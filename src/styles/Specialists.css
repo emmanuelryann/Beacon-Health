@@ -1,0 +1,92 @@
+.specialists {
+  background-color: var(--color-bg-white);
+}
+
+.specialists__header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.specialists__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.specialists__card {
+  flex: 1 1 calc(25% - 1.5rem);
+  min-width: min(100%, 15rem);
+  max-width: 20rem;
+  background-color: var(--color-bg-light);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.specialists__card:hover {
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.08);
+}
+
+.specialists__card-image {
+  width: 100%;
+  height: min(18rem, 35vw);
+  overflow: hidden;
+}
+
+.specialists__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.specialists__card:hover .specialists__card-image img {
+  transform: scale(1.05);
+}
+
+.specialists__card-info {
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.specialists__card-name {
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  color: var(--color-text-dark);
+  font-weight: 700;
+  margin-bottom: clamp(0.25rem, 0.5vw, 0.375rem);
+}
+
+.specialists__card-specialty {
+  font-size: clamp(0.8125rem, 1.3vw, 0.9375rem);
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-bottom: clamp(0.125rem, 0.375vw, 0.25rem);
+}
+
+.specialists__card-quals {
+  font-size: clamp(0.75rem, 1.1vw, 0.8125rem);
+  color: var(--color-text-light);
+}
+
+@media (max-width: 48rem) {
+  .specialists__card {
+    flex-basis: calc(50% - 1.5rem);
+  }
+}
+
+@media (max-width: 30rem) {
+  .specialists__card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .specialists__card-image {
+    height: min(20rem, 60vw);
+  }
+}

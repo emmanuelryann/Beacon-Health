@@ -1,0 +1,146 @@
+/* ================================================
+   DESIGN TOKENS
+   ================================================ */
+:root {
+  --color-primary: #1b4d89;
+  --color-primary-dark: #143a68;
+  --color-secondary: #2e86ab;
+  --color-accent: #f18f01;
+  --color-accent-hover: #d97e01;
+  --color-bg-light: #f8f9fa;
+  --color-bg-white: #ffffff;
+  --color-text-dark: #1a1a2e;
+  --color-text-body: #4a4a5a;
+  --color-text-light: #6c757d;
+  --color-border: #e0e0e0;
+  --font-family: 'Inter', sans-serif;
+}
+
+/* ================================================
+   RESET
+   ================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text-body);
+  background-color: var(--color-bg-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+/* ================================================
+   LAYOUT UTILITIES
+   ================================================ */
+.container {
+  width: min(90%, 75rem);
+  margin-inline: auto;
+}
+
+section {
+  padding: clamp(3rem, 6vw, 6rem) 0;
+}
+
+/* ================================================
+   SHARED TYPOGRAPHY
+   ================================================ */
+.section-subtitle {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  font-weight: 600;
+  margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  color: var(--color-text-dark);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.section-description {
+  font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+  color: var(--color-text-light);
+  max-width: min(100%, 40rem);
+  line-height: 1.7;
+}
+
+/* ================================================
+   SHARED BUTTONS
+   ================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-bg-white);
+  padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.25rem 0.75rem rgba(241, 143, 1, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-bg-white);
+  border: 0.125rem solid var(--color-bg-white);
+  padding: clamp(0.625rem, 1.5vw, 0.875rem) clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-bg-white);
+  color: var(--color-primary);
+}
