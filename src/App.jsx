@@ -17,7 +17,7 @@ function App() {
         <WhyChooseUs />
         <Services />
         <Specialists />
-        <Stats />
+        {/* <Stats /> */}
         <Testimonials />
         <CTA />
       </main>
