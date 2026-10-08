@@ -2,46 +2,20 @@ import '../styles/Services.css'
 
 const services = [
   {
-    image:
-      'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=600&q=80',
-    title: 'Cataract Surgery',
+    title: 'Adult & Pediatric Cardiology',
     description:
-      'Advanced phacoemulsification and premium intraocular lens implantation for clear, restored vision.',
+      'From newborns to adults, our cardiology specialists offer comprehensive heart care. We diagnose and treat congenital heart defects, rhythm disorders, and complex cardiac conditions, ensuring every patient receives age-appropriate, compassionate care.',
+    image:
+      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=900&q=80',
+    link: '#contact',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80',
-    title: 'LASIK & Refractive Surgery',
+    title: 'Radiology',
     description:
-      'State-of-the-art laser vision correction to reduce or eliminate your dependence on glasses and contacts.',
-  },
-  {
+      'State-of-the-art diagnostic imaging utilizing cutting-edge MRI, CT scanners, and digital radiography for accurate, rapid clinical insights and patient-centered diagnostic precision.',
     image:
-      'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=80',
-    title: 'Glaucoma Treatment',
-    description:
-      'Comprehensive glaucoma management including medical therapy, laser treatment, and microsurgical procedures.',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80',
-    title: 'Retina & Vitreous Care',
-    description:
-      'Expert diagnosis and treatment of retinal conditions including macular degeneration, diabetic retinopathy, and retinal detachment.',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?w=600&q=80',
-    title: 'Pediatric Ophthalmology',
-    description:
-      'Specialized eye care for children, including treatment of strabismus, amblyopia, and other pediatric eye conditions.',
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=600&q=80',
-    title: 'Comprehensive Eye Exams',
-    description:
-      'Thorough eye evaluations using advanced diagnostic equipment to detect and manage a wide range of eye conditions.',
+      'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=900&q=80',
+    link: '#contact',
   },
 ]
 
@@ -49,30 +23,64 @@ const Services = () => {
   return (
     <section className="services" id="services">
       <div className="services__container container">
-        <div className="services__header">
-          <p className="section-subtitle">Our Services</p>
-          <h2 className="section-title">Comprehensive Eye Care Services</h2>
-          <p className="section-description">
-            We offer a full range of ophthalmic services to meet all your eye
-            care needs, from preventive care to advanced surgical procedures.
-          </p>
-        </div>
+        <div className="services__layout">
+          {/* Left Column: Heading & Description */}
+          <div className="services__info">
+            <p className="services__subtitle">OUR SERVICES</p>
+            <h2 className="services__title">Excellence in Every Specialty</h2>
+            <p className="services__description">
+              At Euracare, we offer a full spectrum of medical services designed
+              for individuals who expect nothing less than excellence. From advanced
+              diagnostics to minimally invasive procedures and complex surgeries,
+              every service is delivered by specialists with global training and deep
+              local insight. Whether you need preventive care or a second opinion on a
+              serious condition, our multidisciplinary teams work collaboratively to
+              deliver clear answers, rapid access, and the highest level of medical
+              precision.
+            </p>
 
-        <div className="services__grid">
-          {services.map((service, index) => (
-            <article className="services__card" key={index}>
-              <div className="services__card-image">
-                <img src={service.image} alt={service.title} loading="lazy" />
-              </div>
-              <div className="services__card-content">
-                <h3 className="services__card-title">{service.title}</h3>
-                <p className="services__card-desc">{service.description}</p>
-                <a href="#contact" className="services__card-link">
-                  Learn More <span>→</span>
-                </a>
-              </div>
-            </article>
-          ))}
+            <a href="#contact" className="services__view-all-btn">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="services__search-icon"
+                aria-hidden="true"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <path d="M21 21 L16.65 16.65" />
+              </svg>
+              <span>
+                View all <strong>Services</strong>
+              </span>
+            </a>
+          </div>
+
+          {/* Right Column: Two Services Cards Beside Each Other */}
+          <div className="services__grid">
+            {services.map((service, index) => (
+              <article className="services__card" key={index}>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="services__card-bg"
+                  loading="lazy"
+                />
+                <div className="services__card-overlay" />
+
+                <div className="services__card-body">
+                  <h3 className="services__card-title">{service.title}</h3>
+                  <p className="services__card-desc">{service.description}</p>
+                  <a href={service.link} className="services__card-btn">
+                    Learn More
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
