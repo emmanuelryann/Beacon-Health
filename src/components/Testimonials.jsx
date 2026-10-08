@@ -1,66 +1,169 @@
+import { useRef, useState, useEffect } from 'react'
 import '../styles/Testimonials.css'
 
 const testimonials = [
   {
-    quote:
-      'The surgical team restored my vision completely after years of battling cataracts. The care and attention to detail from the doctors and nurses were truly world-class.',
-    name: 'Adaobi Okari',
-    role: 'Cataract Surgery Patient',
-    avatar:
-      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80',
-    rating: 5,
+    image:
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80',
+    title:
+      '““Caring and Comprehensive Bariatric Care” — Mr. Chuka Nwokedi (Bariatric Surgery)”',
+    author: '— Mr. Chuka Nwokedi (Bariatric Surgery)',
   },
   {
-    quote:
-      'Having LASIK at Beacon Health was one of the best decisions I have made. No more glasses, clear 20/20 vision, and the procedure took only a few minutes with zero discomfort.',
-    name: 'Tunde Adeleke',
-    role: 'LASIK Patient',
-    avatar:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
-    rating: 5,
+    image:
+      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80',
+    title:
+      '““Exceptional Service and Professionalism” — Dr. Money Joy (Bariatric Surgery)”',
+    author: '— Dr. Money Joy (Bariatric Surgery)',
   },
   {
-    quote:
-      'Their pediatric ophthalmology department handled my daughter’s strabismus with exceptional gentleness and expertise. We are forever grateful to Dr. Eze and the clinic.',
-    name: 'Fatima Bello',
-    role: 'Parent of Pediatric Patient',
-    avatar:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80',
-    rating: 5,
+    image:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    title:
+      '““Doubt Overcome, Health Restored” — (Bariatric Surgery)”',
+    author: '— M (Bariatric Surgery)',
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80',
+    title:
+      '““Restored Vision, Renewed Independence” — Mrs. Folake Adeleke (Ophthalmology)”',
+    author: '— Mrs. Folake Adeleke (Ophthalmology)',
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80',
+    title:
+      '““World-Class Specialists Right Here in Lagos” — Chief Emeka Okonkwo (Cardiology)”',
+    author: '— Chief Emeka Okonkwo (Cardiology)',
   },
 ]
 
 const Testimonials = () => {
+  const trackRef = useRef(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  const checkScroll = () => {
+    if (!trackRef.current) return
+    const { scrollLeft, scrollWidth, clientWidth } = trackRef.current
+    setCanScrollLeft(scrollLeft > 10)
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 10)
+  }
+
+  useEffect(() => {
+    const el = trackRef.current
+    if (el) {
+      checkScroll()
+      el.addEventListener('scroll', checkScroll)
+      window.addEventListener('resize', checkScroll)
+    }
+    return () => {
+      if (el) el.removeEventListener('scroll', checkScroll)
+      window.removeEventListener('resize', checkScroll)
+    }
+  }, [])
+
+  const handleScroll = (direction) => {
+    if (!trackRef.current) return
+    const scrollAmount = trackRef.current.clientWidth * 0.7
+    trackRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <section className="testimonials" id="testimonials">
       <div className="testimonials__container container">
+        {/* Header with Title, Description, and Horizontal Scroll Buttons */}
         <div className="testimonials__header">
-          <p className="section-subtitle">Testimonials</p>
-          <h2 className="section-title">What Our Patients Say</h2>
-          <p className="section-description">
-            Read inspiring stories from individuals whose vision and quality of life
-            have been transformed by our dedicated team of eye specialists.
-          </p>
+          <div className="testimonials__header-text">
+            <h2 className="testimonials__title">Hear from our Patients</h2>
+            <p className="testimonials__description">
+              We're proud to be the first choice for individuals and families who
+              demand the highest standard of care. These are their words, their
+              journeys, and their reasons for choosing Euracare.
+            </p>
+          </div>
+
+          <div className="testimonials__nav">
+            <button
+              type="button"
+              className={`testimonials__nav-btn ${
+                canScrollLeft ? 'testimonials__nav-btn--active' : 'testimonials__nav-btn--disabled'
+              }`}
+              onClick={() => handleScroll('left')}
+              aria-label="Scroll testimonials left"
+              disabled={!canScrollLeft}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="testimonials__nav-icon"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              className={`testimonials__nav-btn ${
+                canScrollRight ? 'testimonials__nav-btn--active' : 'testimonials__nav-btn--disabled'
+              }`}
+              onClick={() => handleScroll('right')}
+              aria-label="Scroll testimonials right"
+              disabled={!canScrollRight}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="testimonials__nav-icon"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        <div className="testimonials__grid">
+        {/* Horizontal Scroll Track */}
+        <div className="testimonials__track" ref={trackRef}>
           {testimonials.map((item, index) => (
             <article className="testimonials__card" key={index}>
-              <div className="testimonials__rating" aria-label={`${item.rating} out of 5 stars`}>
-                {'★'.repeat(item.rating)}
-              </div>
-              <p className="testimonials__quote">"{item.quote}"</p>
-              <div className="testimonials__author">
+              {/* Card Image Area with 'Watch Video' button */}
+              <div className="testimonials__card-media">
                 <img
-                  src={item.avatar}
-                  alt={item.name}
-                  className="testimonials__avatar"
+                  src={item.image}
+                  alt={item.author}
+                  className="testimonials__card-img"
                   loading="lazy"
                 />
-                <div className="testimonials__info">
-                  <h3 className="testimonials__name">{item.name}</h3>
-                  <p className="testimonials__role">{item.role}</p>
+                <div className="testimonials__card-overlay" />
+                <div className="testimonials__play-pill">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="testimonials__play-icon"
+                    aria-hidden="true"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                  <span>Watch Video</span>
                 </div>
+              </div>
+
+              {/* Card Body with Quote & Author */}
+              <div className="testimonials__card-body">
+                <h3 className="testimonials__card-title">{item.title}</h3>
+                <p className="testimonials__card-author">{item.author}</p>
               </div>
             </article>
           ))}
