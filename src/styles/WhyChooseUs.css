@@ -1,67 +1,220 @@
-.why-choose {
+/* ================================================
+   WELCOME TO EURACARE (SECTION UNDER HERO)
+   Matches screenshot:
+   - Heading: "Welcome to Euracare Multispecialty Hospital"
+   - Two detailed introductory paragraphs
+   - Bold mission statement tagline
+   - Right-side video card with a random medical image and YouTube overlays
+   ================================================ */
+.welcome {
   background-color: var(--color-bg-white);
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
 }
 
-.why-choose__header {
-  text-align: center;
-  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+.welcome__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Left Column: Text */
+.welcome__text {
+  flex: 1 1 calc(50% - 1.5rem);
+  min-width: min(100%, 20rem);
+}
+
+.welcome__title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  color: #111827;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02rem;
+  margin-bottom: clamp(1.25rem, 2.2vw, 1.75rem);
+}
+
+.welcome__paragraph {
+  font-size: clamp(0.875rem, 1.2vw, 0.96875rem);
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: clamp(1rem, 1.8vw, 1.375rem);
+}
+
+.welcome__tagline {
+  font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+  color: #111827;
+  font-weight: 700;
+  letter-spacing: -0.01rem;
+  margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+/* Right Column: Virtual Tour Card with Random Image */
+.welcome__media {
+  flex: 1 1 calc(50% - 1.5rem);
+  min-width: min(100%, 20rem);
+}
+
+.welcome__video-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.75rem 2.5rem rgba(0, 0, 0, 0.12);
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  background-color: #000000;
+}
+
+.welcome__video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.welcome__video-card:hover .welcome__video-thumbnail {
+  transform: scale(1.03);
+}
+
+/* Top bar overlay */
+.welcome__video-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: clamp(0.75rem, 1.5vw, 1rem);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 2;
+}
+
+.welcome__video-avatar {
+  width: min(2.25rem, 6vw);
+  height: min(2.25rem, 6vw);
+  border-radius: 50rem;
+  background-color: #12435c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: clamp(0.6875rem, 1vw, 0.75rem);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.welcome__video-meta {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  overflow: hidden;
 }
 
-.why-choose__grid {
+.welcome__video-title {
+  color: #ffffff;
+  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.8);
+}
+
+.welcome__video-channel {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.6875rem, 1vw, 0.75rem);
+}
+
+/* Center YouTube Play Button */
+.welcome__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(4.25rem, 12vw);
+  height: min(3rem, 8.5vw);
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.welcome__play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.welcome__play-icon {
+  width: 100%;
+  height: 100%;
+}
+
+/* Bottom bar overlay */
+.welcome__video-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: clamp(0.75rem, 1.5vw, 1rem);
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.welcome__video-share-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  width: min(2.25rem, 6vw);
+  height: min(2.25rem, 6vw);
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
 }
 
-.why-choose__card {
-  flex: 1 1 calc(25% - 1.5rem);
-  min-width: min(100%, 15rem);
-  max-width: 20rem;
-  background-color: var(--color-bg-light);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  border-radius: 1rem;
-  text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  border: 0.0625rem solid transparent;
+.welcome__share-icon {
+  width: min(1.125rem, 3vw);
+  height: min(1.125rem, 3vw);
 }
 
-.why-choose__card:hover {
-  transform: translateY(-0.3125rem);
-  border-color: var(--color-secondary);
-  box-shadow: 0 0.625rem 1.875rem rgba(46, 134, 171, 0.1);
+.welcome__youtube-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: rgba(28, 28, 28, 0.85);
+  padding: clamp(0.25rem, 0.6vw, 0.375rem) clamp(0.5rem, 1vw, 0.75rem);
+  border-radius: 50rem;
+  color: #ffffff;
+  font-size: clamp(0.6875rem, 1vw, 0.75rem);
+  font-weight: 500;
 }
 
-.why-choose__icon {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+.welcome__yt-logo {
+  width: min(1rem, 2.5vw);
+  height: min(1rem, 2.5vw);
 }
 
-.why-choose__card-title {
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
-  color: var(--color-text-dark);
+.welcome__yt-text {
   font-weight: 700;
-  margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
 }
 
-.why-choose__card-desc {
-  font-size: clamp(0.8125rem, 1.3vw, 0.9375rem);
-  color: var(--color-text-light);
-  line-height: 1.6;
-}
-
-@media (max-width: 48rem) {
-  .why-choose__card {
-    flex-basis: calc(50% - 1.5rem);
+/* ================================================
+   LAYOUT BREAKPOINTS (MEDIA QUERIES)
+   Strictly layout-changing properties only
+   ================================================ */
+@media (max-width: 58rem) {
+  .welcome__content {
+    flex-direction: column;
   }
-}
 
-@media (max-width: 30rem) {
-  .why-choose__card {
+  .welcome__text {
     flex-basis: 100%;
-    max-width: 100%;
+  }
+
+  .welcome__media {
+    flex-basis: 100%;
   }
 }
