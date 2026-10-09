@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import '../styles/AboutEuracare.css'
 
 const missionCards = [
@@ -44,7 +45,117 @@ const centresOfExcellence = [
   'Comprehensive Health Assessments',
 ]
 
+const leadershipTeam = [
+  {
+    name: 'Dr Tosin Majekodunmi',
+    role: 'Managing Director & Medical Director & Chief of Cardiology',
+    image:
+      'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&q=80',
+  },
+  {
+    name: 'Ijeoma Okoro',
+    role: 'HR Manager',
+    image:
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
+  },
+  {
+    name: 'Olukemi Fasuan',
+    role: 'Financial Controller',
+    image:
+      'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=600&q=80',
+  },
+  {
+    name: 'Sylvester Shih',
+    role: 'Chief Operating Officer',
+    image:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+  },
+  {
+    name: 'Kelvin Ajieh',
+    role: 'Marketing and Communications Manager',
+    image:
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80',
+  },
+  {
+    name: 'Godwin Ikehi',
+    role: 'Laboratory Manager',
+    image:
+      'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&q=80',
+  },
+  {
+    name: 'Abimbola Aransiola',
+    role: 'Pharmacy Manager',
+    image:
+      'https://images.unsplash.com/photo-1594824476967-48c8b964d31f?w=600&q=80',
+  },
+  {
+    name: 'Ebunoluwa sanni',
+    role: 'Nursing Manager',
+    image:
+      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80',
+  },
+  {
+    name: 'Ijeoma Ezimoha',
+    role: 'Patient Services Manager',
+    image:
+      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=80',
+  },
+  {
+    name: 'Bassey Ekpe',
+    role: 'IT Manager',
+    image:
+      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80',
+  },
+]
+
+const innovationCategories = [
+  {
+    title: 'Interventional Radiology & Vascular',
+    items: [
+      'First scrotal varicocele embolization',
+      'First celiac & hypogastric plexus block (for cancer/pancreatitis pain)',
+      'First central venous obstruction (SVC syndrome) stenting',
+      'First direct translumbar IVC dialysis catheter placement',
+      'First below-knee arterial recanalization',
+      'First endovascular iliac artery endograft',
+      'First transarterial chemoembolization (TACE) and microwave ablation for liver cancer',
+    ],
+  },
+  {
+    title: 'Structural Heart & Interventional Cardiology',
+    items: [
+      'First stenting of aortic coarctation in Nigeria',
+      'First ASD device closure in Nigeria’s youngest patient (9 years)',
+      'First PFO (hole-in-the-heart) device closure',
+      'First Transcatheter Aortic Valve Implantation (TAVI)',
+      'First device closure of ruptured sinus of Valsalva aneurysm',
+    ],
+  },
+  {
+    title: 'Urology (with IR collaboration)',
+    items: [
+      'First prostate artery embolization (PAE) for benign prostatic hyperplasia',
+      'Minimally invasive nephrostomy and ureteric stenting',
+      'Advanced laser lithotripsy and endourological procedures',
+    ],
+  },
+  {
+    title: 'Spine Surgery',
+    items: [
+      'Minimally invasive spinal decompression and fusion',
+      'Percutaneous vertebroplasty and kyphoplasty for vertebral compression fractures',
+      'Endoscopic discectomy with rapid mobilization and enhanced recovery',
+    ],
+  },
+]
+
 const AboutEuracare = () => {
+  const [openAccordion, setOpenAccordion] = useState(0)
+
+  const toggleAccordion = (index) => {
+    setOpenAccordion((prev) => (prev === index ? -1 : index))
+  }
+
   return (
     <div className="about-page">
       {/* ================================================
@@ -242,6 +353,134 @@ const AboutEuracare = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================
+          7. OUR LEADERSHIP EXPERTISE
+          Matches screenshot:
+          - Subtitle: OUR LEADERSHIP EXPERTISE
+          - Title: A diverse team driven by expertise, compassion, and commitment.
+          - 4-column cards with rounded rectangle portraits, bold name, and role below
+          ================================================ */}
+      <section className="about-leadership">
+        <div className="about-leadership__container container">
+          <div className="about-leadership__header">
+            <p className="about-leadership__subtitle">OUR LEADERSHIP EXPERTISE</p>
+            <h2 className="about-leadership__title">
+              A diverse team driven by expertise, compassion, and commitment.
+            </h2>
+          </div>
+
+          <div className="about-leadership__grid">
+            {leadershipTeam.map((leader, index) => (
+              <article className="about-leadership__card" key={index}>
+                <div className="about-leadership__photo-wrap">
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="about-leadership__photo"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="about-leadership__meta">
+                  <h3 className="about-leadership__name">{leader.name}</h3>
+                  <p className="about-leadership__role">{leader.role}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================
+          8. INNOVATION & TECHNOLOGY
+          Matches screenshot:
+          - 2-column layout on white background
+          - Left: tall rounded image with radiologist viewing CT/MRI monitor
+          - Right: "Innovation & Technology" title, paragraph, and interactive accordion
+          ================================================ */}
+      <section className="about-innovation">
+        <div className="about-innovation__container container">
+          <div className="about-innovation__layout">
+            {/* Left Column: Image */}
+            <div className="about-innovation__media-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=900&q=80"
+                alt="Radiologist examining high-resolution scan on medical diagnostic monitor"
+                className="about-innovation__media-img"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Right Column: Title, Intro & Accordion */}
+            <div className="about-innovation__content">
+              <h2 className="about-innovation__title">Innovation &amp; Technology</h2>
+
+              <p className="about-innovation__intro">
+                From high-resolution MRI and CT scanners to minimally invasive surgical
+                systems, we use cutting-edge technology to ensure faster diagnoses, safer
+                treatments, and better results. We have led innovation in the healthcare
+                sector in Nigeria delivering notable firsts:
+              </p>
+
+              {/* Accordion list */}
+              <div className="about-innovation__accordion">
+                {innovationCategories.map((category, index) => {
+                  const isOpen = openAccordion === index
+                  return (
+                    <div
+                      className={`about-innovation__accordion-item ${
+                        isOpen ? 'about-innovation__accordion-item--open' : ''
+                      }`}
+                      key={index}
+                    >
+                      <button
+                        type="button"
+                        className="about-innovation__accordion-header"
+                        onClick={() => toggleAccordion(index)}
+                        aria-expanded={isOpen}
+                      >
+                        <span className="about-innovation__accordion-title">
+                          {category.title}
+                        </span>
+                        <span className="about-innovation__accordion-chevron">
+                          <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className={`about-innovation__chevron-svg ${
+                              isOpen ? 'about-innovation__chevron-svg--open' : ''
+                            }`}
+                            aria-hidden="true"
+                          >
+                            <circle cx="12" cy="12" r="10" strokeWidth="1.5" />
+                            <polyline points="8 14 12 10 16 14" />
+                          </svg>
+                        </span>
+                      </button>
+
+                      {isOpen && (
+                        <div className="about-innovation__accordion-body">
+                          <ul className="about-innovation__bullets">
+                            {category.items.map((item, itemIdx) => (
+                              <li key={itemIdx} className="about-innovation__bullet-item">
+                                <span className="about-innovation__bullet-dot">•</span>
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           </div>
         </div>

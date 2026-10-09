@@ -7,6 +7,8 @@
    4. Euracare Core Values (5 principles with icons and bottom dividers)
    5. QUALITY & SAFETY (statement on protocols & dedicated safety team)
    6. Centres of Excellence (consultation photo + bullet list of specialties)
+   7. OUR LEADERSHIP EXPERTISE (4-column grid with rounded rectangle portraits and titles)
+   8. Innovation & Technology (2-column with MRI screen photo and interactive accordion)
    ================================================ */
 
 /* ================================================
@@ -389,9 +391,262 @@
 }
 
 /* ================================================
+   7. OUR LEADERSHIP EXPERTISE
+   Matches screenshots exactly:
+   - Subtitle: OUR LEADERSHIP EXPERTISE
+   - Title: A diverse team driven by expertise, compassion, and commitment.
+   - 4 columns per row, rounded rectangle portraits, bold name, italicized role
+   ================================================ */
+.about-leadership {
+  background-color: var(--color-bg-white);
+  padding: clamp(3.5rem, 6vw, 6rem) 0;
+  border-top: 0.0625rem solid #e5e7eb;
+}
+
+.about-leadership__header {
+  margin-bottom: clamp(2.5rem, 4.5vw, 3.5rem);
+}
+
+.about-leadership__subtitle {
+  font-size: clamp(0.75rem, 1vw, 0.8125rem);
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  color: #12435c;
+  margin-bottom: clamp(0.625rem, 1vw, 0.875rem);
+  text-transform: uppercase;
+}
+
+.about-leadership__title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  color: #0b1a30;
+  line-height: 1.15;
+  letter-spacing: -0.02rem;
+  max-width: min(100%, 48rem);
+}
+
+.about-leadership__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 1.5rem;
+}
+
+.about-leadership__card {
+  flex: 1 1 calc(25% - 1.5rem);
+  min-width: min(100%, 14rem);
+  max-width: calc(25% - 1.125rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-leadership__photo-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.04);
+}
+
+.about-leadership__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.about-leadership__card:hover .about-leadership__photo {
+  transform: scale(1.03);
+}
+
+.about-leadership__meta {
+  margin-top: clamp(0.75rem, 1.2vw, 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.about-leadership__name {
+  font-size: clamp(0.9375rem, 1.3vw, 1.0625rem);
+  font-weight: 700;
+  color: #0b1a30;
+  line-height: 1.3;
+}
+
+.about-leadership__role {
+  font-size: clamp(0.75rem, 1.1vw, 0.8125rem);
+  color: #4b5563;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+/* ================================================
+   8. INNOVATION & TECHNOLOGY
+   Matches screenshots exactly:
+   - 2-column layout on white background
+   - Left: CT/MRI monitor scan image
+   - Right: Title, intro paragraph, and interactive rounded accordion boxes
+   ================================================ */
+.about-innovation {
+  background-color: var(--color-bg-white);
+  padding: clamp(3.5rem, 6vw, 6rem) 0;
+  border-top: 0.0625rem solid #e5e7eb;
+}
+
+.about-innovation__layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+}
+
+/* Left Column: Image */
+.about-innovation__media-wrap {
+  flex: 1 1 calc(50% - 1.75rem);
+  min-width: min(100%, 20rem);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.about-innovation__media-img {
+  width: 100%;
+  height: min(38rem, 75vh);
+  object-fit: cover;
+  display: block;
+}
+
+/* Right Column: Content & Accordion */
+.about-innovation__content {
+  flex: 1 1 calc(50% - 1.75rem);
+  min-width: min(100%, 20rem);
+}
+
+.about-innovation__title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  color: #0b1a30;
+  line-height: 1.15;
+  letter-spacing: -0.02rem;
+  margin-bottom: clamp(1rem, 1.8vw, 1.5rem);
+}
+
+.about-innovation__intro {
+  font-size: clamp(0.875rem, 1.2vw, 0.96875rem);
+  color: #111827;
+  line-height: 1.65;
+  margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+/* Accordion */
+.about-innovation__accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.about-innovation__accordion-item {
+  border: 0.0625rem solid #e5e7eb;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: var(--color-bg-white);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-innovation__accordion-item--open {
+  border-color: #cbd5e1;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
+}
+
+.about-innovation__accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(0.875rem, 1.4vw, 1.125rem) clamp(1rem, 1.8vw, 1.25rem);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+}
+
+.about-innovation__accordion-title {
+  font-size: clamp(0.9375rem, 1.3vw, 1.0625rem);
+  font-weight: 700;
+  color: #0b1a30;
+  line-height: 1.3;
+}
+
+.about-innovation__accordion-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #64748b;
+}
+
+.about-innovation__chevron-svg {
+  width: min(1.375rem, 3.5vw);
+  height: min(1.375rem, 3.5vw);
+  transition: transform 0.3s ease;
+}
+
+.about-innovation__chevron-svg--open {
+  transform: rotate(0deg);
+}
+
+.about-innovation__chevron-svg:not(.about-innovation__chevron-svg--open) {
+  transform: rotate(180deg);
+}
+
+.about-innovation__accordion-body {
+  padding: 0 clamp(1rem, 1.8vw, 1.25rem) clamp(1rem, 1.8vw, 1.25rem);
+}
+
+.about-innovation__bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-innovation__bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: clamp(0.8125rem, 1.1vw, 0.875rem);
+  color: #374151;
+  line-height: 1.55;
+}
+
+.about-innovation__bullet-dot {
+  color: #0b1a30;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ================================================
    LAYOUT BREAKPOINTS (MEDIA QUERIES)
    Strictly layout-changing properties only
    ================================================ */
+@media (max-width: 64rem) {
+  .about-leadership__card {
+    flex-basis: calc(33.333% - 1.5rem);
+    max-width: 100%;
+  }
+
+  .about-innovation__layout {
+    flex-direction: column;
+  }
+
+  .about-innovation__media-wrap,
+  .about-innovation__content {
+    flex-basis: 100%;
+  }
+}
+
 @media (max-width: 58rem) {
   .about-intro__grid {
     flex-direction: column;
@@ -420,10 +675,18 @@
   .about-values__item {
     flex-basis: calc(50% - 1.5rem);
   }
+
+  .about-leadership__card {
+    flex-basis: calc(50% - 1.5rem);
+  }
 }
 
 @media (max-width: 32rem) {
   .about-values__item {
+    flex-basis: 100%;
+  }
+
+  .about-leadership__card {
     flex-basis: 100%;
   }
 }
