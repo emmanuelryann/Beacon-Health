@@ -1,0 +1,284 @@
+/* ================================================
+   SERVICES PAGE STYLES
+   Matches Euracare Services page screenshots:
+   - Full-width hero banner with medical staff photography and ECG watermark
+   - Search bar pill & 'Sort by' pill button
+   - 4-column card grid of all 16 clinical specialties
+   - Cream cards with images, bold titles, descriptions, and pill 'Learn More' buttons
+   ================================================ */
+.services-page {
+  background-color: var(--color-bg-white);
+}
+
+/* Hero Banner */
+.services-page__hero {
+  position: relative;
+  min-height: min(75vh, 44rem);
+  display: flex;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.services-page__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 24, 46, 0.88) 0%,
+    rgba(6, 24, 46, 0.76) 45%,
+    rgba(6, 24, 46, 0.4) 80%,
+    rgba(6, 24, 46, 0.25) 100%
+  );
+  z-index: 1;
+}
+
+.services-page__hero-watermark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.services-page__hero-watermark-svg {
+  width: 100%;
+  height: auto;
+}
+
+.services-page__hero-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-top: clamp(4.5rem, 8vw, 6.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 6.5rem);
+}
+
+.services-page__hero-content {
+  max-width: min(100%, 42rem);
+}
+
+.services-page__hero-title {
+  font-size: clamp(2.25rem, 4.3vw, 3.75rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02rem;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.services-page__hero-text {
+  font-size: clamp(0.9375rem, 1.3vw, 1.0625rem);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.68;
+}
+
+/* Page Body: Controls & Grid */
+.services-page__body {
+  padding: clamp(3rem, 5.5vw, 5rem) 0;
+}
+
+/* Search Input & Sort Controls */
+.services-page__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: clamp(2.5rem, 4.5vw, 3.5rem);
+  flex-wrap: wrap;
+}
+
+.services-page__search-wrap {
+  flex: 1 1 min(100%, 36rem);
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  border: 0.0625rem solid #e2e8f0;
+  border-radius: 50rem;
+  padding: clamp(0.75rem, 1.3vw, 1rem) clamp(1.25rem, 2vw, 1.75rem);
+  background-color: var(--color-bg-white);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.services-page__search-wrap:focus-within {
+  border-color: #12435c;
+  box-shadow: 0 0.25rem 1rem rgba(18, 67, 92, 0.12);
+}
+
+.services-page__search-icon {
+  width: min(1.25rem, 3vw);
+  height: min(1.25rem, 3vw);
+  color: #0b1a30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.services-page__search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-family: inherit;
+  color: #0b1a30;
+}
+
+.services-page__search-input::placeholder {
+  color: #64748b;
+  font-weight: 400;
+}
+
+.services-page__sort-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0.0625rem solid #111827;
+  border-radius: 50rem;
+  background-color: var(--color-bg-white);
+  padding: clamp(0.75rem, 1.3vw, 1rem) clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  font-weight: 600;
+  color: #111827;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.services-page__sort-btn:hover {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+.services-page__sort-icon {
+  width: min(1.125rem, 2.8vw);
+  height: min(1.125rem, 2.8vw);
+  flex-shrink: 0;
+}
+
+/* 4-Column Grid */
+.services-page__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 1.5rem;
+}
+
+.services-page__card {
+  background-color: #fbf8f5;
+  border-radius: 1.125rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-page__card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.625rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.services-page__card-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.services-page__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.services-page__card:hover .services-page__card-image {
+  transform: scale(1.05);
+}
+
+.services-page__card-body {
+  padding: clamp(1.25rem, 1.8vw, 1.625rem);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.services-page__card-title {
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.28;
+  margin-bottom: clamp(0.625rem, 1vw, 0.875rem);
+}
+
+.services-page__card-desc {
+  font-size: clamp(0.8125rem, 1.05vw, 0.875rem);
+  color: #374151;
+  line-height: 1.62;
+  margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
+  flex: 1 1 auto;
+}
+
+.services-page__card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+  border: 0.0625rem solid #111827;
+  border-radius: 50rem;
+  padding: clamp(0.5625rem, 0.9vw, 0.6875rem) 1rem;
+  font-size: clamp(0.75rem, 1.05vw, 0.8125rem);
+  font-weight: 600;
+  color: #111827;
+  background-color: transparent;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.services-page__card-btn:hover {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+.services-page__empty {
+  text-align: center;
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: #64748b;
+}
+
+/* ================================================
+   LAYOUT BREAKPOINTS (MEDIA QUERIES)
+   Strictly layout-changing properties only
+   ================================================ */
+@media (max-width: 64rem) {
+  .services-page__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  .services-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-page__controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 30rem) {
+  .services-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

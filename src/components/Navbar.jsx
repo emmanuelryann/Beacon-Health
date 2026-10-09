@@ -41,6 +41,14 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
       return
     }
 
+    if (link.id === 'services') {
+      e.preventDefault()
+      onNavigate('services')
+      closeSidebar()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
+
     if (currentPage !== 'home') {
       e.preventDefault()
       onNavigate('home')
@@ -120,7 +128,9 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
           {/* Desktop Navigation Links */}
           <ul className="navbar__links">
             {navLinks.map((link) => {
-              const isActive = link.id === 'about' && currentPage === 'about'
+              const isActive =
+                (link.id === 'about' && currentPage === 'about') ||
+                (link.id === 'services' && currentPage === 'services')
               return (
                 <li key={link.label} className="navbar__item">
                   <a
@@ -222,7 +232,9 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
 
         <ul className="sidebar__links">
           {navLinks.map((link) => {
-            const isActive = link.id === 'about' && currentPage === 'about'
+            const isActive =
+              (link.id === 'about' && currentPage === 'about') ||
+              (link.id === 'services' && currentPage === 'services')
             return (
               <li key={link.label}>
                 <a
