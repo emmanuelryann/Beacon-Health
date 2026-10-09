@@ -1,0 +1,429 @@
+/* ================================================
+   ABOUT EURACARE PAGE STYLES
+   Matches the Euracare About page screenshots:
+   1. About Euracare hero banner with staff imagery and ECG watermark
+   2. World Class Healthcare Right Here at Home section (2-column)
+   3. Euracare Mission and Vision (headline, 3 cards with navy bottom bar, vision quote)
+   4. Euracare Core Values (5 principles with icons and bottom dividers)
+   5. QUALITY & SAFETY (statement on protocols & dedicated safety team)
+   6. Centres of Excellence (consultation photo + bullet list of specialties)
+   ================================================ */
+
+/* ================================================
+   1. ABOUT EURACARE HERO
+   ================================================ */
+.about-hero {
+  position: relative;
+  min-height: min(75vh, 44rem);
+  display: flex;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.about-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 24, 46, 0.88) 0%,
+    rgba(6, 24, 46, 0.76) 45%,
+    rgba(6, 24, 46, 0.4) 80%,
+    rgba(6, 24, 46, 0.25) 100%
+  );
+  z-index: 1;
+}
+
+.about-hero__watermark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.about-hero__watermark-svg {
+  width: 100%;
+  height: auto;
+}
+
+.about-hero__container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-top: clamp(4.5rem, 8vw, 6.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 6.5rem);
+}
+
+.about-hero__content {
+  max-width: min(100%, 40rem);
+}
+
+.about-hero__title {
+  font-size: clamp(2.25rem, 4.3vw, 3.75rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02rem;
+  margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.about-hero__text {
+  font-size: clamp(0.9375rem, 1.3vw, 1.0625rem);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.68;
+  margin-bottom: clamp(1rem, 1.8vw, 1.25rem);
+}
+
+/* ================================================
+   2. WORLD CLASS HEALTHCARE, RIGHT HERE AT HOME
+   ================================================ */
+.about-intro {
+  background-color: var(--color-bg-white);
+  padding: clamp(3.5rem, 6vw, 6rem) 0;
+}
+
+.about-intro__grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.about-intro__image-wrap {
+  flex: 1 1 calc(50% - 1.75rem);
+  min-width: min(100%, 20rem);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.about-intro__image {
+  width: 100%;
+  height: min(34rem, 65vh);
+  object-fit: cover;
+  display: block;
+}
+
+.about-intro__text-wrap {
+  flex: 1 1 calc(50% - 1.75rem);
+  min-width: min(100%, 20rem);
+}
+
+.about-intro__title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.15;
+  letter-spacing: -0.02rem;
+  margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.about-intro__paragraph {
+  font-size: clamp(0.875rem, 1.2vw, 0.96875rem);
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: clamp(1rem, 1.8vw, 1.375rem);
+}
+
+/* ================================================
+   3. EURACARE MISSION AND VISION
+   ================================================ */
+.about-mission {
+  background-color: var(--color-bg-white);
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+  border-top: 0.0625rem solid #e5e7eb;
+}
+
+.about-mission__subtitle {
+  font-size: clamp(0.75rem, 1vw, 0.8125rem);
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  color: #12435c;
+  margin-bottom: clamp(0.625rem, 1vw, 0.875rem);
+  text-transform: uppercase;
+}
+
+.about-mission__title {
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  color: #0b1a30;
+  line-height: 1.25;
+  letter-spacing: -0.02rem;
+  max-width: min(100%, 65rem);
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.about-mission__cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.about-mission__card {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: min(100%, 16rem);
+  background-color: #fbf8f5;
+  border-radius: 0.75rem 0.75rem 0 0;
+  padding: clamp(1.75rem, 2.8vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: min(12rem, 30vh);
+  position: relative;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.04);
+}
+
+.about-mission__card-text {
+  font-size: clamp(0.875rem, 1.2vw, 0.96875rem);
+  color: #1f2937;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.about-mission__card-bar {
+  height: 0.25rem;
+  background-color: #0b1a30;
+  width: 100%;
+}
+
+.about-mission__vision {
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+}
+
+.about-mission__quote {
+  font-size: clamp(1.5rem, 3vw, 2.375rem);
+  font-weight: 700;
+  color: #0b1a30;
+  line-height: 1.25;
+  letter-spacing: -0.02rem;
+  max-width: min(100%, 58rem);
+  font-style: normal;
+}
+
+/* ================================================
+   4. EURACARE CORE VALUES
+   ================================================ */
+.about-values {
+  background-color: var(--color-bg-white);
+  padding: clamp(3rem, 5.5vw, 5rem) 0;
+  border-top: 0.0625rem solid #e5e7eb;
+}
+
+.about-values__subtitle {
+  font-size: clamp(0.75rem, 1vw, 0.8125rem);
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  color: #12435c;
+  margin-bottom: clamp(0.625rem, 1vw, 0.875rem);
+  text-transform: uppercase;
+}
+
+.about-values__title {
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  color: #0b1a30;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.about-values__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about-values__item {
+  flex: 1 1 calc(33.333% - 1.5rem);
+  min-width: min(100%, 16rem);
+}
+
+.about-values__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.about-values__icon {
+  width: min(1.875rem, 5vw);
+  height: min(1.875rem, 5vw);
+  border-radius: 50rem;
+  background-color: #0b1a30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.about-values__svg {
+  width: min(1rem, 2.8vw);
+  height: min(1rem, 2.8vw);
+}
+
+.about-values__name {
+  font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+  font-weight: 700;
+  color: #0b1a30;
+}
+
+.about-values__desc {
+  font-size: clamp(0.8125rem, 1.1vw, 0.875rem);
+  color: #374151;
+  line-height: 1.6;
+  margin-top: clamp(0.75rem, 1.2vw, 1rem);
+  margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.about-values__divider {
+  height: 0.0625rem;
+  background-color: #e5e7eb;
+}
+
+/* ================================================
+   5. QUALITY & SAFETY
+   ================================================ */
+.about-safety {
+  background-color: var(--color-bg-white);
+  padding: clamp(3rem, 5.5vw, 5rem) 0;
+  border-top: 0.0625rem solid #e5e7eb;
+}
+
+.about-safety__subtitle {
+  font-size: clamp(0.75rem, 1vw, 0.8125rem);
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  color: #12435c;
+  margin-bottom: clamp(0.625rem, 1vw, 0.875rem);
+  text-transform: uppercase;
+}
+
+.about-safety__title {
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #0b1a30;
+  line-height: 1.35;
+  letter-spacing: -0.02rem;
+  max-width: min(100%, 58rem);
+}
+
+/* ================================================
+   6. CENTRES OF EXCELLENCE
+   ================================================ */
+.about-centres {
+  background-color: var(--color-bg-white);
+  padding: clamp(3rem, 5.5vw, 5rem) 0;
+  border-top: 0.0625rem solid #e5e7eb;
+}
+
+.about-centres__grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.about-centres__image-wrap {
+  flex: 1 1 calc(50% - 1.75rem);
+  min-width: min(100%, 20rem);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.about-centres__image {
+  width: 100%;
+  height: min(30rem, 60vh);
+  object-fit: cover;
+  display: block;
+}
+
+.about-centres__text-wrap {
+  flex: 1 1 calc(50% - 1.75rem);
+  min-width: min(100%, 20rem);
+}
+
+.about-centres__title {
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  color: #0b1a30;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+.about-centres__lead {
+  font-size: clamp(0.9375rem, 1.3vw, 1.0625rem);
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.about-centres__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.about-centres__item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: clamp(0.875rem, 1.2vw, 0.96875rem);
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.about-centres__bullet {
+  color: #0b1a30;
+  font-weight: 700;
+}
+
+/* ================================================
+   LAYOUT BREAKPOINTS (MEDIA QUERIES)
+   Strictly layout-changing properties only
+   ================================================ */
+@media (max-width: 58rem) {
+  .about-intro__grid {
+    flex-direction: column;
+  }
+
+  .about-intro__image-wrap,
+  .about-intro__text-wrap {
+    flex-basis: 100%;
+  }
+
+  .about-centres__grid {
+    flex-direction: column;
+  }
+
+  .about-centres__image-wrap,
+  .about-centres__text-wrap {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 48rem) {
+  .about-mission__card {
+    flex-basis: 100%;
+  }
+
+  .about-values__item {
+    flex-basis: calc(50% - 1.5rem);
+  }
+}
+
+@media (max-width: 32rem) {
+  .about-values__item {
+    flex-basis: 100%;
+  }
+}

@@ -2,15 +2,15 @@ import { useState, useEffect, useCallback } from 'react'
 import '../styles/Navbar.css'
 
 const navLinks = [
-  { label: 'About Euracare', href: '#about' },
-  { label: 'Our Services', href: '#services' },
-  { label: 'Find a Doctor', href: '#specialists' },
-  { label: 'Patient & Visitor Information', href: '#patient-info', hasDropdown: true },
-  { label: 'Book Appointment', href: '#contact' },
-  { label: 'Careers', href: '#careers' },
+  { id: 'about', label: 'About Euracare', href: '#about' },
+  { id: 'services', label: 'Our Services', href: '#services' },
+  { id: 'specialists', label: 'Find a Doctor', href: '#specialists' },
+  { id: 'patient-info', label: 'Patient & Visitor Information', href: '#patient-info', hasDropdown: true },
+  { id: 'contact', label: 'Book Appointment', href: '#contact' },
+  { id: 'careers', label: 'Careers', href: '#careers' },
 ]
 
-const Navbar = () => {
+const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -31,6 +31,36 @@ const Navbar = () => {
 
   const closeSidebar = useCallback(() => setSidebarOpen(false), [])
   const toggleSidebar = useCallback(() => setSidebarOpen((prev) => !prev), [])
+
+  const handleLinkClick = (e, link) => {
+    if (link.id === 'about') {
+      e.preventDefault()
+      onNavigate('about')
+      closeSidebar()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
+
+    if (currentPage !== 'home') {
+      e.preventDefault()
+      onNavigate('home')
+      closeSidebar()
+      setTimeout(() => {
+        const el = document.querySelector(link.href)
+        if (el) el.scrollIntoView({ behavior: 'smooth' })
+      }, 50)
+      return
+    }
+
+    closeSidebar()
+  }
+
+  const handleLogoClick = (e) => {
+    e.preventDefault()
+    onNavigate('home')
+    closeSidebar()
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
     <header className="site-header">
@@ -54,7 +84,12 @@ const Navbar = () => {
       <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
         <div className="navbar__container container">
           {/* Logo with ECG line */}
-          <a href="#home" className="navbar__logo" aria-label="Euracare Home">
+          <a
+            href="#home"
+            className="navbar__logo"
+            aria-label="Euracare Home"
+            onClick={handleLogoClick}
+          >
             <svg
               className="navbar__logo-svg"
               viewBox="0 0 220 44"
@@ -84,27 +119,34 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <ul className="navbar__links">
-            {navLinks.map((link) => (
-              <li key={link.label} className="navbar__item">
-                <a href={link.href} className="navbar__link">
-                  <span>{link.label}</span>
-                  {link.hasDropdown && (
-                    <svg
-                      className="navbar__chevron"
-                      viewBox="0 0 12 12"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M2.5 4.5 L6 8 L9.5 4.5" />
-                    </svg>
-                  )}
-                </a>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.id === 'about' && currentPage === 'about'
+              return (
+                <li key={link.label} className="navbar__item">
+                  <a
+                    href={link.href}
+                    className={`navbar__link ${isActive ? 'navbar__link--active' : ''}`}
+                    onClick={(e) => handleLinkClick(e, link)}
+                  >
+                    <span>{link.label}</span>
+                    {link.hasDropdown && (
+                      <svg
+                        className="navbar__chevron"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M2.5 4.5 L6 8 L9.5 4.5" />
+                      </svg>
+                    )}
+                  </a>
+                </li>
+              )
+            })}
           </ul>
 
           {/* Call Us Today Button */}
@@ -179,14 +221,21 @@ const Navbar = () => {
         </div>
 
         <ul className="sidebar__links">
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a href={link.href} className="sidebar__link" onClick={closeSidebar}>
-                <span>{link.label}</span>
-                {link.hasDropdown && <span className="sidebar__chevron">▾</span>}
-              </a>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = link.id === 'about' && currentPage === 'about'
+            return (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className={`sidebar__link ${isActive ? 'sidebar__link--active' : ''}`}
+                  onClick={(e) => handleLinkClick(e, link)}
+                >
+                  <span>{link.label}</span>
+                  {link.hasDropdown && <span className="sidebar__chevron">▾</span>}
+                </a>
+              </li>
+            )
+          })}
         </ul>
 
         <div className="sidebar__footer">

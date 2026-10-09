@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import WhyChooseUs from './components/WhyChooseUs'
@@ -6,17 +7,26 @@ import Specialists from './components/Specialists'
 import Testimonials from './components/Testimonials'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import AboutEuracare from './components/AboutEuracare'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home')
+
   return (
     <>
-      <Navbar />
+      <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
       <main>
-        <Hero />
-        <WhyChooseUs />
-        <Services />
-        <Specialists />
-        <Testimonials />
+        {currentPage === 'home' ? (
+          <>
+            <Hero />
+            <WhyChooseUs />
+            <Services />
+            <Specialists />
+            <Testimonials />
+          </>
+        ) : (
+          <AboutEuracare />
+        )}
         <CTA />
       </main>
       <Footer />
