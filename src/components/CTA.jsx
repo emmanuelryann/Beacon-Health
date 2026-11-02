@@ -77,7 +77,7 @@ const ctaActions = [
   },
 ]
 
-const CTA = () => {
+const CTA = ({ onNavigate }) => {
   return (
     <section className="cta" id="contact">
       <div className="cta__container container">
@@ -122,7 +122,18 @@ const CTA = () => {
         {/* Bottom Row: 4 Pill Action Buttons */}
         <div className="cta__actions">
           {ctaActions.map((action, index) => (
-            <a key={index} href={action.href} className="cta__btn">
+            <a
+              key={index}
+              href={action.href}
+              className="cta__btn"
+              onClick={(e) => {
+                if (action.label === 'Book Appointment' && onNavigate) {
+                  e.preventDefault()
+                  onNavigate('appointment')
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }
+              }}
+            >
               {action.icon}
               <span>{action.label}</span>
             </a>

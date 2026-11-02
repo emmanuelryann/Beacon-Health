@@ -1,0 +1,301 @@
+/* ================================================
+   BOOK APPOINTMENT / ENQUIRY PAGE STYLES
+   Matches Euracare Enquiry page screenshots:
+   - Deep navy header banner with Enquiry Form title and info paragraphs
+   - Clean white form area with pill-shaped input fields and selects
+   - Custom circular chevron dropdown controls
+   - Rounded rectangular message textarea
+   - Dark navy pill Submit button and privacy note
+   - Strict layout-only media queries, zero pixel units
+   ================================================ */
+
+.enquiry-page {
+  background-color: var(--color-bg-white);
+}
+
+/* ================================================
+   1. HERO BANNER
+   ================================================ */
+.enquiry-hero {
+  background-color: #0c2141;
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+  color: #ffffff;
+}
+
+.enquiry-hero__container {
+  max-width: min(100%, 75rem);
+}
+
+.enquiry-hero__title {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.015rem;
+  margin-bottom: clamp(1.25rem, 2.2vw, 1.875rem);
+}
+
+.enquiry-hero__text {
+  font-size: clamp(0.9375rem, 1.25vw, 1.0625rem);
+  color: #ffffff;
+  line-height: 1.65;
+  margin-bottom: clamp(0.875rem, 1.5vw, 1.25rem);
+  max-width: min(100%, 65rem);
+}
+
+.enquiry-hero__phone-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.enquiry-hero__phone-link strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.enquiry-hero__phone-link:hover {
+  opacity: 0.85;
+}
+
+.enquiry-hero__text--required {
+  margin-bottom: 0;
+  opacity: 0.95;
+}
+
+/* ================================================
+   2. FORM BODY
+   ================================================ */
+.enquiry-body {
+  padding: clamp(3rem, 5.5vw, 5rem) 0 clamp(4rem, 7vw, 6rem) 0;
+  background-color: var(--color-bg-white);
+}
+
+.enquiry-body__container {
+  max-width: min(100%, 75rem);
+}
+
+.enquiry-form {
+  width: 100%;
+}
+
+/* Two-Column Grid Rows */
+.enquiry-form__row-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.25rem, 2vw, 2rem);
+  margin-bottom: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+/* Form Field Groups */
+.enquiry-form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+.enquiry-form__row-two .enquiry-form__field {
+  margin-bottom: 0;
+}
+
+/* Field Labels */
+.enquiry-form__label {
+  font-size: clamp(0.875rem, 1.15vw, 0.9375rem);
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: clamp(0.5rem, 0.8vw, 0.625rem);
+}
+
+/* Single-Line Inputs */
+.enquiry-form__input {
+  width: 100%;
+  height: clamp(3.125rem, 4.2vw, 3.625rem);
+  padding: 0 clamp(1.25rem, 2vw, 1.75rem);
+  border: 0.0625rem solid #111827;
+  border-radius: 50rem;
+  background-color: var(--color-bg-white);
+  font-size: clamp(0.875rem, 1.15vw, 1rem);
+  font-family: inherit;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enquiry-form__input:focus {
+  border-color: #12435c;
+  box-shadow: 0 0 0 0.1875rem rgba(18, 67, 92, 0.12);
+}
+
+/* Select Dropdown Wrapper */
+.enquiry-form__select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.enquiry-form__select {
+  width: 100%;
+  height: clamp(3.125rem, 4.2vw, 3.625rem);
+  padding: 0 clamp(3.5rem, 5vw, 4.25rem) 0 clamp(1.25rem, 2vw, 1.75rem);
+  border: 0.0625rem solid #111827;
+  border-radius: 50rem;
+  background-color: var(--color-bg-white);
+  font-size: clamp(0.875rem, 1.15vw, 1rem);
+  font-family: inherit;
+  color: #111827;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enquiry-form__select:focus {
+  border-color: #12435c;
+  box-shadow: 0 0 0 0.1875rem rgba(18, 67, 92, 0.12);
+}
+
+/* Circular Chevron Icon Inside Select */
+.enquiry-form__select-icon {
+  position: absolute;
+  right: clamp(0.875rem, 1.5vw, 1.25rem);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: min(1.875rem, 4.5vw);
+  height: min(1.875rem, 4.5vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+}
+
+.enquiry-form__chevron-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Textarea Field */
+.enquiry-form__textarea {
+  width: 100%;
+  min-height: clamp(10rem, 18vw, 15rem);
+  padding: clamp(1rem, 1.5vw, 1.375rem) clamp(1.25rem, 2vw, 1.75rem);
+  border: 0.0625rem solid #111827;
+  border-radius: 1.5rem;
+  background-color: var(--color-bg-white);
+  font-size: clamp(0.875rem, 1.15vw, 1rem);
+  font-family: inherit;
+  color: #111827;
+  outline: none;
+  resize: vertical;
+  line-height: 1.6;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enquiry-form__textarea:focus {
+  border-color: #12435c;
+  box-shadow: 0 0 0 0.1875rem rgba(18, 67, 92, 0.12);
+}
+
+/* Privacy Disclaimer */
+.enquiry-form__disclaimer {
+  font-size: clamp(0.8125rem, 1.1vw, 0.875rem);
+  color: #111827;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: clamp(0.75rem, 1.2vw, 1rem);
+  margin-bottom: clamp(1.75rem, 2.8vw, 2.5rem);
+}
+
+/* Submit Button */
+.enquiry-form__submit-wrap {
+  display: flex;
+}
+
+.enquiry-form__submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50rem;
+  background-color: #0c2141;
+  color: #ffffff;
+  padding: clamp(0.75rem, 1.2vw, 0.9375rem) clamp(3rem, 5vw, 4.25rem);
+  font-size: clamp(0.875rem, 1.15vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.enquiry-form__submit-btn:hover {
+  background-color: #12435c;
+  transform: translateY(-0.0625rem);
+}
+
+/* Submission Success State */
+.enquiry-form__success {
+  background-color: #f0fdf4;
+  border: 0.0625rem solid #bbf7d0;
+  border-radius: 1.25rem;
+  padding: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  max-width: min(100%, 42rem);
+  margin-inline: auto;
+}
+
+.enquiry-form__success-icon {
+  width: min(3rem, 8vw);
+  height: min(3rem, 8vw);
+  color: #16a34a;
+  margin-inline: auto;
+  margin-bottom: clamp(1rem, 1.8vw, 1.5rem);
+}
+
+.enquiry-form__success-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.enquiry-form__success-title {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  color: #14532d;
+  margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+.enquiry-form__success-text {
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  color: #166534;
+  line-height: 1.6;
+  margin-bottom: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+.enquiry-form__reset-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.0625rem solid #15803d;
+  border-radius: 50rem;
+  background-color: #ffffff;
+  color: #15803d;
+  padding: clamp(0.625rem, 1vw, 0.75rem) clamp(1.75rem, 2.5vw, 2.25rem);
+  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.enquiry-form__reset-btn:hover {
+  background-color: #15803d;
+  color: #ffffff;
+}
+
+/* ================================================
+   LAYOUT BREAKPOINTS (MEDIA QUERIES)
+   Strictly layout-changing properties only
+   ================================================ */
+@media (max-width: 48rem) {
+  .enquiry-form__row-two {
+    grid-template-columns: 1fr;
+  }
+}

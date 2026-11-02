@@ -6,7 +6,7 @@ const navLinks = [
   { id: 'services', label: 'Our Services', href: '#services' },
   { id: 'specialists', label: 'Find a Doctor', href: '#specialists' },
   { id: 'patient-info', label: 'Patient & Visitor Information', href: '#patient-info', hasDropdown: true },
-  { id: 'contact', label: 'Book Appointment', href: '#contact' },
+  { id: 'appointment', label: 'Book Appointment', href: '#appointment' },
   { id: 'careers', label: 'Careers', href: '#careers' },
 ]
 
@@ -44,6 +44,14 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
     if (link.id === 'services') {
       e.preventDefault()
       onNavigate('services')
+      closeSidebar()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
+
+    if (link.id === 'appointment' || link.id === 'contact') {
+      e.preventDefault()
+      onNavigate('appointment')
       closeSidebar()
       window.scrollTo({ top: 0, behavior: 'smooth' })
       return
@@ -130,7 +138,8 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
             {navLinks.map((link) => {
               const isActive =
                 (link.id === 'about' && currentPage === 'about') ||
-                (link.id === 'services' && currentPage === 'services')
+                (link.id === 'services' && currentPage === 'services') ||
+                ((link.id === 'appointment' || link.id === 'contact') && currentPage === 'appointment')
               return (
                 <li key={link.label} className="navbar__item">
                   <a
@@ -234,7 +243,8 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
           {navLinks.map((link) => {
             const isActive =
               (link.id === 'about' && currentPage === 'about') ||
-              (link.id === 'services' && currentPage === 'services')
+              (link.id === 'services' && currentPage === 'services') ||
+              ((link.id === 'appointment' || link.id === 'contact') && currentPage === 'appointment')
             return (
               <li key={link.label}>
                 <a
