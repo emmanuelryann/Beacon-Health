@@ -4,14 +4,22 @@ import '../styles/Navbar.css'
 const navLinks = [
   { id: 'about', label: 'About Euracare', href: '#about' },
   { id: 'services', label: 'Our Services', href: '#services' },
-  { id: 'specialists', label: 'Find a Doctor', href: '#specialists' },
-  { id: 'patient-info', label: 'Patient & Visitor Information', href: '#patient-info', hasDropdown: true },
+  {
+    id: 'patient-info',
+    label: 'Patient & Visitor Information',
+    href: '#patient-info',
+    hasDropdown: true,
+    dropdownItems: [
+      { label: 'What To Expect', href: '#what-to-expect' },
+      { label: 'International Patient', href: '#international-patient' },
+    ],
+  },
   { id: 'appointment', label: 'Book Appointment', href: '#appointment' },
-  { id: 'careers', label: 'Careers', href: '#careers' },
 ]
 
 const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [patientDropdownOpen, setPatientDropdownOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -33,6 +41,12 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
   const toggleSidebar = useCallback(() => setSidebarOpen((prev) => !prev), [])
 
   const handleLinkClick = (e, link) => {
+    if (link.id === 'patient-info') {
+      e.preventDefault()
+      setPatientDropdownOpen((prev) => !prev)
+      return
+    }
+
     if (link.id === 'about') {
       e.preventDefault()
       onNavigate('about')
@@ -141,11 +155,16 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                 (link.id === 'services' && currentPage === 'services') ||
                 ((link.id === 'appointment' || link.id === 'contact') && currentPage === 'appointment')
               return (
-                <li key={link.label} className="navbar__item">
+                <li
+                  key={link.label}
+                  className={`navbar__item ${link.hasDropdown ? 'navbar__item--has-dropdown' : ''}`}
+                >
                   <a
                     href={link.href}
                     className={`navbar__link ${isActive ? 'navbar__link--active' : ''}`}
                     onClick={(e) => handleLinkClick(e, link)}
+                    aria-haspopup={link.hasDropdown ? 'true' : undefined}
+                    aria-expanded={link.hasDropdown ? 'false' : undefined}
                   >
                     <span>{link.label}</span>
                     {link.hasDropdown && (
@@ -163,6 +182,33 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                       </svg>
                     )}
                   </a>
+
+                  {link.hasDropdown && link.dropdownItems && (
+                    <div className="navbar__dropdown" role="menu">
+                      <ul className="navbar__dropdown-list">
+                        {link.dropdownItems.map((item) => (
+                          <li key={item.label} className="navbar__dropdown-item">
+                            <a
+                              href={item.href}
+                              className="navbar__dropdown-link"
+                              onClick={(e) => {
+                                if (currentPage !== 'home') {
+                                  e.preventDefault()
+                                  onNavigate('home')
+                                  setTimeout(() => {
+                                    const el = document.querySelector(item.href)
+                                    if (el) el.scrollIntoView({ behavior: 'smooth' })
+                                  }, 50)
+                                }
+                              }}
+                            >
+                              {item.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </li>
               )
             })}
@@ -253,8 +299,38 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                   onClick={(e) => handleLinkClick(e, link)}
                 >
                   <span>{link.label}</span>
-                  {link.hasDropdown && <span className="sidebar__chevron">▾</span>}
+                  {link.hasDropdown && (
+                    <span className="sidebar__chevron">
+                      {patientDropdownOpen ? '▴' : '▾'}
+                    </span>
+                  )}
                 </a>
+
+                {link.hasDropdown && patientDropdownOpen && link.dropdownItems && (
+                  <ul className="sidebar__sublinks">
+                    {link.dropdownItems.map((item) => (
+                      <li key={item.label}>
+                        <a
+                          href={item.href}
+                          className="sidebar__sublink"
+                          onClick={(e) => {
+                            closeSidebar()
+                            if (currentPage !== 'home') {
+                              e.preventDefault()
+                              onNavigate('home')
+                              setTimeout(() => {
+                                const el = document.querySelector(item.href)
+                                if (el) el.scrollIntoView({ behavior: 'smooth' })
+                              }, 50)
+                            }
+                          }}
+                        >
+                          {item.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             )
           })}
