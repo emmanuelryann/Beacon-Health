@@ -3,7 +3,7 @@ import '../styles/CTA.css'
 const ctaActions = [
   {
     label: 'Book Appointment',
-    href: '#contact',
+    href: '#appointment',
     icon: (
       <svg
         className="cta__btn-icon"
@@ -79,7 +79,7 @@ const ctaActions = [
 
 const CTA = ({ onNavigate }) => {
   return (
-    <section className="cta" id="contact">
+    <section className="cta" id="cta">
       <div className="cta__container container">
         {/* Top Row: EURACARE Logo + Enquiries Phone */}
         <div className="cta__top">

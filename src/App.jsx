@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import WhyChooseUs from './components/WhyChooseUs'
@@ -11,12 +11,41 @@ import AboutEuracare from './components/AboutEuracare'
 import ServicesPage from './components/ServicesPage'
 import BookAppointment from './components/BookAppointment'
 
+const getPageFromHash = () => {
+  if (typeof window === 'undefined') return 'home'
+  const hash = window.location.hash.toLowerCase().replace('#', '')
+  if (hash === 'about') return 'about'
+  if (hash === 'services') return 'services'
+  if (hash === 'appointment' || hash === 'contact' || hash === 'enquiry') return 'appointment'
+  return 'home'
+}
+
 function App() {
-  const [currentPage, setCurrentPage] = useState('home')
+  const [currentPage, setCurrentPage] = useState(getPageFromHash)
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const page = getPageFromHash()
+      setCurrentPage(page)
+      window.scrollTo({ top: 0, behavior: 'auto' })
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
+
+  const handleNavigate = useCallback((page) => {
+    setCurrentPage(page)
+    const targetHash = page === 'home' ? '#home' : `#${page}`
+    if (window.location.hash !== targetHash) {
+      window.history.pushState(null, '', targetHash)
+    }
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [])
 
   return (
     <>
-      <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
+      <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
       <main>
         {currentPage === 'home' && (
           <>
@@ -30,7 +59,7 @@ function App() {
         {currentPage === 'about' && <AboutEuracare />}
         {currentPage === 'services' && <ServicesPage />}
         {currentPage === 'appointment' && <BookAppointment />}
-        <CTA onNavigate={setCurrentPage} />
+        <CTA onNavigate={handleNavigate} />
       </main>
       <Footer />
     </>

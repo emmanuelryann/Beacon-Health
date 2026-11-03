@@ -1,7 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/BookAppointment.css'
 
 const BookAppointment = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [])
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -44,7 +48,7 @@ const BookAppointment = () => {
       {/* ================================================
           1. HERO HEADER BANNER
           ================================================ */}
-      <section className="enquiry-hero">
+      <section className="enquiry-hero" id="appointment">
         <div className="enquiry-hero__container container">
           <h1 className="enquiry-hero__title">Enquiry Form</h1>
 
