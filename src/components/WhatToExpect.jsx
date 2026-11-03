@@ -341,7 +341,21 @@ const WhatToExpect = ({ onNavigate = () => {} }) => {
       </section>
 
       {/* ================================================
-          5. SUPPORT SERVICES (Interactive Tabs)
+          5. PATIENT LIAISON BANNER
+          ================================================ */}
+      <section className="wte-liaison">
+        <div className="wte-liaison__container container">
+          <div className="wte-liaison__card">
+            <p className="wte-liaison__text">
+              We understand that navigating healthcare can sometimes feel overwhelming, which is why we have a dedicated{' '}
+              <strong>Patient Liaison Officer</strong> available to guide you through every step — from registration and insurance processing to answering questions and ensuring you feel supported throughout your care journey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================
+          6. SUPPORT SERVICES (Interactive Tabs)
           ================================================ */}
       <section className="wte-section wte-support">
         <div className="wte-section__container container">

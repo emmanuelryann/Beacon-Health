@@ -223,7 +223,37 @@
 }
 
 /* ================================================
-   5. SUPPORT SERVICES (Interactive Tabs)
+   5. PATIENT LIAISON BANNER
+   ================================================ */
+.wte-liaison {
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(2.5rem, 4.5vw, 3.5rem);
+}
+
+.wte-liaison__card {
+  background-color: #e6f0e8;
+  border-radius: 1.75rem;
+  padding: clamp(2.5rem, 4.5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem);
+  text-align: center;
+  margin-inline: auto;
+}
+
+.wte-liaison__text {
+  font-size: clamp(1.15rem, 2vw, 1.625rem);
+  font-weight: 500;
+  color: #071c35;
+  line-height: 1.5;
+  letter-spacing: -0.01rem;
+  max-width: 62rem;
+  margin-inline: auto;
+}
+
+.wte-liaison__text strong {
+  font-weight: 700;
+  color: #071c35;
+}
+
+/* ================================================
+   6. SUPPORT SERVICES (Interactive Tabs)
    ================================================ */
 .wte-support {
   padding-bottom: clamp(4rem, 7vw, 6rem);
