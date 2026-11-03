@@ -10,12 +10,14 @@ import Footer from './components/Footer'
 import AboutEuracare from './components/AboutEuracare'
 import ServicesPage from './components/ServicesPage'
 import BookAppointment from './components/BookAppointment'
+import WhatToExpect from './components/WhatToExpect'
 
 const getPageFromHash = () => {
   if (typeof window === 'undefined') return 'home'
   const hash = window.location.hash.toLowerCase().replace('#', '')
   if (hash === 'about') return 'about'
   if (hash === 'services') return 'services'
+  if (hash === 'what-to-expect' || hash === 'whattoexpect') return 'what-to-expect'
   if (hash === 'appointment' || hash === 'contact' || hash === 'enquiry') return 'appointment'
   return 'home'
 }
@@ -58,6 +60,7 @@ function App() {
         )}
         {currentPage === 'about' && <AboutEuracare />}
         {currentPage === 'services' && <ServicesPage />}
+        {currentPage === 'what-to-expect' && <WhatToExpect onNavigate={handleNavigate} />}
         {currentPage === 'appointment' && <BookAppointment />}
         <CTA onNavigate={handleNavigate} />
       </main>

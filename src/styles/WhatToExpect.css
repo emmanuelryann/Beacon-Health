@@ -1,0 +1,351 @@
+/* ================================================
+   WHAT TO EXPECT AS A PATIENT PAGE STYLES
+   Matches Euracare screenshots:
+   - Split hero banner with dark navy background, ECG pulse watermark, and clinical scan photography
+   - 'Why choose Euracare?' section with pale mint card containing 4 service pillars
+   - 'Before your visit' section with 3 cards and patient-reception photo
+   - 'During Your Visit' section in reversed 2-column split layout
+   - 'Support Services' interactive tabbed section (Our Care Team, Laboratory & Imaging, Pharmacy)
+   - Layout-only media queries, zero pixel units
+   ================================================ */
+
+.wte-page {
+  background-color: var(--color-bg-white);
+}
+
+/* ================================================
+   1. HERO BANNER
+   ================================================ */
+.wte-hero {
+  background-color: #071c35;
+  overflow: hidden;
+}
+
+.wte-hero__layout {
+  display: flex;
+  min-height: min(34rem, 72vh);
+}
+
+.wte-hero__left {
+  flex: 1 1 50%;
+  position: relative;
+  background-color: #071c35;
+  display: flex;
+  align-items: center;
+  padding: clamp(3.5rem, 6vw, 5.5rem) clamp(2rem, 5vw, 4.5rem);
+  z-index: 2;
+}
+
+.wte-hero__watermark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.wte-hero__watermark-svg {
+  width: 130%;
+  height: auto;
+  opacity: 0.85;
+}
+
+.wte-hero__left-content {
+  position: relative;
+  z-index: 3;
+  max-width: min(100%, 34rem);
+}
+
+.wte-hero__title {
+  font-size: clamp(2.35rem, 4.5vw, 3.75rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02rem;
+}
+
+.wte-hero__right {
+  flex: 1 1 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.wte-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================================================
+   2. WHY CHOOSE EURACARE?
+   ================================================ */
+.wte-why {
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+  background-color: var(--color-bg-white);
+}
+
+.wte-why__title {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: #0c2141;
+  line-height: 1.2;
+  margin-bottom: clamp(1rem, 1.8vw, 1.5rem);
+}
+
+.wte-why__text {
+  font-size: clamp(0.9375rem, 1.25vw, 1.0625rem);
+  color: #374151;
+  line-height: 1.65;
+  max-width: min(100%, 48rem);
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.wte-why__card {
+  background-color: #edf7f7;
+  border-radius: 1.5rem;
+  padding: clamp(2.5rem, 4.5vw, 3.75rem) clamp(1.5rem, 3vw, 2.75rem);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.wte-why__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wte-why__icon {
+  width: min(3rem, 7vw);
+  height: min(3rem, 7vw);
+  color: #0c2141;
+  margin-bottom: clamp(1rem, 1.6vw, 1.25rem);
+}
+
+.wte-why__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wte-why__col-title {
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  color: #0c2141;
+  line-height: 1.25;
+  margin-bottom: clamp(0.5rem, 0.8vw, 0.75rem);
+}
+
+.wte-why__col-desc {
+  font-size: clamp(0.8125rem, 1.05vw, 0.875rem);
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* ================================================
+   3. BEFORE / DURING VISIT SHARED LAYOUT
+   ================================================ */
+.wte-section {
+  padding: clamp(3rem, 5vw, 4.5rem) 0;
+  background-color: var(--color-bg-white);
+}
+
+.wte-section__title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  color: #0c2141;
+  line-height: 1.18;
+  margin-bottom: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+.wte-split {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.wte-split__text {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wte-split__image-wrap {
+  flex: 1 1 50%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.04);
+}
+
+.wte-split__image {
+  width: 100%;
+  height: 100%;
+  min-height: min(24rem, 50vh);
+  object-fit: cover;
+  display: block;
+}
+
+/* Card Lists */
+.wte-cards {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.875rem, 1.4vw, 1.125rem);
+}
+
+.wte-card {
+  background-color: var(--color-bg-white);
+  border: 0.0625rem solid #e5e7eb;
+  border-radius: 1rem;
+  padding: clamp(1.25rem, 1.8vw, 1.625rem);
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wte-card:hover {
+  border-color: #12435c;
+  box-shadow: 0 0.375rem 1.25rem rgba(18, 67, 92, 0.06);
+}
+
+.wte-card__title {
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  font-weight: 700;
+  color: #0c2141;
+  line-height: 1.25;
+  margin-bottom: clamp(0.375rem, 0.6vw, 0.5rem);
+}
+
+.wte-card__desc {
+  font-size: clamp(0.8125rem, 1.05vw, 0.875rem);
+  color: #4b5563;
+  line-height: 1.62;
+}
+
+/* ================================================
+   5. SUPPORT SERVICES (Interactive Tabs)
+   ================================================ */
+.wte-support {
+  padding-bottom: clamp(4rem, 7vw, 6rem);
+}
+
+.wte-support__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: clamp(2rem, 3.5vw, 3rem);
+}
+
+.wte-support__title {
+  margin-bottom: 0;
+}
+
+.wte-support__tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1vw, 0.875rem);
+  flex-wrap: wrap;
+}
+
+.wte-support__tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: clamp(0.5625rem, 0.9vw, 0.6875rem) clamp(1rem, 1.5vw, 1.375rem);
+  border: none;
+  border-radius: 50rem;
+  background-color: transparent;
+  color: #0c2141;
+  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.wte-support__tab-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.wte-support__tab-btn--active {
+  background-color: #b7d5be;
+  color: #0c2141;
+}
+
+.wte-support__tab-btn--active:hover {
+  background-color: #a8ccaf;
+}
+
+.wte-tab__icon {
+  width: min(1.125rem, 2.5vw);
+  height: min(1.125rem, 2.5vw);
+  flex-shrink: 0;
+}
+
+.wte-support__details {
+  justify-content: center;
+}
+
+.wte-support__active-title {
+  font-size: clamp(1.875rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #0c2141;
+  line-height: 1.2;
+  margin-bottom: clamp(1rem, 1.8vw, 1.5rem);
+}
+
+.wte-support__active-desc {
+  font-size: clamp(0.875rem, 1.15vw, 0.9375rem);
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.wte-support__book-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: clamp(0.875rem, 1.15vw, 0.9375rem);
+  font-weight: 700;
+  color: #0c2141;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.wte-support__book-link:hover {
+  color: #12435c;
+  opacity: 0.85;
+}
+
+/* ================================================
+   LAYOUT BREAKPOINTS (MEDIA QUERIES)
+   Strictly layout-changing properties only
+   ================================================ */
+@media (max-width: 64rem) {
+  .wte-why__card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wte-hero__layout {
+    flex-direction: column;
+  }
+
+  .wte-split {
+    flex-direction: column;
+  }
+
+  .wte-split--reversed {
+    flex-direction: column;
+  }
+
+  .wte-support__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 36rem) {
+  .wte-why__card {
+    grid-template-columns: 1fr;
+  }
+}

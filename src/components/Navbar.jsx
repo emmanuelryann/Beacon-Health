@@ -153,6 +153,7 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
               const isActive =
                 (link.id === 'about' && currentPage === 'about') ||
                 (link.id === 'services' && currentPage === 'services') ||
+                (link.id === 'patient-info' && currentPage === 'what-to-expect') ||
                 ((link.id === 'appointment' || link.id === 'contact') && currentPage === 'appointment')
               return (
                 <li
@@ -192,6 +193,12 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                               href={item.href}
                               className="navbar__dropdown-link"
                               onClick={(e) => {
+                                if (item.label === 'What To Expect') {
+                                  e.preventDefault()
+                                  onNavigate('what-to-expect')
+                                  window.scrollTo({ top: 0, behavior: 'auto' })
+                                  return
+                                }
                                 if (currentPage !== 'home') {
                                   e.preventDefault()
                                   onNavigate('home')
@@ -290,6 +297,7 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
             const isActive =
               (link.id === 'about' && currentPage === 'about') ||
               (link.id === 'services' && currentPage === 'services') ||
+              (link.id === 'patient-info' && currentPage === 'what-to-expect') ||
               ((link.id === 'appointment' || link.id === 'contact') && currentPage === 'appointment')
             return (
               <li key={link.label}>
@@ -315,6 +323,12 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                           className="sidebar__sublink"
                           onClick={(e) => {
                             closeSidebar()
+                            if (item.label === 'What To Expect') {
+                              e.preventDefault()
+                              onNavigate('what-to-expect')
+                              window.scrollTo({ top: 0, behavior: 'auto' })
+                              return
+                            }
                             if (currentPage !== 'home') {
                               e.preventDefault()
                               onNavigate('home')
