@@ -1,12 +1,12 @@
 /* ================================================
    CTA & QUICK ACCESS SECTION
-   Matches Euracare visual design:
-   - Top row: Vector EURACARE logo and 'Enquiries & Appointments: +234 909 444 4413'
+   Matches Beacon Health visual design:
+   - Top row: Vector BEACON HEALTH logo and 'Enquiries & Appointments: +234 906 349 8314'
    - Bottom row: 4 pill-shaped outline buttons:
      1. 'Book Appointment' (phone icon)
-     2. 'Careers at Euracare' (arrow icon)
+     2. 'Careers at Beacon Health' (arrow icon)
      3. 'Find a doctor' (check icon)
-     4. 'Insurance & Payment Info' (card icon)
+     4. 'Our locations' (pin icon)
    ================================================ */
 .cta {
   background-color: var(--color-bg-white);
@@ -31,7 +31,7 @@
 }
 
 .cta__logo-svg {
-  width: min(13rem, 40vw);
+  width: min(14.5rem, 42vw);
   height: auto;
 }
 

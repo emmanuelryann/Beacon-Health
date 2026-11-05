@@ -1,10 +1,10 @@
 /* ================================================
-   ABOUT EURACARE PAGE STYLES
-   Matches the Euracare About page screenshots:
-   1. About Euracare hero banner with staff imagery and ECG watermark
+   ABOUT BEACON HEALTH PAGE STYLES
+   Matches the Beacon Health About page design:
+   1. About Beacon Health hero banner with staff imagery and ECG watermark
    2. World Class Healthcare Right Here at Home section (2-column)
-   3. Euracare Mission and Vision (headline, 3 cards with navy bottom bar, vision quote)
-   4. Euracare Core Values (5 principles with icons and bottom dividers)
+   3. Beacon Health Mission and Vision (headline, 3 cards with navy bottom bar, vision quote)
+   4. Beacon Health Core Values (5 principles with icons and bottom dividers)
    5. QUALITY & SAFETY (statement on protocols & dedicated safety team)
    6. Centres of Excellence (consultation photo + bullet list of specialties)
    7. OUR LEADERSHIP EXPERTISE (4-column grid with rounded rectangle portraits and titles)
@@ -12,18 +12,16 @@
    ================================================ */
 
 /* ================================================
-   1. ABOUT EURACARE HERO
+   1. ABOUT BEACON HEALTH HERO
    ================================================ */
 .about-hero {
   position: relative;
-  min-height: min(38vh, 22rem);
-  display: flex;
-  align-items: center;
   background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&q=80');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  padding: clamp(2rem, 3.5vw, 2.75rem) 0;
 }
 
 .about-hero__overlay {
@@ -57,9 +55,6 @@
 .about-hero__container {
   position: relative;
   z-index: 3;
-  width: 100%;
-  padding-top: clamp(2rem, 3.5vw, 3rem);
-  padding-bottom: clamp(2rem, 3.5vw, 3rem);
 }
 
 .about-hero__content {
@@ -135,7 +130,7 @@
 }
 
 /* ================================================
-   3. EURACARE MISSION AND VISION
+   3. BEACON HEALTH MISSION AND VISION
    ================================================ */
 .about-mission {
   background-color: var(--color-bg-white);
@@ -211,7 +206,7 @@
 }
 
 /* ================================================
-   4. EURACARE CORE VALUES
+   4. BEACON HEALTH CORE VALUES
    ================================================ */
 .about-values {
   background-color: var(--color-bg-white);

@@ -1,14 +1,13 @@
 /* ================================================
    FOOTER SECTION
-   Matches Euracare visual design:
+   Matches Beacon Health visual design:
    - Clean white background with top divider line
-   - 4 Columns:
-     1. ABOUT EURACARE links
-     2. SERVICE LINES links
-     3. MEDIA links
-     4. Contact info and 5 circular outline social buttons
+   - 3 Columns:
+     1. ABOUT BEACON HEALTH links
+     2. MEDIA links
+     3. Contact info and circular outline social buttons
    - Bottom bar: 'Cookie settings • Privacy Policy • Legal'
-     and 'Euracare Nigeria. © Copyright 2025 - Euracare Nigeria'
+     and 'Beacon Health Nigeria. © Copyright 2025 - Beacon Health Nigeria'
    ================================================ */
 .footer {
   background-color: var(--color-bg-white);

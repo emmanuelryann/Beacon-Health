@@ -1,8 +1,8 @@
 /* ================================================
    WHAT TO EXPECT AS A PATIENT PAGE STYLES
-   Matches Euracare screenshots:
-   - Split hero banner with dark navy background, ECG pulse watermark, and clinical scan photography
-   - 'Why choose Euracare?' section with pale mint card containing 4 service pillars
+   Matches Beacon Health design:
+   - Compact hero banner with dark navy background and ECG pulse watermark
+   - 'Why choose Beacon Health?' section with pale mint card containing 4 service pillars
    - 'Before your visit' section with 3 cards and patient-reception photo
    - 'During Your Visit' section in reversed 2-column split layout
    - 'Support Services' interactive tabbed section (Our Care Team, Laboratory & Imaging, Pharmacy)
@@ -17,45 +17,46 @@
    1. HERO BANNER
    ================================================ */
 .wte-hero {
-  background-color: #071c35;
-  overflow: hidden;
-}
-
-.wte-hero__layout {
-  display: flex;
-  min-height: min(20rem, 38vh);
-}
-
-.wte-hero__left {
-  flex: 1 1 50%;
   position: relative;
   background-color: #071c35;
-  display: flex;
-  align-items: center;
-  padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2.5rem);
-  z-index: 2;
+  overflow: hidden;
+  padding: clamp(2rem, 3.5vw, 2.75rem) 0;
+}
+
+.wte-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 28, 53, 0.95) 0%,
+    rgba(7, 28, 53, 0.8) 50%,
+    rgba(7, 28, 53, 0.6) 100%
+  );
+  z-index: 1;
 }
 
 .wte-hero__watermark {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
-  overflow: hidden;
-}
-
-.wte-hero__watermark-svg {
-  width: 130%;
-  height: auto;
   opacity: 0.85;
 }
 
-.wte-hero__left-content {
+.wte-hero__watermark-svg {
+  width: 100%;
+  height: auto;
+}
+
+.wte-hero__container {
   position: relative;
   z-index: 3;
-  max-width: min(100%, 34rem);
+}
+
+.wte-hero__content {
+  max-width: 44rem;
 }
 
 .wte-hero__title {
@@ -66,21 +67,8 @@
   letter-spacing: -0.02rem;
 }
 
-.wte-hero__right {
-  flex: 1 1 50%;
-  position: relative;
-  overflow: hidden;
-}
-
-.wte-hero__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 /* ================================================
-   2. WHY CHOOSE EURACARE?
+   2. WHY CHOOSE BEACON HEALTH?
    ================================================ */
 .wte-why {
   padding: clamp(3.5rem, 6vw, 5.5rem) 0;
@@ -354,10 +342,6 @@
 @media (max-width: 64rem) {
   .wte-why__card {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .wte-hero__layout {
-    flex-direction: column;
   }
 
   .wte-split {

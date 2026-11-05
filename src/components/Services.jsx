@@ -29,7 +29,7 @@ const Services = () => {
             <p className="services__subtitle">OUR SERVICES</p>
             <h2 className="services__title">Excellence in Every Specialty</h2>
             <p className="services__description">
-              At Euracare, we offer a full spectrum of medical services designed
+              At Beacon Health, we offer a full spectrum of medical services designed
               for individuals who expect nothing less than excellence. From advanced
               diagnostics to minimally invasive procedures and complex surgeries,
               every service is delivered by specialists with global training and deep

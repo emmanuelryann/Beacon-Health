@@ -9,18 +9,7 @@ const BlogArticle = ({ onNavigate = () => {} }) => {
   return (
     <article className="blog-page">
       {/* ================================================
-          1. HERO IMAGE BANNER
-          ================================================ */}
-      <div className="blog-hero">
-        <img
-          src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1600&q=80"
-          alt="Cardiologist examining an anatomical heart model with surgical pointer"
-          className="blog-hero__image"
-        />
-      </div>
-
-      {/* ================================================
-          2. ARTICLE CONTENT
+          1. ARTICLE CONTENT
           ================================================ */}
       <div className="blog-content">
         <div className="blog-content__container">
@@ -29,7 +18,7 @@ const BlogArticle = ({ onNavigate = () => {} }) => {
           </h1>
 
           <p className="blog-content__paragraph blog-content__lead">
-            When people think about heart treatment, they often imagine open-heart surgery — long hospital stays, big scars, and lengthy recovery. But medicine has changed dramatically. Today, interventional cardiology allows doctors to treat many heart conditions with minimally invasive procedures, using catheters and imaging guidance. At Euracare, this specialty is transforming lives.
+            When people think about heart treatment, they often imagine open-heart surgery — long hospital stays, big scars, and lengthy recovery. But medicine has changed dramatically. Today, interventional cardiology allows doctors to treat many heart conditions with minimally invasive procedures, using catheters and imaging guidance. At Beacon Health, this specialty is transforming lives.
           </p>
 
           <h2 className="blog-content__section-title">
@@ -67,11 +56,11 @@ const BlogArticle = ({ onNavigate = () => {} }) => {
           </p>
 
           <h2 className="blog-content__section-title">
-            Interventional Cardiology at Euracare
+            Interventional Cardiology at Beacon Health
           </h2>
 
           <p className="blog-content__paragraph">
-            Euracare offers world-class interventional cardiology right here in Lagos. Our specialists are internationally trained and bring experience from top hospitals abroad. Patients benefit from cutting-edge technology, global expertise, and a multidisciplinary team that ensures every stage of care is coordinated.
+            Beacon Health offers world-class interventional cardiology right here in Lagos. Our specialists are internationally trained and bring experience from top hospitals abroad. Patients benefit from cutting-edge technology, global expertise, and a multidisciplinary team that ensures every stage of care is coordinated.
           </p>
 
           <p className="blog-content__paragraph">
@@ -98,7 +87,7 @@ const BlogArticle = ({ onNavigate = () => {} }) => {
                   window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                Schedule a consultation at Euracare.
+                Schedule a consultation at Beacon Health.
               </a>{' '}
               With interventional cardiology, life-saving care is closer and safer than ever.
             </p>

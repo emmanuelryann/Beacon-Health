@@ -1,9 +1,9 @@
 /* ================================================
    INTERNATIONAL PATIENTS PAGE STYLES
-   Euracare International Patients design specifications:
-   - Split hero banner with dark navy background, ECG pulse watermark, and doctor consultation image
+   Beacon Health International Patients design specifications:
+   - Compact hero banner with dark navy background and ECG pulse watermark
    - Centered sage mint quote statement card
-   - Why choose Euracare section with 4-pillar mint card
+   - Why choose Beacon Health section with 4-pillar mint card
    - International Patient Services two-column section with consultation photo and service cards
    - Planning Your Visit two-column section with step cards and diagnostic scanner photo
    - Strictly zero prohibited units; layout-only media queries; no addition in clamp preferred values
@@ -17,45 +17,46 @@
    1. HERO BANNER
    ================================================ */
 .ip-hero {
-  background-color: #071c35;
-  overflow: hidden;
-}
-
-.ip-hero__layout {
-  display: flex;
-  min-height: min(20rem, 38vh);
-}
-
-.ip-hero__left {
-  flex: 1 1 50%;
   position: relative;
   background-color: #071c35;
-  display: flex;
-  align-items: center;
-  padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2.5rem);
-  z-index: 2;
+  overflow: hidden;
+  padding: clamp(2rem, 3.5vw, 2.75rem) 0;
+}
+
+.ip-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 28, 53, 0.95) 0%,
+    rgba(7, 28, 53, 0.8) 50%,
+    rgba(7, 28, 53, 0.6) 100%
+  );
+  z-index: 1;
 }
 
 .ip-hero__watermark {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
-  overflow: hidden;
-}
-
-.ip-hero__watermark-svg {
-  width: 130%;
-  height: auto;
   opacity: 0.85;
 }
 
-.ip-hero__left-content {
+.ip-hero__watermark-svg {
+  width: 100%;
+  height: auto;
+}
+
+.ip-hero__container {
   position: relative;
   z-index: 3;
-  max-width: min(100%, 34rem);
+}
+
+.ip-hero__content {
+  max-width: 44rem;
 }
 
 .ip-hero__title {
@@ -64,19 +65,6 @@
   color: #ffffff;
   line-height: 1.15;
   letter-spacing: -0.02rem;
-}
-
-.ip-hero__right {
-  flex: 1 1 50%;
-  position: relative;
-  overflow: hidden;
-}
-
-.ip-hero__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 /* ================================================
@@ -105,7 +93,7 @@
 }
 
 /* ================================================
-   3. WHY CHOOSE EURACARE?
+   3. WHY CHOOSE BEACON HEALTH?
    ================================================ */
 .ip-why {
   padding: clamp(2rem, 4vw, 3.5rem) 0 clamp(3rem, 5vw, 4.5rem);
@@ -340,10 +328,6 @@
    LAYOUT-ONLY MEDIA QUERIES
    ================================================ */
 @media (max-width: 64rem) {
-  .ip-hero__layout {
-    flex-direction: column;
-  }
-
   .ip-why__card {
     grid-template-columns: repeat(2, 1fr);
   }

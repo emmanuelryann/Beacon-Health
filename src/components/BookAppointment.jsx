@@ -58,8 +58,8 @@ const BookAppointment = () => {
 
           <p className="enquiry-hero__text">
             For general enquiries and appointments, please contact the hospital on{' '}
-            <a href="tel:+2349094444413" className="enquiry-hero__phone-link">
-              <strong>+234 909 444 4413</strong>
+            <a href="tel:+2349063498314" className="enquiry-hero__phone-link">
+              <strong>+234 906 349 8314</strong>
             </a>
             . Alternatively fill in the form below and we will contact you asap.
           </p>
@@ -93,7 +93,7 @@ const BookAppointment = () => {
               </div>
               <h2 className="enquiry-form__success-title">Thank you for your enquiry</h2>
               <p className="enquiry-form__success-text">
-                Your request has been received. A member of the Euracare medical team will contact you shortly via your preferred communication channel.
+                Your request has been received. A member of the Beacon Health medical team will contact you shortly via your preferred communication channel.
               </p>
               <button
                 type="button"
@@ -265,7 +265,7 @@ const BookAppointment = () => {
 
               {/* Disclaimer */}
               <p className="enquiry-form__disclaimer">
-                We won't share your contact information with anyone outside of the Euracare Group
+                We won't share your contact information with anyone outside of Beacon Health
               </p>
 
               {/* Submit Button */}

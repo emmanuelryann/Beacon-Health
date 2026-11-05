@@ -182,7 +182,7 @@ const ServicesPage = () => {
           <div className="services-page__hero-content">
             <h1 className="services-page__hero-title">Our Services</h1>
             <p className="services-page__hero-text">
-              At Euracare, we deliver premium medical care tailored to your
+              At Beacon Health, we deliver premium medical care tailored to your
               needs—led by internationally trained specialists, powered by advanced
               diagnostics, and grounded in genuine compassion.
             </p>

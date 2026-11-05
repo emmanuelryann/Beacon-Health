@@ -185,7 +185,7 @@ const Careers = ({ onNavigate = () => {} }) => {
               <h3 className="careers-empty__title">No available position</h3>
 
               <p className="careers-empty__desc">
-                There are currently no active job openings at Euracare. However, we are always
+                There are currently no active job openings at Beacon Health. However, we are always
                 looking for talented, compassionate, and driven healthcare professionals to join our team.
               </p>
 
@@ -194,7 +194,7 @@ const Careers = ({ onNavigate = () => {} }) => {
                   We welcome speculative applications. If you would like to be considered for future opportunities in clinical practice, nursing, diagnostics, or administration, please submit your CV to our talent acquisition team.
                 </p>
                 <a
-                  href="mailto:careers@euracare.com.ng?subject=Speculative%20Application%20-%20Euracare"
+                  href="mailto:customersuccess@beaconhealth.io?subject=Speculative%20Application%20-%20Beacon%20Health"
                   className="careers-empty__action-btn"
                 >
                   <svg
@@ -210,7 +210,7 @@ const Careers = ({ onNavigate = () => {} }) => {
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
-                  <span>Submit Your CV (careers@euracare.com.ng)</span>
+                  <span>Submit Your CV (customersuccess@beaconhealth.io)</span>
                 </a>
               </div>
             </div>
@@ -219,12 +219,12 @@ const Careers = ({ onNavigate = () => {} }) => {
       </section>
 
       {/* ================================================
-          3. WHY WORK AT EURACARE?
+          3. WHY WORK AT BEACON HEALTH?
           ================================================ */}
       <section className="careers-values">
         <div className="careers-values__container container">
           <div className="careers-values__header">
-            <h2 className="careers-values__title">Why Build Your Career at Euracare?</h2>
+            <h2 className="careers-values__title">Why Build Your Career at Beacon Health?</h2>
             <p className="careers-values__subtitle">
               Join a multidisciplinary community that combines cutting-edge clinical infrastructure with a shared commitment to improving lives across Nigeria and West Africa.
             </p>

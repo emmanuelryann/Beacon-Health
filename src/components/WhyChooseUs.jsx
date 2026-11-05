@@ -8,11 +8,11 @@ const WhyChooseUs = () => {
           {/* Left Column: Text Content */}
           <div className="welcome__text">
             <h2 className="welcome__title">
-              Welcome to Euracare<br />Multispecialty Hospital
+              Welcome to Beacon Health<br />Multispecialty Hospital
             </h2>
 
             <p className="welcome__paragraph">
-              Euracare is a leading multispecialty hospital in Lagos, redefining healthcare
+              Beacon Health is a leading multispecialty hospital in Lagos, redefining healthcare
               in Nigeria. We bring global medical standards home—offering cutting-edge
               treatments, world-class expertise, state-of-the-art technology, and truly
               personalised care—ensuring every patient receives the attention, comfort, and
@@ -21,7 +21,7 @@ const WhyChooseUs = () => {
 
             <p className="welcome__paragraph">
               You no longer need to travel abroad to receive the highest standard of care.
-              At Euracare, we deliver world-class medical expertise, advanced diagnostics,
+              At Beacon Health, we deliver world-class medical expertise, advanced diagnostics,
               and personalised attention—right here in Lagos. Whether it’s a routine check-up
               or a complex procedure, your health is in expert hands, close to home.
             </p>
@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
             <div className="welcome__video-card">
               <img
                 src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1000&q=80"
-                alt="Euracare Multi-Specialist Hospital facility"
+                alt="Beacon Health Multi-Specialist Hospital facility"
                 className="welcome__video-thumbnail"
                 loading="lazy"
               />
@@ -44,13 +44,13 @@ const WhyChooseUs = () => {
               {/* Top video info overlay */}
               <div className="welcome__video-header">
                 <div className="welcome__video-avatar">
-                  <span className="welcome__avatar-initials">EH</span>
+                  <span className="welcome__avatar-initials">BH</span>
                 </div>
                 <div className="welcome__video-meta">
                   <p className="welcome__video-title">
-                    Take the virtual tour of Euracare Multi-Specialist Hosp...
+                    Take the virtual tour of Beacon Health Multi-Specialist Hosp...
                   </p>
-                  <span className="welcome__video-channel">Euracare</span>
+                  <span className="welcome__video-channel">Beacon Health</span>
                 </div>
               </div>
 

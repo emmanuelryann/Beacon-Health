@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../styles/AboutEuracare.css'
+import '../styles/AboutBeaconHealth.css'
 
 const missionCards = [
   'To offer corporate companies and insurers efficient healthcare solutions for their employees and customers.',
@@ -149,7 +149,7 @@ const innovationCategories = [
   },
 ]
 
-const AboutEuracare = () => {
+const AboutBeaconHealth = () => {
   const [openAccordion, setOpenAccordion] = useState(0)
 
   const toggleAccordion = (index) => {
@@ -159,7 +159,7 @@ const AboutEuracare = () => {
   return (
     <div className="about-page">
       {/* ================================================
-          1. ABOUT EURACARE (HERO BANNER)
+          1. ABOUT BEACON HEALTH (HERO BANNER)
           ================================================ */}
       <section className="about-hero" id="about-hero">
         <div className="about-hero__overlay" />
@@ -184,9 +184,9 @@ const AboutEuracare = () => {
 
         <div className="about-hero__container container">
           <div className="about-hero__content">
-            <h1 className="about-hero__title">About Euracare</h1>
+            <h1 className="about-hero__title">About Beacon Health</h1>
             <p className="about-hero__text">
-              Founded in 2017, Euracare is a state-of-the-art multi-specialty hospital
+              Founded in 2017, Beacon Health is a state-of-the-art multi-specialty hospital
               located in Victoria Island, Lagos. We combine global medical expertise
               with advanced technology to deliver exceptional care across key specialties.
             </p>
@@ -219,11 +219,11 @@ const AboutEuracare = () => {
                 World Class Healthcare,<br />Right Here at Home.
               </h2>
               <p className="about-intro__paragraph">
-                At Euracare, we believe you shouldn’t have to travel abroad to access
+                At Beacon Health, we believe you shouldn’t have to travel abroad to access
                 world-class healthcare. We bring international standards of medicine to
                 Nigeria, combining advanced technology, globally trained specialists,
                 and personalised care under one roof. For patients who expect the very best,
-                Euracare offers the expertise, precision, and compassion found in the
+                Beacon Health offers the expertise, precision, and compassion found in the
                 world’s leading medical centers, delivered with the comfort and convenience
                 of being close to home.
               </p>
@@ -234,7 +234,7 @@ const AboutEuracare = () => {
                 and tailored to your unique needs.
               </p>
               <p className="about-intro__paragraph">
-                At Euracare, we are redefining private healthcare in Nigeria, setting a
+                At Beacon Health, we are redefining private healthcare in Nigeria, setting a
                 new benchmark where innovation meets empathy, and where every patient
                 receives care that is both globally advanced, yet personalized.
               </p>
@@ -244,11 +244,11 @@ const AboutEuracare = () => {
       </section>
 
       {/* ================================================
-          3. EURACARE MISSION AND VISION
+          3. BEACON HEALTH MISSION AND VISION
           ================================================ */}
       <section className="about-mission" id="about-mission">
         <div className="about-mission__container container">
-          <p className="about-mission__subtitle">EURACARE MISSION AND VISION</p>
+          <p className="about-mission__subtitle">BEACON HEALTH MISSION AND VISION</p>
           <h2 className="about-mission__title">
             To deliver world-class, patient-focused care using advanced medical
             technology, evidence-based protocols, and a compassionate approach.
@@ -273,11 +273,11 @@ const AboutEuracare = () => {
       </section>
 
       {/* ================================================
-          4. EURACARE CORE VALUES
+          4. BEACON HEALTH CORE VALUES
           ================================================ */}
       <section className="about-values">
         <div className="about-values__container container">
-          <p className="about-values__subtitle">EURACARE CORE VALUES</p>
+          <p className="about-values__subtitle">BEACON HEALTH CORE VALUES</p>
           <h2 className="about-values__title">
             Our guiding principles for delivering world-class healthcare.
           </h2>
@@ -335,7 +335,7 @@ const AboutEuracare = () => {
             <div className="about-centres__image-wrap">
               <img
                 src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=900&q=80"
-                alt="Doctor consulting with patient at Euracare Centres of Excellence"
+                alt="Doctor consulting with patient at Beacon Health Centres of Excellence"
                 className="about-centres__image"
                 loading="lazy"
               />
@@ -489,4 +489,4 @@ const AboutEuracare = () => {
   )
 }
 
-export default AboutEuracare
+export default AboutBeaconHealth

@@ -20,7 +20,7 @@ const ctaActions = [
     ),
   },
   {
-    label: 'Careers at Euracare',
+    label: 'Careers at Beacon Health',
     href: '#careers',
     icon: (
       <svg
@@ -81,17 +81,17 @@ const CTA = ({ onNavigate }) => {
   return (
     <section className="cta" id="cta">
       <div className="cta__container container">
-        {/* Top Row: EURACARE Logo + Enquiries Phone */}
+        {/* Top Row: BEACON HEALTH Logo + Enquiries Phone */}
         <div className="cta__top">
-          <div className="cta__logo" aria-label="Euracare">
+          <div className="cta__logo" aria-label="Beacon Health">
             <svg
               className="cta__logo-svg"
-              viewBox="0 0 220 44"
+              viewBox="0 0 255 44"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M2 30 H20 L25 20 L31 38 L38 8 L46 34 L52 26 L58 30 H218"
+                d="M2 30 H20 L25 20 L31 38 L38 8 L46 34 L52 26 L58 30 H253"
                 stroke="#12435c"
                 strokeWidth="2.5"
                 strokeLinecap="round"
@@ -101,20 +101,20 @@ const CTA = ({ onNavigate }) => {
                 x="64"
                 y="24"
                 fontFamily="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
-                fontSize="22"
+                fontSize="20"
                 fontWeight="700"
                 letterSpacing="1.2"
                 fill="#12435c"
               >
-                EURACARE
+                BEACON HEALTH
               </text>
             </svg>
           </div>
 
           <div className="cta__enquiry">
             <span className="cta__enquiry-label">Enquiries &amp; Appointments: </span>
-            <a href="tel:+2349094444413" className="cta__enquiry-phone">
-              +234 909 444 4413
+            <a href="tel:+2349063498314" className="cta__enquiry-phone">
+              +234 906 349 8314
             </a>
           </div>
         </div>
@@ -132,7 +132,7 @@ const CTA = ({ onNavigate }) => {
                   onNavigate('appointment')
                   window.scrollTo({ top: 0, behavior: 'smooth' })
                 }
-                if (action.label === 'Careers at Euracare' && onNavigate) {
+                if (action.label === 'Careers at Beacon Health' && onNavigate) {
                   e.preventDefault()
                   onNavigate('careers')
                   window.scrollTo({ top: 0, behavior: 'smooth' })

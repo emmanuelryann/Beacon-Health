@@ -1,10 +1,10 @@
 /* ================================================
    CAREERS PAGE STYLES
-   Matches Euracare Careers screenshot and design patterns:
+   Matches Beacon Health Careers design patterns:
    - Full-width hero banner with medical team background, dark overlay, and ECG watermark
    - Positions header with count and category filter pills
    - Elegant empty state card for 'No available position'
-   - Why Build Your Career at Euracare value pillars
+   - Why Build Your Career at Beacon Health value pillars
    - Strictly zero prohibited units, layout-only media queries, no addition in clamp preferred values
    ================================================ */
 
@@ -17,14 +17,12 @@
    ================================================ */
 .careers-hero {
   position: relative;
-  min-height: min(20rem, 38vh);
-  display: flex;
-  align-items: center;
   background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1600&q=80');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  padding: clamp(2rem, 3.5vw, 2.75rem) 0;
 }
 
 .careers-hero__overlay {
@@ -58,9 +56,6 @@
 .careers-hero__container {
   position: relative;
   z-index: 3;
-  width: 100%;
-  padding-top: clamp(2rem, 3.5vw, 3rem);
-  padding-bottom: clamp(2rem, 3.5vw, 3rem);
 }
 
 .careers-hero__content {
@@ -236,7 +231,7 @@
 }
 
 /* ================================================
-   3. WHY BUILD YOUR CAREER AT EURACARE?
+   3. WHY BUILD YOUR CAREER AT BEACON HEALTH?
    ================================================ */
 .careers-values {
   padding: clamp(2.5rem, 4vw, 4rem) 0 clamp(4rem, 6vw, 6rem);

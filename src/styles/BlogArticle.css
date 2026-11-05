@@ -1,6 +1,6 @@
 /* ================================================
    BLOG / NEWS ARTICLE PAGE STYLES
-   Matches Euracare article screenshots:
+   Matches Beacon Health article design:
    - Full-width hero photograph of clinical heart model
    - Clean readable typography container for article narrative
    - Formatted clinical subsections and benefit bullet points
@@ -14,28 +14,10 @@
 }
 
 /* ================================================
-   1. HERO IMAGE BANNER
-   ================================================ */
-.blog-hero {
-  width: 100%;
-  height: clamp(12rem, 26vh, 18rem);
-  overflow: hidden;
-  background-color: #071c35;
-}
-
-.blog-hero__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* ================================================
-   2. ARTICLE CONTENT
+   1. ARTICLE CONTENT
    ================================================ */
 .blog-content {
-  padding: clamp(3rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3rem);
+  padding: clamp(2.5rem, 4vw, 3.5rem) 0 clamp(2rem, 3.5vw, 3rem);
 }
 
 .blog-content__container {
@@ -44,12 +26,12 @@
 }
 
 .blog-content__main-title {
-  font-size: var(--font-size-hero-subpage);
+  font-size: var(--font-size-section-title);
   font-weight: 700;
   color: #071c35;
   line-height: 1.25;
   letter-spacing: -0.015rem;
-  margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
 }
 
 .blog-content__paragraph {
@@ -60,7 +42,7 @@
 }
 
 .blog-content__lead {
-  font-size: var(--font-size-card-title);
+  font-size: var(--font-size-body);
   color: #1f2937;
   line-height: 1.75;
 }

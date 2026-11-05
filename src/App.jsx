@@ -7,7 +7,7 @@ import Specialists from './components/Specialists'
 import Testimonials from './components/Testimonials'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
-import AboutEuracare from './components/AboutEuracare'
+import AboutBeaconHealth from './components/AboutBeaconHealth'
 import ServicesPage from './components/ServicesPage'
 import BookAppointment from './components/BookAppointment'
 import WhatToExpect from './components/WhatToExpect'
@@ -90,7 +90,7 @@ function App() {
             <Testimonials />
           </>
         )}
-        {currentPage === 'about' && <AboutEuracare />}
+        {currentPage === 'about' && <AboutBeaconHealth />}
         {currentPage === 'services' && <ServicesPage />}
         {currentPage === 'what-to-expect' && <WhatToExpect onNavigate={handleNavigate} />}
         {currentPage === 'international-patients' && <InternationalPatients onNavigate={handleNavigate} />}

@@ -30,7 +30,7 @@ const supportTabs = [
       'We are happy to provide assistance with transportation needs, including helping patients and their families arrange pick-up or drop-off services to and from the hospital. If you have any special requests — such as mobility support, accessibility requirements, or any other personal needs to make your visit more comfortable — please let us know in advance. Our team is committed to ensuring that every patient receives the necessary care, attention, and support from the moment they begin their journey to our hospital.',
     image:
       'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1000&q=80',
-    imageAlt: 'Euracare care team smiling at reception desk',
+    imageAlt: 'Beacon Health care team smiling at reception desk',
   },
   {
     id: 'laboratory',
@@ -79,7 +79,7 @@ const supportTabs = [
       'Our pharmacy is fully stocked with genuine, high-quality medications to ensure patients have easy access to the prescriptions and treatments they need. With a wide range of trusted medicines, professional guidance from qualified pharmacists, and a commitment to safety, we provide reliable support for your health and recovery, all in one convenient location.',
     image:
       'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1000&q=80',
-    imageAlt: 'Euracare hospital pharmacy with clinical pharmacist',
+    imageAlt: 'Beacon Health hospital pharmacy with clinical pharmacist',
   },
 ]
 
@@ -98,51 +98,41 @@ const WhatToExpect = ({ onNavigate = () => {} }) => {
           1. HERO BANNER
           ================================================ */}
       <section className="wte-hero">
-        <div className="wte-hero__layout">
-          <div className="wte-hero__left">
-            {/* ECG Pulse Watermark */}
-            <div className="wte-hero__watermark" aria-hidden="true">
-              <svg
-                viewBox="0 0 1000 350"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="wte-hero__watermark-svg"
-              >
-                <path
-                  d="M0 240 H380 L415 170 L450 310 L495 50 L545 290 L580 200 L615 240 H1000"
-                  stroke="rgba(255, 255, 255, 0.18)"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-
-            <div className="wte-hero__left-content">
-              <h1 className="wte-hero__title">
-                What to Expect<br />as a Patient
-              </h1>
-            </div>
-          </div>
-
-          <div className="wte-hero__right">
-            <img
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80"
-              alt="Medical team reviewing clinical diagnostic scans at a workstation"
-              className="wte-hero__image"
+        <div className="wte-hero__overlay" />
+        <div className="wte-hero__watermark" aria-hidden="true">
+          <svg
+            viewBox="0 0 1200 400"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="wte-hero__watermark-svg"
+          >
+            <path
+              d="M0 260 H420 L455 190 L490 330 L535 70 L585 310 L620 220 L655 260 H1200"
+              stroke="rgba(255, 255, 255, 0.22)"
+              strokeWidth="3.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
+          </svg>
+        </div>
+
+        <div className="wte-hero__container container">
+          <div className="wte-hero__content">
+            <h1 className="wte-hero__title">
+              What to Expect as a Patient
+            </h1>
           </div>
         </div>
       </section>
 
       {/* ================================================
-          2. WHY CHOOSE EURACARE?
+          2. WHY CHOOSE BEACON HEALTH?
           ================================================ */}
       <section className="wte-why">
         <div className="wte-why__container container">
-          <h2 className="wte-why__title">Why choose Euracare?</h2>
+          <h2 className="wte-why__title">Why choose Beacon Health?</h2>
           <p className="wte-why__text">
-            At Euracare, we want every patient and visitor to feel supported, informed, and cared for.
+            At Beacon Health, we want every patient and visitor to feel supported, informed, and cared for.
             Whether you are coming for a consultation, diagnostic test, or inpatient treatment, our goal is to
             make your experience smooth, safe, and comfortable.
           </p>
@@ -254,7 +244,7 @@ const WhatToExpect = ({ onNavigate = () => {} }) => {
                   <h3 className="wte-card__title">Making an Appointment</h3>
                   <p className="wte-card__desc">
                     You can schedule your appointment by submitting an enquiry form on our website, and our team
-                    will call you back, or call us on +234 2014664090. We recommend arriving 15 minutes early for
+                    will call you back, or call us on +234 906 349 8314. We recommend arriving 15 minutes early for
                     first appointments.
                   </p>
                 </div>
@@ -270,7 +260,7 @@ const WhatToExpect = ({ onNavigate = () => {} }) => {
                 <div className="wte-card">
                   <h3 className="wte-card__title">Insurance &amp; Billing</h3>
                   <p className="wte-card__desc">
-                    Euracare partners with leading Health Maintenance Organizations (HMOs) and private insurers.
+                    Beacon Health partners with leading Health Maintenance Organizations (HMOs) and private insurers.
                     Our billing desk can guide you through pre-authorizations and claims.
                   </p>
                 </div>

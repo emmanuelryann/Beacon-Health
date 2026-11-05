@@ -83,7 +83,7 @@ const Testimonials = () => {
             <p className="testimonials__description">
               We're proud to be the first choice for individuals and families who
               demand the highest standard of care. These are their words, their
-              journeys, and their reasons for choosing Euracare.
+              journeys, and their reasons for choosing Beacon Health.
             </p>
           </div>
 

@@ -1,10 +1,10 @@
 /* ================================================
-   WELCOME TO EURACARE (SECTION UNDER HERO)
-   Matches screenshot:
-   - Heading: "Welcome to Euracare Multispecialty Hospital"
+   WELCOME TO BEACON HEALTH (SECTION UNDER HERO)
+   Matches design:
+   - Heading: "Welcome to Beacon Health Multispecialty Hospital"
    - Two detailed introductory paragraphs
    - Bold mission statement tagline
-   - Right-side video card with a random medical image and YouTube overlays
+   - Right-side video card with medical image and video overlays
    ================================================ */
 .welcome {
   background-color: var(--color-bg-white);

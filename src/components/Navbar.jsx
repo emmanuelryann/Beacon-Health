@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import '../styles/Navbar.css'
 
 const navLinks = [
-  { id: 'about', label: 'About Euracare', href: '#about' },
+  { id: 'about', label: 'About Beacon Health', href: '#about' },
   { id: 'services', label: 'Our Services', href: '#services' },
   {
     id: 'patient-info',
@@ -100,12 +100,12 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
         <div className="topbar__container container">
           <p className="topbar__text">
             For enquiries and booking, kindly call{' '}
-            <a href="tel:+2349094444413" className="topbar__link">
-              +234 909 444 4413
+            <a href="tel:+2349063498314" className="topbar__link">
+              +234 906 349 8314
             </a>{' '}
             or send an email to{' '}
-            <a href="mailto:info@euracare.com.ng" className="topbar__link">
-              info@euracare.com.ng
+            <a href="mailto:customersuccess@beaconhealth.io" className="topbar__link">
+              customersuccess@beaconhealth.io
             </a>
           </p>
         </div>
@@ -118,17 +118,17 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
           <a
             href="#home"
             className="navbar__logo"
-            aria-label="Euracare Home"
+            aria-label="Beacon Health Home"
             onClick={handleLogoClick}
           >
             <svg
               className="navbar__logo-svg"
-              viewBox="0 0 220 44"
+              viewBox="0 0 255 44"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M2 30 H20 L25 20 L31 38 L38 8 L46 34 L52 26 L58 30 H218"
+                d="M2 30 H20 L25 20 L31 38 L38 8 L46 34 L52 26 L58 30 H253"
                 stroke="#12435c"
                 strokeWidth="2.5"
                 strokeLinecap="round"
@@ -138,12 +138,12 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                 x="64"
                 y="24"
                 fontFamily="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
-                fontSize="22"
+                fontSize="20"
                 fontWeight="700"
                 letterSpacing="1.2"
                 fill="#12435c"
               >
-                EURACARE
+                BEACON HEALTH
               </text>
             </svg>
           </a>
@@ -288,12 +288,12 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
         <div className="sidebar__header">
           <svg
             className="sidebar__logo-svg"
-            viewBox="0 0 220 44"
+            viewBox="0 0 255 44"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M2 30 H20 L25 20 L31 38 L38 8 L46 34 L52 26 L58 30 H218"
+              d="M2 30 H20 L25 20 L31 38 L38 8 L46 34 L52 26 L58 30 H253"
               stroke="#ffffff"
               strokeWidth="2.5"
               strokeLinecap="round"
@@ -303,12 +303,12 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
               x="64"
               y="24"
               fontFamily="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
-              fontSize="22"
+              fontSize="20"
               fontWeight="700"
               letterSpacing="1.2"
               fill="#ffffff"
             >
-              EURACARE
+              BEACON HEALTH
             </text>
           </svg>
         </div>

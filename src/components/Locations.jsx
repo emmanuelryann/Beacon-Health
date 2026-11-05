@@ -4,11 +4,11 @@ import '../styles/Locations.css'
 const locationsData = [
   {
     id: 'victoria-island',
-    name: 'Euracare Multi-Specialist Hospital',
+    name: 'Beacon Health Multi-Specialist Hospital',
     type: 'Multi-Specialist Hospital',
     city: 'Lagos',
     address: '293 Younis Bashorun Street cnr Jide Oki Street, Victoria Island, Lagos',
-    phone: '+234 909 444 4413',
+    phone: '+234 906 349 8314',
     hours: '24/7 Emergency & Inpatient • 8:00 AM – 5:00 PM Consultations',
     image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
     featured: true,

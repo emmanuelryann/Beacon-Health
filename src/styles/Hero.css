@@ -1,6 +1,6 @@
 /* ================================================
    HERO SECTION
-   Matches Euracare visual design:
+   Matches Beacon Health visual design:
    - Full-width hero banner with family photo
    - Left-aligned dark gradient overlay
    - Faint ECG pulse watermark
@@ -79,7 +79,7 @@
   max-width: min(100%, 45rem);
 }
 
-/* White Pill Search Bar matching Euracare screenshot */
+/* White Pill Search Bar matching Beacon Health design */
 .hero__search-bar {
   display: flex;
   align-items: center;

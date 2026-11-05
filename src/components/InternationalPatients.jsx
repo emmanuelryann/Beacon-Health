@@ -160,51 +160,41 @@ const InternationalPatients = ({ onNavigate = () => {} }) => {
           1. HERO BANNER
           ================================================ */}
       <section className="ip-hero">
-        <div className="ip-hero__layout">
-          <div className="ip-hero__left">
-            {/* ECG Pulse Watermark */}
-            <div className="ip-hero__watermark" aria-hidden="true">
-              <svg
-                viewBox="0 0 1000 350"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="ip-hero__watermark-svg"
-              >
-                <path
-                  d="M0 240 H380 L415 170 L450 310 L495 50 L545 290 L580 200 L615 240 H1000"
-                  stroke="rgba(255, 255, 255, 0.18)"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-
-            <div className="ip-hero__left-content">
-              <h1 className="ip-hero__title">
-                International<br />Patients
-              </h1>
-            </div>
-          </div>
-
-          <div className="ip-hero__right">
-            <img
-              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=1200&q=80"
-              alt="Doctor warmly consulting with patient in medical clinic"
-              className="ip-hero__image"
+        <div className="ip-hero__overlay" />
+        <div className="ip-hero__watermark" aria-hidden="true">
+          <svg
+            viewBox="0 0 1200 400"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="ip-hero__watermark-svg"
+          >
+            <path
+              d="M0 260 H420 L455 190 L490 330 L535 70 L585 310 L620 220 L655 260 H1200"
+              stroke="rgba(255, 255, 255, 0.22)"
+              strokeWidth="3.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
+          </svg>
+        </div>
+
+        <div className="ip-hero__container container">
+          <div className="ip-hero__content">
+            <h1 className="ip-hero__title">
+              International Patients
+            </h1>
           </div>
         </div>
       </section>
 
       {/* ================================================
-          2. WHY CHOOSE EURACARE?
+          2. WHY CHOOSE BEACON HEALTH?
           ================================================ */}
       <section className="ip-why">
         <div className="ip-why__container container">
-          <h2 className="ip-why__title">Why choose Euracare?</h2>
+          <h2 className="ip-why__title">Why choose Beacon Health?</h2>
           <p className="ip-why__text">
-            At Euracare, we want every patient and visitor to feel supported, informed, and cared for.
+            At Beacon Health, we want every patient and visitor to feel supported, informed, and cared for.
             Whether you are coming for a consultation, diagnostic test, or inpatient treatment, our goal is to
             make your experience smooth, safe, and comfortable.
           </p>

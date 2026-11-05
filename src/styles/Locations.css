@@ -17,11 +17,9 @@
    ================================================ */
 .locations-hero {
   position: relative;
-  min-height: min(20rem, 38vh);
-  display: flex;
-  align-items: center;
   background-color: #071c35;
   overflow: hidden;
+  padding: clamp(2rem, 3.5vw, 2.75rem) 0;
 }
 
 .locations-hero__overlay {
@@ -54,9 +52,6 @@
 .locations-hero__container {
   position: relative;
   z-index: 3;
-  width: 100%;
-  padding-top: clamp(2rem, 3.5vw, 3rem);
-  padding-bottom: clamp(2rem, 3.5vw, 3rem);
 }
 
 .locations-hero__content {

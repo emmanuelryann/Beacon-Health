@@ -1,6 +1,6 @@
 /* ================================================
    SERVICES PAGE STYLES
-   Matches Euracare Services page screenshots:
+   Matches Beacon Health Services page design:
    - Full-width hero banner with medical staff photography and ECG watermark
    - Search bar pill & 'Sort by' pill button
    - 4-column card grid of all 16 clinical specialties
@@ -13,14 +13,12 @@
 /* Hero Banner */
 .services-page__hero {
   position: relative;
-  min-height: min(38vh, 22rem);
-  display: flex;
-  align-items: center;
   background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1600&q=80');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  padding: clamp(2rem, 3.5vw, 2.75rem) 0;
 }
 
 .services-page__hero-overlay {
@@ -54,9 +52,6 @@
 .services-page__hero-container {
   position: relative;
   z-index: 3;
-  width: 100%;
-  padding-top: clamp(2rem, 3.5vw, 3rem);
-  padding-bottom: clamp(2rem, 3.5vw, 3rem);
 }
 
 .services-page__hero-content {
