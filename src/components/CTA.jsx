@@ -132,6 +132,11 @@ const CTA = ({ onNavigate }) => {
                   onNavigate('appointment')
                   window.scrollTo({ top: 0, behavior: 'smooth' })
                 }
+                if (action.label === 'Careers at Euracare' && onNavigate) {
+                  e.preventDefault()
+                  onNavigate('careers')
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }
               }}
             >
               {action.icon}

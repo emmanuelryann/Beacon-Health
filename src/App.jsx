@@ -12,6 +12,7 @@ import ServicesPage from './components/ServicesPage'
 import BookAppointment from './components/BookAppointment'
 import WhatToExpect from './components/WhatToExpect'
 import InternationalPatients from './components/InternationalPatients'
+import Careers from './components/Careers'
 
 const getPageFromHash = () => {
   if (typeof window === 'undefined') return 'home'
@@ -20,6 +21,7 @@ const getPageFromHash = () => {
   if (hash === 'services') return 'services'
   if (hash === 'what-to-expect' || hash === 'whattoexpect') return 'what-to-expect'
   if (hash === 'international-patients' || hash === 'international-patient') return 'international-patients'
+  if (hash === 'careers' || hash === 'career') return 'careers'
   if (hash === 'appointment' || hash === 'contact' || hash === 'enquiry') return 'appointment'
   return 'home'
 }
@@ -64,6 +66,7 @@ function App() {
         {currentPage === 'services' && <ServicesPage />}
         {currentPage === 'what-to-expect' && <WhatToExpect onNavigate={handleNavigate} />}
         {currentPage === 'international-patients' && <InternationalPatients onNavigate={handleNavigate} />}
+        {currentPage === 'careers' && <Careers onNavigate={handleNavigate} />}
         {currentPage === 'appointment' && <BookAppointment />}
         <CTA onNavigate={handleNavigate} />
       </main>
