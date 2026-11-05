@@ -1,0 +1,186 @@
+/* ================================================
+   BLOG / NEWS ARTICLE PAGE STYLES
+   Matches Euracare article screenshots:
+   - Full-width hero photograph of clinical heart model
+   - Clean readable typography container for article narrative
+   - Formatted clinical subsections and benefit bullet points
+   - Styled callout box for consultation scheduling
+   - 'More News You Might Like' section with empty state
+   - Strictly zero prohibited units, layout-only media queries, no addition in clamp preferred values
+   ================================================ */
+
+.blog-page {
+  background-color: var(--color-bg-white);
+}
+
+/* ================================================
+   1. HERO IMAGE BANNER
+   ================================================ */
+.blog-hero {
+  width: 100%;
+  height: clamp(18rem, 42vh, 32rem);
+  overflow: hidden;
+  background-color: #071c35;
+}
+
+.blog-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ================================================
+   2. ARTICLE CONTENT
+   ================================================ */
+.blog-content {
+  padding: clamp(3rem, 5vw, 4.5rem) 0 clamp(2rem, 4vw, 3rem);
+}
+
+.blog-content__container {
+  width: min(90%, 56rem);
+  margin-inline: auto;
+}
+
+.blog-content__main-title {
+  font-size: clamp(2rem, 3.6vw, 2.75rem);
+  font-weight: 700;
+  color: #071c35;
+  line-height: 1.25;
+  letter-spacing: -0.015rem;
+  margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.blog-content__paragraph {
+  font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: clamp(1rem, 1.6vw, 1.35rem);
+}
+
+.blog-content__lead {
+  font-size: clamp(1.0625rem, 1.3vw, 1.2rem);
+  color: #1f2937;
+  line-height: 1.75;
+}
+
+.blog-content__section-title {
+  font-size: clamp(1.3rem, 2vw, 1.55rem);
+  font-weight: 700;
+  color: #071c35;
+  line-height: 1.3;
+  margin-top: clamp(2rem, 3.5vw, 2.75rem);
+  margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+.blog-content__bullets {
+  list-style: disc;
+  padding-left: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: clamp(1.25rem, 2vw, 1.6rem);
+  color: #374151;
+  line-height: 1.8;
+  font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
+}
+
+.blog-content__bullets strong {
+  color: #071c35;
+  font-weight: 700;
+}
+
+.blog-content__callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background-color: #f8fafc;
+  border-left: 0.25rem solid #12435c;
+  border-radius: 0.5rem;
+  padding: clamp(1rem, 1.8vw, 1.35rem) clamp(1.25rem, 2vw, 1.5rem);
+  margin-top: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: clamp(2rem, 3.5vw, 3rem);
+}
+
+.blog-content__callout-hand {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.blog-content__callout-text {
+  font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
+  font-weight: 600;
+  font-style: italic;
+  color: #071c35;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.blog-content__callout-link {
+  color: #12435c;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.blog-content__callout-link:hover {
+  color: #0c2141;
+}
+
+/* ================================================
+   3. MORE NEWS YOU MIGHT LIKE (EMPTY STATE)
+   ================================================ */
+.blog-more {
+  padding: clamp(2.5rem, 4vw, 4rem) 0 clamp(4rem, 6vw, 6rem);
+  background-color: #ffffff;
+}
+
+.blog-more__title {
+  font-size: clamp(1.85rem, 3vw, 2.35rem);
+  font-weight: 700;
+  color: #071c35;
+  text-align: center;
+  line-height: 1.25;
+  margin-bottom: clamp(2rem, 3.5vw, 2.75rem);
+}
+
+.blog-more__empty {
+  background-color: #fafbfc;
+  border: 0.0625rem solid #e2e8f0;
+  border-radius: 1.5rem;
+  text-align: center;
+  padding: clamp(3rem, 5vw, 4.5rem) clamp(1.5rem, 4vw, 3.5rem);
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+.blog-more__empty-icon-wrap {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #eef7f7;
+  color: #12435c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-bottom: clamp(1rem, 1.8vw, 1.35rem);
+}
+
+.blog-more__empty-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.blog-more__empty-title {
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 700;
+  color: #071c35;
+  margin-bottom: 0.5rem;
+}
+
+.blog-more__empty-desc {
+  font-size: clamp(0.875rem, 1.05vw, 0.95rem);
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 34rem;
+  margin-inline: auto;
+}

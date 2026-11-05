@@ -1,6 +1,6 @@
 import '../styles/Footer.css'
 
-const Footer = () => {
+const Footer = ({ onNavigate = () => {} }) => {
   return (
     <footer className="footer">
       <div className="footer__top container">
@@ -8,38 +8,85 @@ const Footer = () => {
         <div className="footer__col">
           <h4 className="footer__col-title">ABOUT EURACARE</h4>
           <ul className="footer__links">
-            <li><a href="#about">Who we are</a></li>
-            <li><a href="#about">Our Vision &amp; mission</a></li>
-            <li><a href="#about">Our Mission Statement</a></li>
-            <li><a href="#specialists">Our Team</a></li>
-            <li><a href="#about">Accreditations &amp; Awards</a></li>
+            <li>
+              <a
+                href="#about-hero"
+                onClick={(e) => {
+                  e.preventDefault()
+                  onNavigate('about')
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
+              >
+                Who we are
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about-mission"
+                onClick={(e) => {
+                  e.preventDefault()
+                  onNavigate('about', 'about-mission')
+                }}
+              >
+                Our Vision &amp; mission
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about-mission"
+                onClick={(e) => {
+                  e.preventDefault()
+                  onNavigate('about', 'about-mission')
+                }}
+              >
+                Our Mission Statement
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about-leadership"
+                onClick={(e) => {
+                  e.preventDefault()
+                  onNavigate('about', 'about-leadership')
+                }}
+              >
+                Our Team
+              </a>
+            </li>
           </ul>
         </div>
 
-        {/* Col 2: SERVICE LINES */}
-        <div className="footer__col">
-          <h4 className="footer__col-title">SERVICE LINES</h4>
-          <ul className="footer__links">
-            <li><a href="#services">Interventional Cardiology</a></li>
-            <li><a href="#services">Interventional Radiology</a></li>
-            <li><a href="#services">Adult &amp; Pediatric Cardiology</a></li>
-            <li><a href="#services">Bariatric &amp; Weight Loss Surgery</a></li>
-            <li><a href="#services">General Surgery</a></li>
-            <li><a href="#services">Gastroenterology</a></li>
-            <li><a href="#services">Orthopedic Surgery</a></li>
-          </ul>
-        </div>
-
-        {/* Col 3: MEDIA */}
+        {/* Col 2: MEDIA */}
         <div className="footer__col">
           <h4 className="footer__col-title">MEDIA</h4>
           <ul className="footer__links">
-            <li><a href="#media">Blogs and articles</a></li>
-            <li><a href="#testimonials">Patient stories</a></li>
+            <li>
+              <a
+                href="#news"
+                onClick={(e) => {
+                  e.preventDefault()
+                  onNavigate('news')
+                  window.scrollTo({ top: 0, behavior: 'auto' })
+                }}
+              >
+                Blogs and articles
+              </a>
+            </li>
+            <li>
+              <a
+                href="#testimonials"
+                onClick={(e) => {
+                  e.preventDefault()
+                  onNavigate('home', 'testimonials')
+                }}
+              >
+                Patient stories
+              </a>
+            </li>
           </ul>
         </div>
 
-        {/* Col 4: Contact & Socials */}
+        {/* Col 3: Contact & Socials */}
         <div className="footer__col footer__col--contact">
           <div className="footer__contact-info">
             <p className="footer__address">

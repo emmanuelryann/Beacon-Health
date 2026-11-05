@@ -161,7 +161,7 @@ const AboutEuracare = () => {
       {/* ================================================
           1. ABOUT EURACARE (HERO BANNER)
           ================================================ */}
-      <section className="about-hero">
+      <section className="about-hero" id="about-hero">
         <div className="about-hero__overlay" />
 
         {/* ECG pulse watermark */}
@@ -246,7 +246,7 @@ const AboutEuracare = () => {
       {/* ================================================
           3. EURACARE MISSION AND VISION
           ================================================ */}
-      <section className="about-mission">
+      <section className="about-mission" id="about-mission">
         <div className="about-mission__container container">
           <p className="about-mission__subtitle">EURACARE MISSION AND VISION</p>
           <h2 className="about-mission__title">
@@ -365,7 +365,7 @@ const AboutEuracare = () => {
           - Title: A diverse team driven by expertise, compassion, and commitment.
           - 4-column cards with rounded rectangle portraits, bold name, and role below
           ================================================ */}
-      <section className="about-leadership">
+      <section className="about-leadership" id="about-leadership">
         <div className="about-leadership__container container">
           <div className="about-leadership__header">
             <p className="about-leadership__subtitle">OUR LEADERSHIP EXPERTISE</p>

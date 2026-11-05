@@ -26,13 +26,13 @@
 }
 
 .footer__col {
-  flex: 1 1 calc(22% - 1.5rem);
-  min-width: min(100%, 12rem);
+  flex: 1 1 calc(28% - 1.5rem);
+  min-width: min(100%, 14rem);
 }
 
 .footer__col--contact {
-  flex: 1 1 calc(30% - 1.5rem);
-  min-width: min(100%, 16rem);
+  flex: 1 1 calc(36% - 1.5rem);
+  min-width: min(100%, 18rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
