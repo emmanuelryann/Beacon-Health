@@ -57,8 +57,8 @@ const ctaActions = [
     ),
   },
   {
-    label: 'Insurance & Payment Info',
-    href: '#insurance',
+    label: 'Our locations',
+    href: '#locations',
     icon: (
       <svg
         className="cta__btn-icon"
@@ -70,8 +70,8 @@ const ctaActions = [
         strokeLinejoin="round"
         aria-hidden="true"
       >
-        <rect x="2" y="5" width="20" height="14" rx="2" />
-        <line x1="2" y1="10" x2="22" y2="10" />
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
       </svg>
     ),
   },
@@ -136,6 +136,11 @@ const CTA = ({ onNavigate }) => {
                   e.preventDefault()
                   onNavigate('careers')
                   window.scrollTo({ top: 0, behavior: 'smooth' })
+                }
+                if (action.label === 'Our locations' && onNavigate) {
+                  e.preventDefault()
+                  onNavigate('locations')
+                  window.scrollTo({ top: 0, behavior: 'auto' })
                 }
               }}
             >

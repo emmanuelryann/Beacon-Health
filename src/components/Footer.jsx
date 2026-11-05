@@ -178,11 +178,35 @@ const Footer = ({ onNavigate = () => {} }) => {
       <div className="footer__bottom">
         <div className="footer__bottom-container container">
           <div className="footer__legal">
-            <a href="#cookie-settings">Cookie settings</a>
+            <a
+              href="#cookie-settings"
+              onClick={(e) => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+            >
+              Cookie settings
+            </a>
             <span className="footer__legal-dot">•</span>
-            <a href="#privacy-policy">Privacy Policy</a>
+            <a
+              href="#privacy-policy"
+              onClick={(e) => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+            >
+              Privacy Policy
+            </a>
             <span className="footer__legal-dot">•</span>
-            <a href="#legal">Legal</a>
+            <a
+              href="#legal"
+              onClick={(e) => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+            >
+              Legal
+            </a>
           </div>
 
           <p className="footer__copyright">

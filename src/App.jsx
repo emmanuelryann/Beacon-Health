@@ -14,6 +14,7 @@ import WhatToExpect from './components/WhatToExpect'
 import InternationalPatients from './components/InternationalPatients'
 import Careers from './components/Careers'
 import BlogArticle from './components/BlogArticle'
+import Locations from './components/Locations'
 
 const getPageFromHash = () => {
   if (typeof window === 'undefined') return 'home'
@@ -24,6 +25,7 @@ const getPageFromHash = () => {
   if (hash === 'international-patients' || hash === 'international-patient') return 'international-patients'
   if (hash === 'careers' || hash === 'career') return 'careers'
   if (hash === 'news' || hash === 'blogs-and-articles' || hash === 'articles' || hash === 'blog') return 'news'
+  if (hash === 'locations' || hash === 'location' || hash === 'clinics' || hash === 'branches') return 'locations'
   if (hash === 'appointment' || hash === 'contact' || hash === 'enquiry') return 'appointment'
   if (hash === 'testimonials' || hash === 'specialists') return 'home'
   return 'home'
@@ -94,6 +96,7 @@ function App() {
         {currentPage === 'international-patients' && <InternationalPatients onNavigate={handleNavigate} />}
         {currentPage === 'careers' && <Careers onNavigate={handleNavigate} />}
         {currentPage === 'news' && <BlogArticle onNavigate={handleNavigate} />}
+        {currentPage === 'locations' && <Locations onNavigate={handleNavigate} />}
         {currentPage === 'appointment' && <BookAppointment />}
         <CTA onNavigate={handleNavigate} />
       </main>

@@ -227,8 +227,16 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
             })}
           </ul>
 
-          {/* Call Us Today Button */}
-          <a href="tel:+2349094444413" className="navbar__call-btn">
+          {/* Call Us Today Button -> Enquiry Form Page */}
+          <a
+            href="#appointment"
+            className="navbar__call-btn"
+            onClick={(e) => {
+              e.preventDefault()
+              onNavigate('appointment')
+              window.scrollTo({ top: 0, behavior: 'auto' })
+            }}
+          >
             <svg
               className="navbar__call-icon"
               viewBox="0 0 24 24"
@@ -364,9 +372,14 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
 
         <div className="sidebar__footer">
           <a
-            href="tel:+2349094444413"
+            href="#appointment"
             className="sidebar__call-btn"
-            onClick={closeSidebar}
+            onClick={(e) => {
+              e.preventDefault()
+              closeSidebar()
+              onNavigate('appointment')
+              window.scrollTo({ top: 0, behavior: 'auto' })
+            }}
           >
             <svg
               className="navbar__call-icon"
