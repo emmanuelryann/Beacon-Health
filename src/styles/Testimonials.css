@@ -27,7 +27,7 @@
 }
 
 .testimonials__title {
-  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-size: var(--font-size-section-title);
   font-weight: 700;
   color: #111827;
   line-height: 1.15;
@@ -36,7 +36,7 @@
 }
 
 .testimonials__description {
-  font-size: clamp(0.875rem, 1.2vw, 0.96875rem);
+  font-size: var(--font-size-body);
   color: #4b5563;
   line-height: 1.65;
 }
@@ -181,7 +181,7 @@
 }
 
 .testimonials__card-title {
-  font-size: clamp(1rem, 1.5vw, 1.1875rem);
+  font-size: var(--font-size-card-title);
   font-weight: 700;
   color: #111827;
   line-height: 1.35;
@@ -189,7 +189,7 @@
 }
 
 .testimonials__card-author {
-  font-size: clamp(0.75rem, 1.1vw, 0.8125rem);
+  font-size: var(--font-size-body);
   color: #1f2937;
   font-weight: 600;
   font-style: italic;

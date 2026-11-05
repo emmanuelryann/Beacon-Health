@@ -25,7 +25,7 @@
 }
 
 .specialists__subtitle {
-  font-size: clamp(0.75rem, 1vw, 0.8125rem);
+  font-size: var(--font-size-subtitle);
   font-weight: 700;
   letter-spacing: 0.125rem;
   color: #12435c;
@@ -34,7 +34,7 @@
 }
 
 .specialists__title {
-  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-size: var(--font-size-section-title);
   font-weight: 700;
   color: #0b1a30;
   line-height: 1.15;
@@ -50,7 +50,7 @@
   border-radius: 50rem;
   background-color: transparent;
   color: #0b1a30;
-  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  font-size: var(--font-size-btn);
   font-weight: 600;
   white-space: nowrap;
   transition: background-color 0.25s ease, color 0.25s ease;
@@ -119,14 +119,14 @@
 }
 
 .specialists__name {
-  font-size: clamp(0.9375rem, 1.4vw, 1.0625rem);
+  font-size: var(--font-size-card-title);
   font-weight: 700;
   color: #0b1a30;
   line-height: 1.3;
 }
 
 .specialists__specialty {
-  font-size: clamp(0.75rem, 1.1vw, 0.8125rem);
+  font-size: var(--font-size-body);
   color: #4b5563;
   line-height: 1.5;
 }
@@ -141,7 +141,7 @@
   border-radius: 50rem;
   background-color: transparent;
   color: #0b1a30;
-  font-size: clamp(0.75rem, 1.1vw, 0.8125rem);
+  font-size: var(--font-size-btn);
   font-weight: 600;
   transition: background-color 0.25s ease, color 0.25s ease;
 }

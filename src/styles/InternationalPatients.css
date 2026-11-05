@@ -23,7 +23,7 @@
 
 .ip-hero__layout {
   display: flex;
-  min-height: min(34rem, 72vh);
+  min-height: min(20rem, 38vh);
 }
 
 .ip-hero__left {
@@ -32,7 +32,7 @@
   background-color: #071c35;
   display: flex;
   align-items: center;
-  padding: clamp(3.5rem, 6vw, 5.5rem) clamp(2rem, 5vw, 4.5rem);
+  padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2.5rem);
   z-index: 2;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .ip-hero__title {
-  font-size: clamp(2.35rem, 4.5vw, 3.75rem);
+  font-size: var(--font-size-hero-subpage);
   font-weight: 700;
   color: #ffffff;
   line-height: 1.15;
@@ -95,7 +95,7 @@
 }
 
 .ip-statement__text {
-  font-size: clamp(1.2rem, 2.1vw, 1.75rem);
+  font-size: var(--font-size-card-title);
   font-weight: 600;
   color: #071c35;
   line-height: 1.45;
@@ -112,7 +112,7 @@
 }
 
 .ip-why__title {
-  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-size: var(--font-size-section-title);
   font-weight: 700;
   color: #071c35;
   line-height: 1.2;
@@ -120,7 +120,7 @@
 }
 
 .ip-why__text {
-  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  font-size: var(--font-size-body);
   color: #374151;
   line-height: 1.6;
   max-width: 54rem;
@@ -159,7 +159,7 @@
 }
 
 .ip-why__pillar-title {
-  font-size: clamp(1.0625rem, 1.3vw, 1.2rem);
+  font-size: var(--font-size-card-title);
   font-weight: 700;
   color: #071c35;
   margin-bottom: clamp(0.375rem, 0.8vw, 0.5rem);
@@ -167,7 +167,7 @@
 }
 
 .ip-why__pillar-desc {
-  font-size: clamp(0.8125rem, 1vw, 0.875rem);
+  font-size: var(--font-size-body);
   color: #4b5563;
   line-height: 1.55;
 }
@@ -212,7 +212,7 @@
 }
 
 .ip-services__title {
-  font-size: clamp(2rem, 3.4vw, 2.875rem);
+  font-size: var(--font-size-section-title);
   font-weight: 700;
   color: #071c35;
   line-height: 1.15;
@@ -241,7 +241,7 @@
 }
 
 .ip-service-card__title {
-  font-size: clamp(1rem, 1.2vw, 1.0625rem);
+  font-size: var(--font-size-card-title);
   font-weight: 700;
   color: #071c35;
   margin-bottom: 0.375rem;
@@ -249,7 +249,7 @@
 }
 
 .ip-service-card__desc {
-  font-size: clamp(0.84375rem, 1vw, 0.90625rem);
+  font-size: var(--font-size-body);
   color: #4b5563;
   line-height: 1.5;
 }
@@ -274,7 +274,7 @@
 }
 
 .ip-planning__title {
-  font-size: clamp(2rem, 3.4vw, 2.875rem);
+  font-size: var(--font-size-section-title);
   font-weight: 700;
   color: #071c35;
   line-height: 1.15;
@@ -303,7 +303,7 @@
 }
 
 .ip-planning-card__title {
-  font-size: clamp(1rem, 1.2vw, 1.0625rem);
+  font-size: var(--font-size-card-title);
   font-weight: 700;
   color: #071c35;
   margin-bottom: 0.375rem;
@@ -311,7 +311,7 @@
 }
 
 .ip-planning-card__desc {
-  font-size: clamp(0.84375rem, 1vw, 0.90625rem);
+  font-size: var(--font-size-body);
   color: #4b5563;
   line-height: 1.5;
 }

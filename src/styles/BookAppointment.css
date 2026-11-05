@@ -18,7 +18,7 @@
    ================================================ */
 .enquiry-hero {
   background-color: #0c2141;
-  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+  padding: clamp(2rem, 3.5vw, 3rem) 0;
   color: #ffffff;
 }
 
@@ -27,19 +27,19 @@
 }
 
 .enquiry-hero__title {
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-size: var(--font-size-hero-subpage);
   font-weight: 700;
   color: #ffffff;
   line-height: 1.15;
   letter-spacing: -0.015rem;
-  margin-bottom: clamp(1.25rem, 2.2vw, 1.875rem);
+  margin-bottom: clamp(1rem, 1.8vw, 1.5rem);
 }
 
 .enquiry-hero__text {
-  font-size: clamp(0.9375rem, 1.25vw, 1.0625rem);
+  font-size: var(--font-size-body);
   color: #ffffff;
   line-height: 1.65;
-  margin-bottom: clamp(0.875rem, 1.5vw, 1.25rem);
+  margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
   max-width: min(100%, 65rem);
 }
 
@@ -100,7 +100,7 @@
 
 /* Field Labels */
 .enquiry-form__label {
-  font-size: clamp(0.875rem, 1.15vw, 0.9375rem);
+  font-size: var(--font-size-body);
   font-weight: 600;
   color: #111827;
   margin-bottom: clamp(0.5rem, 0.8vw, 0.625rem);
@@ -114,7 +114,7 @@
   border: 0.0625rem solid #111827;
   border-radius: 50rem;
   background-color: var(--color-bg-white);
-  font-size: clamp(0.875rem, 1.15vw, 1rem);
+  font-size: var(--font-size-body);
   font-family: inherit;
   color: #111827;
   outline: none;
@@ -139,7 +139,7 @@
   border: 0.0625rem solid #111827;
   border-radius: 50rem;
   background-color: var(--color-bg-white);
-  font-size: clamp(0.875rem, 1.15vw, 1rem);
+  font-size: var(--font-size-body);
   font-family: inherit;
   color: #111827;
   outline: none;
@@ -183,7 +183,7 @@
   border: 0.0625rem solid #111827;
   border-radius: 1.5rem;
   background-color: var(--color-bg-white);
-  font-size: clamp(0.875rem, 1.15vw, 1rem);
+  font-size: var(--font-size-body);
   font-family: inherit;
   color: #111827;
   outline: none;
@@ -199,7 +199,7 @@
 
 /* Privacy Disclaimer */
 .enquiry-form__disclaimer {
-  font-size: clamp(0.8125rem, 1.1vw, 0.875rem);
+  font-size: var(--font-size-small);
   color: #111827;
   font-weight: 500;
   line-height: 1.5;
@@ -221,7 +221,7 @@
   background-color: #0c2141;
   color: #ffffff;
   padding: clamp(0.75rem, 1.2vw, 0.9375rem) clamp(3rem, 5vw, 4.25rem);
-  font-size: clamp(0.875rem, 1.15vw, 1rem);
+  font-size: var(--font-size-btn);
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.25s ease, transform 0.2s ease;
@@ -257,14 +257,14 @@
 }
 
 .enquiry-form__success-title {
-  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-size: var(--font-size-card-title);
   font-weight: 700;
   color: #14532d;
   margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
 }
 
 .enquiry-form__success-text {
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-size: var(--font-size-body);
   color: #166534;
   line-height: 1.6;
   margin-bottom: clamp(1.5rem, 2.2vw, 2rem);
@@ -279,7 +279,7 @@
   background-color: #ffffff;
   color: #15803d;
   padding: clamp(0.625rem, 1vw, 0.75rem) clamp(1.75rem, 2.5vw, 2.25rem);
-  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  font-size: var(--font-size-btn);
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;

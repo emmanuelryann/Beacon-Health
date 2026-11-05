@@ -17,7 +17,7 @@
    ================================================ */
 .careers-hero {
   position: relative;
-  min-height: min(34rem, 68vh);
+  min-height: min(20rem, 38vh);
   display: flex;
   align-items: center;
   background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1600&q=80');
@@ -58,6 +58,9 @@
 .careers-hero__container {
   position: relative;
   z-index: 3;
+  width: 100%;
+  padding-top: clamp(2rem, 3.5vw, 3rem);
+  padding-bottom: clamp(2rem, 3.5vw, 3rem);
 }
 
 .careers-hero__content {
@@ -65,7 +68,7 @@
 }
 
 .careers-hero__title {
-  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+  font-size: var(--font-size-hero-subpage);
   font-weight: 700;
   color: #ffffff;
   line-height: 1.1;
@@ -93,7 +96,7 @@
 }
 
 .careers-header__title {
-  font-size: clamp(1.35rem, 2vw, 1.625rem);
+  font-size: var(--font-size-card-title);
   font-weight: 700;
   color: #071c35;
   line-height: 1.25;
@@ -101,7 +104,7 @@
 }
 
 .careers-header__count {
-  font-size: clamp(0.84375rem, 1vw, 0.90625rem);
+  font-size: var(--font-size-body);
   color: #6b7280;
 }
 
@@ -113,7 +116,7 @@
 }
 
 .careers-filter-btn {
-  font-size: clamp(0.8125rem, 0.9vw, 0.875rem);
+  font-size: var(--font-size-btn);
   font-weight: 600;
   padding: 0.5rem 1.35rem;
   border-radius: 6.25rem;
@@ -176,7 +179,7 @@
 }
 
 .careers-empty__title {
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-size: var(--font-size-card-title);
   font-weight: 700;
   color: #071c35;
   line-height: 1.25;
@@ -184,7 +187,7 @@
 }
 
 .careers-empty__desc {
-  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  font-size: var(--font-size-body);
   color: #4b5563;
   line-height: 1.6;
   max-width: 46rem;
@@ -202,7 +205,7 @@
 }
 
 .careers-empty__notice-text {
-  font-size: clamp(0.875rem, 1.05vw, 0.9375rem);
+  font-size: var(--font-size-body);
   color: #374151;
   line-height: 1.6;
   margin-bottom: clamp(1rem, 1.8vw, 1.5rem);
@@ -215,7 +218,7 @@
   gap: 0.625rem;
   background-color: #071c35;
   color: #ffffff;
-  font-size: clamp(0.875rem, 1.05vw, 0.9375rem);
+  font-size: var(--font-size-btn);
   font-weight: 600;
   padding: 0.875rem clamp(1.25rem, 2vw, 1.75rem);
   border-radius: 6.25rem;
@@ -248,7 +251,7 @@
 }
 
 .careers-values__title {
-  font-size: clamp(1.85rem, 3vw, 2.5rem);
+  font-size: var(--font-size-section-title);
   font-weight: 700;
   color: #071c35;
   line-height: 1.2;
@@ -256,7 +259,7 @@
 }
 
 .careers-values__subtitle {
-  font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
+  font-size: var(--font-size-body);
   color: #4b5563;
   line-height: 1.6;
 }
@@ -299,7 +302,7 @@
 }
 
 .careers-pillar__title {
-  font-size: clamp(1.0625rem, 1.2vw, 1.15rem);
+  font-size: var(--font-size-card-title);
   font-weight: 700;
   color: #071c35;
   margin-bottom: 0.5rem;
@@ -307,7 +310,7 @@
 }
 
 .careers-pillar__desc {
-  font-size: clamp(0.8125rem, 0.95vw, 0.875rem);
+  font-size: var(--font-size-body);
   color: #4b5563;
   line-height: 1.55;
 }

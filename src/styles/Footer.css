@@ -40,7 +40,7 @@
 
 .footer__col-title {
   color: #6b7280;
-  font-size: clamp(0.75rem, 1vw, 0.8125rem);
+  font-size: var(--font-size-subtitle);
   font-weight: 700;
   letter-spacing: 0.0625rem;
   text-transform: uppercase;
@@ -54,7 +54,7 @@
 }
 
 .footer__links a {
-  font-size: clamp(0.8125rem, 1.1vw, 0.875rem);
+  font-size: var(--font-size-body);
   color: #111827;
   font-weight: 500;
   transition: color 0.2s ease;
@@ -72,13 +72,13 @@
 }
 
 .footer__address {
-  font-size: clamp(0.8125rem, 1.1vw, 0.875rem);
+  font-size: var(--font-size-body);
   color: #111827;
   line-height: 1.6;
 }
 
 .footer__contact-link {
-  font-size: clamp(0.8125rem, 1.1vw, 0.875rem);
+  font-size: var(--font-size-body);
   color: #111827;
   font-weight: 500;
   transition: color 0.2s ease;
@@ -142,7 +142,7 @@
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  font-size: clamp(0.75rem, 1vw, 0.8125rem);
+  font-size: var(--font-size-small);
   color: #111827;
   font-weight: 500;
 }
@@ -161,7 +161,7 @@
 }
 
 .footer__copyright {
-  font-size: clamp(0.75rem, 1vw, 0.8125rem);
+  font-size: var(--font-size-small);
   color: #111827;
   font-weight: 500;
 }

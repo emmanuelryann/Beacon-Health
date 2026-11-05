@@ -13,7 +13,7 @@
 /* Hero Banner */
 .services-page__hero {
   position: relative;
-  min-height: min(75vh, 44rem);
+  min-height: min(38vh, 22rem);
   display: flex;
   align-items: center;
   background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1600&q=80');
@@ -55,8 +55,8 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  padding-top: clamp(4.5rem, 8vw, 6.5rem);
-  padding-bottom: clamp(4.5rem, 8vw, 6.5rem);
+  padding-top: clamp(2rem, 3.5vw, 3rem);
+  padding-bottom: clamp(2rem, 3.5vw, 3rem);
 }
 
 .services-page__hero-content {
@@ -64,18 +64,18 @@
 }
 
 .services-page__hero-title {
-  font-size: clamp(2.25rem, 4.3vw, 3.75rem);
+  font-size: var(--font-size-hero-subpage);
   font-weight: 700;
   color: #ffffff;
   line-height: 1.15;
   letter-spacing: -0.02rem;
-  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: clamp(0.75rem, 1.4vw, 1.125rem);
 }
 
 .services-page__hero-text {
-  font-size: clamp(0.9375rem, 1.3vw, 1.0625rem);
+  font-size: var(--font-size-body);
   color: rgba(255, 255, 255, 0.95);
-  line-height: 1.68;
+  line-height: 1.65;
 }
 
 /* Page Body: Controls & Grid */
@@ -126,7 +126,7 @@
   outline: none;
   background: transparent;
   width: 100%;
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-size: var(--font-size-body);
   font-family: inherit;
   color: #0b1a30;
 }
@@ -144,7 +144,7 @@
   border-radius: 50rem;
   background-color: var(--color-bg-white);
   padding: clamp(0.75rem, 1.3vw, 1rem) clamp(1.5rem, 2.5vw, 2rem);
-  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  font-size: var(--font-size-btn);
   font-weight: 600;
   color: #111827;
   cursor: pointer;
@@ -212,7 +212,7 @@
 }
 
 .services-page__card-title {
-  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  font-size: var(--font-size-card-title);
   font-weight: 700;
   color: #111827;
   line-height: 1.28;
@@ -220,7 +220,7 @@
 }
 
 .services-page__card-desc {
-  font-size: clamp(0.8125rem, 1.05vw, 0.875rem);
+  font-size: var(--font-size-body);
   color: #374151;
   line-height: 1.62;
   margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
@@ -236,7 +236,7 @@
   border: 0.0625rem solid #111827;
   border-radius: 50rem;
   padding: clamp(0.5625rem, 0.9vw, 0.6875rem) 1rem;
-  font-size: clamp(0.75rem, 1.05vw, 0.8125rem);
+  font-size: var(--font-size-btn);
   font-weight: 600;
   color: #111827;
   background-color: transparent;
@@ -252,7 +252,7 @@
 .services-page__empty {
   text-align: center;
   padding: clamp(3rem, 6vw, 5rem) 0;
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-size: var(--font-size-body);
   color: #64748b;
 }
 

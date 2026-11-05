@@ -36,7 +36,7 @@
 }
 
 .cta__enquiry {
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-size: var(--font-size-body);
   color: #111827;
   display: flex;
   align-items: center;
@@ -79,7 +79,7 @@
   border-radius: 50rem;
   background-color: transparent;
   color: #111827;
-  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  font-size: var(--font-size-btn);
   font-weight: 600;
   white-space: nowrap;
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
