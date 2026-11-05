@@ -10,6 +10,7 @@ const navLinks = [
     href: '#patient-info',
     hasDropdown: true,
     dropdownItems: [
+      { label: 'News & Updates', href: '#news' },
       { label: 'What To Expect', href: '#what-to-expect' },
       { label: 'International Patient', href: '#international-patients' },
     ],
@@ -153,7 +154,7 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
               const isActive =
                 (link.id === 'about' && currentPage === 'about') ||
                 (link.id === 'services' && currentPage === 'services') ||
-                (link.id === 'patient-info' && (currentPage === 'what-to-expect' || currentPage === 'international-patients')) ||
+                (link.id === 'patient-info' && (currentPage === 'what-to-expect' || currentPage === 'international-patients' || currentPage === 'news')) ||
                 ((link.id === 'appointment' || link.id === 'contact') && currentPage === 'appointment')
               return (
                 <li
@@ -193,6 +194,12 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                               href={item.href}
                               className="navbar__dropdown-link"
                               onClick={(e) => {
+                                if (item.label === 'News & Updates') {
+                                  e.preventDefault()
+                                  onNavigate('news')
+                                  window.scrollTo({ top: 0, behavior: 'auto' })
+                                  return
+                                }
                                 if (item.label === 'What To Expect') {
                                   e.preventDefault()
                                   onNavigate('what-to-expect')
@@ -311,7 +318,7 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
             const isActive =
               (link.id === 'about' && currentPage === 'about') ||
               (link.id === 'services' && currentPage === 'services') ||
-              (link.id === 'patient-info' && (currentPage === 'what-to-expect' || currentPage === 'international-patients')) ||
+              (link.id === 'patient-info' && (currentPage === 'what-to-expect' || currentPage === 'international-patients' || currentPage === 'news')) ||
               ((link.id === 'appointment' || link.id === 'contact') && currentPage === 'appointment')
             return (
               <li key={link.label}>
@@ -337,6 +344,12 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                           className="sidebar__sublink"
                           onClick={(e) => {
                             closeSidebar()
+                            if (item.label === 'News & Updates') {
+                              e.preventDefault()
+                              onNavigate('news')
+                              window.scrollTo({ top: 0, behavior: 'auto' })
+                              return
+                            }
                             if (item.label === 'What To Expect') {
                               e.preventDefault()
                               onNavigate('what-to-expect')

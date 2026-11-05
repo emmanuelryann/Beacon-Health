@@ -30,11 +30,10 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: clamp(6.5rem, 11vw, 8rem);
 }
 
 [id] {
-  scroll-margin-top: clamp(6.5rem, 11vw, 8rem);
+  scroll-margin-top: clamp(4.25rem, 5.5vw, 5.25rem);
 }
 
 body {
