@@ -86,7 +86,7 @@ function App() {
             <Hero />
             <WhyChooseUs />
             <Services />
-            <Specialists />
+            {/* <Specialists /> */}
             <Testimonials />
           </>
         )}

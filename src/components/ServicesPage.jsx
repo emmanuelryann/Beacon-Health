@@ -1,4 +1,6 @@
 import { useState, useMemo } from 'react'
+import adultAndPediatricImg from '../images/adult_and_pediatric.svg'
+import radiologyImg from '../images/radiology.svg'
 import '../styles/ServicesPage.css'
 
 const allServices = [
@@ -23,8 +25,7 @@ const allServices = [
     title: 'Adult & Pediatric Cardiology',
     description:
       'From newborns to adults, our cardiology specialists offer comprehensive heart care. We diagnose and treat congenital heart defects, rhythm disorders, and complex cardiac conditions, ensuring every patient receives age-appropriate, compassionate care.',
-    image:
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80',
+    image: adultAndPediatricImg,
   },
   {
     id: 4,
@@ -63,8 +64,7 @@ const allServices = [
     title: 'Radiology',
     description:
       'With advanced imaging technology, our Radiology department offers precise diagnostic services including MRI, CT scans, mammography, and X-rays. We provide fast, accurate diagnoses to guide effective treatment plans.',
-    image:
-      'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&q=80',
+    image: radiologyImg,
   },
   {
     id: 9,

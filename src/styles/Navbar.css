@@ -324,6 +324,13 @@
   flex-shrink: 0;
 }
 
+.sidebar__logo-link {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .sidebar__logo-img {
   width: min(10rem, 45vw);
   height: auto;

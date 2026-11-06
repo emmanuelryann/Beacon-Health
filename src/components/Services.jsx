@@ -1,3 +1,5 @@
+import adultAndPediatricImg from '../images/adult_and_pediatric.svg'
+import radiologyImg from '../images/radiology.svg'
 import '../styles/Services.css'
 
 const services = [
@@ -5,16 +7,14 @@ const services = [
     title: 'Adult & Pediatric Cardiology',
     description:
       'From newborns to adults, our cardiology specialists offer comprehensive heart care. We diagnose and treat congenital heart defects, rhythm disorders, and complex cardiac conditions, ensuring every patient receives age-appropriate, compassionate care.',
-    image:
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=900&q=80',
+    image: adultAndPediatricImg,
     link: '#contact',
   },
   {
     title: 'Radiology',
     description:
       'State-of-the-art diagnostic imaging utilizing cutting-edge MRI, CT scanners, and digital radiography for accurate, rapid clinical insights and patient-centered diagnostic precision.',
-    image:
-      'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=900&q=80',
+    image: radiologyImg,
     link: '#contact',
   },
 ]

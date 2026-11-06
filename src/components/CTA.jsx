@@ -40,20 +40,20 @@ const ctaActions = [
     ),
   },
   {
-    label: 'Find a doctor',
-    href: '#specialists',
+    label: 'Our Services',
+    href: '#services',
     icon: (
       <svg
         className="cta__btn-icon"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="2.5"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
       >
-        <polyline points="20 6 9 17 4 12" />
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
       </svg>
     ),
   },
@@ -112,6 +112,11 @@ const CTA = ({ onNavigate }) => {
                 if (action.label === 'Careers at Beacon Health' && onNavigate) {
                   e.preventDefault()
                   onNavigate('careers')
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }
+                if (action.label === 'Our Services' && onNavigate) {
+                  e.preventDefault()
+                  onNavigate('services')
                   window.scrollTo({ top: 0, behavior: 'smooth' })
                 }
                 if (action.label === 'Our locations' && onNavigate) {

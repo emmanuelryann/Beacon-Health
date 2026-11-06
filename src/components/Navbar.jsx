@@ -268,14 +268,35 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
         aria-hidden={!sidebarOpen}
       >
         <div className="sidebar__header">
-          <img
-            src={beaconHealthLogoWhite}
-            alt="Beacon Health"
-            className="sidebar__logo-img"
-          />
+          <a
+            href="#home"
+            className="sidebar__logo-link"
+            aria-label="Beacon Health Home"
+            onClick={handleLogoClick}
+          >
+            <img
+              src={beaconHealthLogoWhite}
+              alt="Beacon Health"
+              className="sidebar__logo-img"
+            />
+          </a>
         </div>
 
         <ul className="sidebar__links">
+          <li>
+            <a
+              href="#home"
+              className={`sidebar__link ${currentPage === 'home' ? 'sidebar__link--active' : ''}`}
+              onClick={(e) => {
+                e.preventDefault()
+                onNavigate('home')
+                closeSidebar()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+            >
+              <span>Home</span>
+            </a>
+          </li>
           {navLinks.map((link) => {
             const isActive =
               (link.id === 'about' && currentPage === 'about') ||

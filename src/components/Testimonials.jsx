@@ -4,38 +4,33 @@ import '../styles/Testimonials.css'
 const testimonials = [
   {
     image:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80',
-    title:
-      '““Caring and Comprehensive Bariatric Care” — Mr. Chuka Nwokedi (Bariatric Surgery)”',
-    author: '— Mr. Chuka Nwokedi (Bariatric Surgery)',
+      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+    title: '“Prompt Intervention and Compassionate Heart Care”',
+    author: '— Mr. Chuka Nwokedi (Interventional Cardiology)',
   },
   {
     image:
-      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80',
-    title:
-      '““Exceptional Service and Professionalism” — Dr. Money Joy (Bariatric Surgery)”',
-    author: '— Dr. Money Joy (Bariatric Surgery)',
+      'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80',
+    title: '“Pain-Free Mobility and Reclaimed Independence”',
+    author: '— Dr. Joy Ekenedilichukwu (Orthopedics & Joint Care)',
   },
   {
     image:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
-    title:
-      '““Doubt Overcome, Health Restored” — (Bariatric Surgery)”',
-    author: '— M (Bariatric Surgery)',
+      'https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&q=80',
+    title: '“Comprehensive Diagnosis and Life-Changing Guidance”',
+    author: '— Mr. Michael Alabi (Internal Medicine)',
   },
   {
     image:
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80',
-    title:
-      '““Restored Vision, Renewed Independence” — Mrs. Folake Adeleke (Ophthalmology)”',
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80',
+    title: '“Restored Vision and Exceptional Precision”',
     author: '— Mrs. Folake Adeleke (Ophthalmology)',
   },
   {
     image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80',
-    title:
-      '““World-Class Specialists Right Here in Lagos” — Chief Emeka Okonkwo (Cardiology)”',
-    author: '— Chief Emeka Okonkwo (Cardiology)',
+      'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&q=80',
+    title: '“World-Class Imaging and Swift, Accurate Results”',
+    author: '— Chief Emeka Okonkwo (Diagnostic Imaging)',
   },
 ]
 

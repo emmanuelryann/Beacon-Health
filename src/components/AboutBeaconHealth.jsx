@@ -367,7 +367,7 @@ const AboutBeaconHealth = () => {
           - Title: A diverse team driven by expertise, compassion, and commitment.
           - 4-column cards with rounded rectangle portraits, bold name, and role below
           ================================================ */}
-      <section className="about-leadership" id="about-leadership">
+      {/* <section className="about-leadership" id="about-leadership">
         <div className="about-leadership__container container">
           <div className="about-leadership__header">
             <p className="about-leadership__subtitle">OUR LEADERSHIP EXPERTISE</p>
@@ -395,7 +395,7 @@ const AboutBeaconHealth = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================================================
           8. INNOVATION & TECHNOLOGY
@@ -407,17 +407,7 @@ const AboutBeaconHealth = () => {
       <section className="about-innovation">
         <div className="about-innovation__container container">
           <div className="about-innovation__layout">
-            {/* Left Column: Image */}
-            <div className="about-innovation__media-wrap">
-              <img
-                src={innovationTechImg}
-                alt="Radiologist examining high-resolution scan on medical diagnostic monitor"
-                className="about-innovation__media-img"
-                loading="lazy"
-              />
-            </div>
-
-            {/* Right Column: Title, Intro & Accordion */}
+            {/* Left Column: Title, Intro & Accordion */}
             <div className="about-innovation__content">
               <h2 className="about-innovation__title">Innovation &amp; Technology</h2>
 
@@ -483,6 +473,16 @@ const AboutBeaconHealth = () => {
                   )
                 })}
               </div>
+            </div>
+
+            {/* Right Column: Image */}
+            <div className="about-innovation__media-wrap">
+              <img
+                src={innovationTechImg}
+                alt="Radiologist examining high-resolution scan on medical diagnostic monitor"
+                className="about-innovation__media-img"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
