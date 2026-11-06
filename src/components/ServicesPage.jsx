@@ -1,6 +1,20 @@
 import { useState, useMemo } from 'react'
-import adultAndPediatricImg from '../images/adult_and_pediatric.svg'
-import radiologyImg from '../images/radiology.svg'
+import interventionalCardiologyImg from '../images/interventional cardiology.jpg'
+import interventionalRadiologyImg from '../images/interventional radiology.jpg'
+import adultAndPediatricImg from '../images/adult_and_pedriatic_cardiology.jpg'
+import bariatricImg from '../images/Bariatic_and_weight_loss_surgery.png'
+import generalSurgeryImg from '../images/general surgery.jpg'
+import gastroenterologyImg from '../images/gastroentronology.jpg'
+import orthopedicSurgeryImg from '../images/orthopedic surgery.jpg'
+import radiologyImg from '../images/radiology.jpg'
+import urologyImg from '../images/urology.jpg'
+import familyGeriatricImg from '../images/family and geriatic medicine.jpg'
+import generalMedicineImg from '../images/general medicine.jpg'
+import neurologyImg from '../images/neurology and neurosurgery.jpg'
+import endocrinologyImg from '../images/endocrinology.jpg'
+import nutritionWellnessImg from '../images/nutrition and wellness.jpg'
+import breastSurgeryImg from '../images/breast_surgery.jpg'
+import dermatologyImg from '../images/dermatology.jpg'
 import '../styles/ServicesPage.css'
 
 const allServices = [
@@ -9,16 +23,14 @@ const allServices = [
     title: 'Interventional Cardiology',
     description:
       'Our expert cardiologists provide advanced heart care, from diagnostics to complex interventions. Using the latest technology and evidence-based treatments, we help you protect and restore your heart health with precision and compassion.',
-    image:
-      'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=800&q=80',
+    image: interventionalCardiologyImg,
   },
   {
     id: 2,
     title: 'Interventional Radiology',
     description:
       'We provide cutting-edge, image-guided procedures that diagnose and treat conditions with less discomfort and faster recovery. From targeted therapies to vascular interventions, our Interventional Radiology specialists combine technology and expertise to deliver outstanding outcomes.',
-    image:
-      'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&q=80',
+    image: interventionalRadiologyImg,
   },
   {
     id: 3,
@@ -32,32 +44,28 @@ const allServices = [
     title: 'Bariatric & Weight Loss Surgery',
     description:
       'Our Bariatric Surgery program supports patients on their weight-loss journey with tailored surgical and non-surgical options. We focus on long-term health improvements, helping reduce obesity-related risks and enhancing overall well-being.',
-    image:
-      'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&q=80',
+    image: bariatricImg,
   },
   {
     id: 5,
     title: 'General Surgery',
     description:
       'Our General Surgery team is skilled in a wide range of procedures, from hernia repairs to complex abdominal surgeries. We prioritize patient safety, careful planning, and post-operative care to promote fast recovery and optimal results.',
-    image:
-      'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?w=800&q=80',
+    image: generalSurgeryImg,
   },
   {
     id: 6,
     title: 'Gastroenterology',
     description:
       'We provide expert care for digestive health, diagnosing and treating conditions of the stomach, intestines, liver, and pancreas. Our gastroenterologists use advanced endoscopic techniques for accurate diagnosis and effective treatment.',
-    image:
-      'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+    image: gastroenterologyImg,
   },
   {
     id: 7,
     title: 'Orthopedic Surgery',
     description:
       'Whether it’s a sports injury, joint pain, or complex surgery, our orthopedic specialists and surgeons deliver solutions to restore movement and quality of life. We focus on minimally invasive techniques to help patients regain mobility, reduce pain, and return to active lifestyles with personalized treatment plans.',
-    image:
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80',
+    image: orthopedicSurgeryImg,
   },
   {
     id: 8,
@@ -71,64 +79,56 @@ const allServices = [
     title: 'Urology',
     description:
       'We offer comprehensive care for urinary tract and reproductive health issues. From kidney stones to prostate conditions, our urologists use advanced diagnostics and tailored treatments for the best possible outcomes.',
-    image:
-      'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80',
+    image: urologyImg,
   },
   {
     id: 10,
     title: 'Family & Geriatric Medicine',
     description:
       'We provide ongoing, personalized care for every stage of life. Our physicians manage chronic conditions, preventive health, and complex needs of older adults with a focus on quality of life and independence.',
-    image:
-      'https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&q=80',
+    image: familyGeriatricImg,
   },
   {
     id: 11,
     title: 'General Medicine',
     description:
       'Our General Medicine department delivers expert diagnosis and management of a broad spectrum of health concerns. We coordinate care across specialties, ensuring patients receive timely, effective, and compassionate treatment.',
-    image:
-      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80',
+    image: generalMedicineImg,
   },
   {
     id: 12,
     title: 'Neurology & Neurosurgery',
     description:
       'Our Neurology and Neurosurgery team diagnoses and treats conditions of the brain, spine, and nervous system. From migraines to complex neurosurgical procedures, we provide integrated, patient-centered care.',
-    image:
-      'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80',
+    image: neurologyImg,
   },
   {
     id: 13,
     title: 'Endocrinology & Diabetology',
     description:
       'We manage hormonal and metabolic disorders, including diabetes, thyroid disease, and adrenal conditions. Our specialists work closely with patients to optimize treatment and improve long-term health.',
-    image:
-      'https://images.unsplash.com/photo-1579684453423-f84349ef60b0?w=800&q=80',
+    image: endocrinologyImg,
   },
   {
     id: 14,
     title: 'Nutrition and Wellness',
     description:
       'Our nutritionists provide personalized dietary plans to support weight management, chronic disease prevention, and overall wellness. We combine scientific expertise with practical advice for sustainable results.',
-    image:
-      'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80',
+    image: nutritionWellnessImg,
   },
   {
     id: 15,
     title: 'Breast Surgery',
     description:
       'We offer advanced surgical care for benign and malignant breast conditions. Our approach is compassionate, precise, and tailored to each patient’s needs, with a focus on both health and aesthetics.',
-    image:
-      'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&q=80',
+    image: breastSurgeryImg,
   },
   {
     id: 16,
     title: 'Dermatology',
     description:
       'Our dermatologists diagnose and treat skin, hair, and nail conditions, offering both medical and aesthetic dermatology services. We use the latest techniques to promote healthy skin and confidence.',
-    image:
-      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80',
+    image: dermatologyImg,
   },
 ]
 

@@ -232,6 +232,12 @@
   transform: translateY(-0.0625rem);
 }
 
+.enquiry-form__submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* Submission Success State */
 .enquiry-form__success {
   background-color: #f0fdf4;

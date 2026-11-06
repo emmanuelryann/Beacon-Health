@@ -193,7 +193,7 @@ const Footer = ({ onNavigate = () => {} }) => {
           </div>
 
           <p className="footer__copyright">
-            Beacon Health Nigeria. © Copyright 2025 - Beacon Health Nigeria
+            © 2024 MDaaS Global. All rights reserved.
           </p>
         </div>
       </div>

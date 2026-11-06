@@ -170,19 +170,19 @@
 
 .services-page__card {
   background-color: #fbf8f5;
-  border-radius: 1.125rem;
+  border-radius: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
-  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04);
+  /* box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.services-page__card:hover {
+/* .services-page__card:hover {
   transform: translateY(-0.25rem);
   box-shadow: 0 0.625rem 2rem rgba(0, 0, 0, 0.08);
-}
+} */
 
 .services-page__card-image-wrap {
   width: 100%;
@@ -198,9 +198,9 @@
   transition: transform 0.4s ease;
 }
 
-.services-page__card:hover .services-page__card-image {
+/* .services-page__card:hover .services-page__card-image {
   transform: scale(1.05);
-}
+} */
 
 .services-page__card-body {
   padding: clamp(1.25rem, 1.8vw, 1.625rem);

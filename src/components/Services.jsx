@@ -1,5 +1,5 @@
-import adultAndPediatricImg from '../images/adult_and_pediatric.svg'
-import radiologyImg from '../images/radiology.svg'
+import adultAndPediatricImg from '../images/adult_and_pedriatic_cardiology.jpg'
+import radiologyImg from '../images/radiology.jpg'
 import '../styles/Services.css'
 
 const services = [

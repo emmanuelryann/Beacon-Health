@@ -23,6 +23,7 @@ const navLinks = [
 const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [patientDropdownOpen, setPatientDropdownOpen] = useState(false)
+  const [dropdownClosed, setDropdownClosed] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -40,7 +41,10 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
     return () => document.body.classList.remove('no-scroll')
   }, [sidebarOpen])
 
-  const closeSidebar = useCallback(() => setSidebarOpen(false), [])
+  const closeSidebar = useCallback(() => {
+    setSidebarOpen(false)
+    setPatientDropdownOpen(false)
+  }, [])
   const toggleSidebar = useCallback(() => setSidebarOpen((prev) => !prev), [])
 
   const handleLinkClick = (e, link) => {
@@ -142,6 +146,9 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                 <li
                   key={link.label}
                   className={`navbar__item ${link.hasDropdown ? 'navbar__item--has-dropdown' : ''}`}
+                  onMouseEnter={() => {
+                    if (link.hasDropdown) setDropdownClosed(false)
+                  }}
                 >
                   <a
                     href={link.href}
@@ -168,7 +175,10 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                   </a>
 
                   {link.hasDropdown && link.dropdownItems && (
-                    <div className="navbar__dropdown" role="menu">
+                    <div
+                      className={`navbar__dropdown ${dropdownClosed ? 'navbar__dropdown--closed' : ''}`}
+                      role="menu"
+                    >
                       <ul className="navbar__dropdown-list">
                         {link.dropdownItems.map((item) => (
                           <li key={item.label} className="navbar__dropdown-item">
@@ -176,6 +186,8 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
                               href={item.href}
                               className="navbar__dropdown-link"
                               onClick={(e) => {
+                                setDropdownClosed(true)
+                                setPatientDropdownOpen(false)
                                 if (item.label === 'News & Updates') {
                                   e.preventDefault()
                                   onNavigate('news')
