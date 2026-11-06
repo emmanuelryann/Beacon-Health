@@ -9,6 +9,23 @@ const BlogArticle = ({ onNavigate = () => {} }) => {
   return (
     <article className="blog-page">
       {/* ================================================
+          HERO BANNER
+          ================================================ */}
+      <section className="blog-hero">
+        <div className="blog-hero__overlay" />
+        <div className="blog-hero__watermark" aria-hidden="true">
+          <svg viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="blog-hero__watermark-svg">
+            <path d="M0 260 H420 L455 190 L490 330 L535 70 L585 310 L620 220 L655 260 H1200" stroke="rgba(255, 255, 255, 0.22)" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+        <div className="blog-hero__container container">
+          <div className="blog-hero__content">
+            <h1 className="blog-hero__title">News & Updates</h1>
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================
           1. ARTICLE CONTENT
           ================================================ */}
       <div className="blog-content">

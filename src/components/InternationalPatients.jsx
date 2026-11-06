@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import internationalPatientsServicesImg from '../images/international_patients_services.jpg'
 import '../styles/InternationalPatients.css'
 
 const whyPillars = [
@@ -223,8 +224,8 @@ const InternationalPatients = ({ onNavigate = () => {} }) => {
             <div className="ip-services__image-col">
               <div className="ip-services__image-wrap">
                 <img
-                  src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=1000&q=80"
-                  alt="Doctor consulting patient in private clinic room"
+                  src={internationalPatientsServicesImg}
+                  alt="Specialist doctor consulting patient at Beacon Health International Patient Services"
                   className="ip-services__image"
                 />
               </div>
@@ -267,12 +268,12 @@ const InternationalPatients = ({ onNavigate = () => {} }) => {
               </div>
             </div>
 
-            {/* Right Column: Diagnostic Scanner Room Image */}
+            {/* Right Column: Medical Care & Recovery Suite Image */}
             <div className="ip-planning__image-col">
               <div className="ip-planning__image-wrap">
                 <img
-                  src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1000&q=80"
-                  alt="Medical professional explaining procedure to patient by scanner"
+                  src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1000&q=80"
+                  alt="Modern private patient recovery suite at Beacon Health"
                   className="ip-planning__image"
                 />
               </div>

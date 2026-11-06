@@ -1,4 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
+import beaconHealthLogo from '../images/Beaconhealth-_sjCoVqD.svg'
+import beaconHealthLogoWhite from '../images/Beaconhealth-white.svg'
 import '../styles/Navbar.css'
 
 const navLinks = [
@@ -114,38 +116,18 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
       {/* Main Navbar */}
       <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
         <div className="navbar__container container">
-          {/* Logo with ECG line */}
+          {/* Logo */}
           <a
             href="#home"
             className="navbar__logo"
             aria-label="Beacon Health Home"
             onClick={handleLogoClick}
           >
-            <svg
-              className="navbar__logo-svg"
-              viewBox="0 0 255 44"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2 30 H20 L25 20 L31 38 L38 8 L46 34 L52 26 L58 30 H253"
-                stroke="#12435c"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <text
-                x="64"
-                y="24"
-                fontFamily="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
-                fontSize="20"
-                fontWeight="700"
-                letterSpacing="1.2"
-                fill="#12435c"
-              >
-                BEACON HEALTH
-              </text>
-            </svg>
+            <img
+              src={beaconHealthLogo}
+              alt="Beacon Health"
+              className="navbar__logo-img"
+            />
           </a>
 
           {/* Desktop Navigation Links */}
@@ -286,31 +268,11 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
         aria-hidden={!sidebarOpen}
       >
         <div className="sidebar__header">
-          <svg
-            className="sidebar__logo-svg"
-            viewBox="0 0 255 44"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2 30 H20 L25 20 L31 38 L38 8 L46 34 L52 26 L58 30 H253"
-              stroke="#ffffff"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <text
-              x="64"
-              y="24"
-              fontFamily="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
-              fontSize="20"
-              fontWeight="700"
-              letterSpacing="1.2"
-              fill="#ffffff"
-            >
-              BEACON HEALTH
-            </text>
-          </svg>
+          <img
+            src={beaconHealthLogoWhite}
+            alt="Beacon Health"
+            className="sidebar__logo-img"
+          />
         </div>
 
         <ul className="sidebar__links">

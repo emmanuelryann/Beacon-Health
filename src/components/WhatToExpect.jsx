@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import ourCareTeamImg from '../images/our_care_team.jpg'
+import duringYourVisitImg from '../images/during_your_visit.jpg'
 import '../styles/WhatToExpect.css'
 
 const supportTabs = [
@@ -28,8 +30,7 @@ const supportTabs = [
     title: 'Our Care Team',
     description:
       'We are happy to provide assistance with transportation needs, including helping patients and their families arrange pick-up or drop-off services to and from the hospital. If you have any special requests — such as mobility support, accessibility requirements, or any other personal needs to make your visit more comfortable — please let us know in advance. Our team is committed to ensuring that every patient receives the necessary care, attention, and support from the moment they begin their journey to our hospital.',
-    image:
-      'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=1000&q=80',
+    image: ourCareTeamImg,
     imageAlt: 'Beacon Health care team smiling at reception desk',
   },
   {
@@ -289,7 +290,7 @@ const WhatToExpect = ({ onNavigate = () => {} }) => {
             {/* Left Photo */}
             <div className="wte-split__image-wrap">
               <img
-                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=1000&q=80"
+                src={duringYourVisitImg}
                 alt="Patient checking in at reception counter"
                 className="wte-split__image"
                 loading="lazy"

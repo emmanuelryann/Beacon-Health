@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import centresOfExcellenceImg from '../images/centres_of_excellence.png'
+import innovationTechImg from '../images/innovation_and_technology.jpg'
 import '../styles/AboutBeaconHealth.css'
 
 const missionCards = [
@@ -334,7 +336,7 @@ const AboutBeaconHealth = () => {
           <div className="about-centres__grid">
             <div className="about-centres__image-wrap">
               <img
-                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=900&q=80"
+                src={centresOfExcellenceImg}
                 alt="Doctor consulting with patient at Beacon Health Centres of Excellence"
                 className="about-centres__image"
                 loading="lazy"
@@ -408,7 +410,7 @@ const AboutBeaconHealth = () => {
             {/* Left Column: Image */}
             <div className="about-innovation__media-wrap">
               <img
-                src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=900&q=80"
+                src={innovationTechImg}
                 alt="Radiologist examining high-resolution scan on medical diagnostic monitor"
                 className="about-innovation__media-img"
                 loading="lazy"

@@ -1,3 +1,4 @@
+import beaconHealthLogo from '../images/Beaconhealth-_sjCoVqD.svg'
 import '../styles/CTA.css'
 
 const ctaActions = [
@@ -84,31 +85,7 @@ const CTA = ({ onNavigate }) => {
         {/* Top Row: BEACON HEALTH Logo + Enquiries Phone */}
         <div className="cta__top">
           <div className="cta__logo" aria-label="Beacon Health">
-            <svg
-              className="cta__logo-svg"
-              viewBox="0 0 255 44"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2 30 H20 L25 20 L31 38 L38 8 L46 34 L52 26 L58 30 H253"
-                stroke="#12435c"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <text
-                x="64"
-                y="24"
-                fontFamily="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
-                fontSize="20"
-                fontWeight="700"
-                letterSpacing="1.2"
-                fill="#12435c"
-              >
-                BEACON HEALTH
-              </text>
-            </svg>
+            <img src={beaconHealthLogo} alt="Beacon Health" className="cta__logo-img" />
           </div>
 
           <div className="cta__enquiry">

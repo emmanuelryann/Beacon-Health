@@ -21,7 +21,10 @@
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  min-height: min(18rem, 28vh);
   padding: clamp(2rem, 3.5vw, 2.75rem) 0;
+  display: flex;
+  align-items: center;
 }
 
 .about-hero__overlay {
@@ -55,6 +58,7 @@
 .about-hero__container {
   position: relative;
   z-index: 3;
+  width: 100%;
 }
 
 .about-hero__content {

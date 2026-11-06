@@ -20,7 +20,11 @@
   position: relative;
   background-color: #071c35;
   overflow: hidden;
+  min-height: min(18rem, 28vh);
   padding: clamp(2rem, 3.5vw, 2.75rem) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ip-hero__overlay {
@@ -53,10 +57,15 @@
 .ip-hero__container {
   position: relative;
   z-index: 3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .ip-hero__content {
   max-width: 44rem;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .ip-hero__title {
@@ -65,6 +74,7 @@
   color: #ffffff;
   line-height: 1.15;
   letter-spacing: -0.02rem;
+  text-align: center;
 }
 
 /* ================================================

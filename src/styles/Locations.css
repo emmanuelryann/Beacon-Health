@@ -19,7 +19,10 @@
   position: relative;
   background-color: #071c35;
   overflow: hidden;
+  min-height: min(18rem, 28vh);
   padding: clamp(2rem, 3.5vw, 2.75rem) 0;
+  display: flex;
+  align-items: center;
 }
 
 .locations-hero__overlay {
@@ -52,6 +55,7 @@
 .locations-hero__container {
   position: relative;
   z-index: 3;
+  width: 100%;
 }
 
 .locations-hero__content {

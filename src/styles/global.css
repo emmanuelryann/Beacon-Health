@@ -21,12 +21,12 @@
   --font-size-hero-title: clamp(2.125rem, 3.8vw, 3.125rem);
   --font-size-hero-subpage: clamp(1.625rem, 2.5vw, 2.125rem);
   --font-size-section-title: clamp(1.5rem, 2.2vw, 1.875rem);
-  --font-size-card-title: clamp(1.0625rem, 1.4vw, 1.25rem);
-  --font-size-card-subtitle: clamp(0.9375rem, 1.1vw, 1.0625rem);
-  --font-size-subtitle: clamp(0.75rem, 0.9vw, 0.8125rem);
-  --font-size-body: clamp(0.875rem, 1vw, 0.9375rem);
-  --font-size-small: clamp(0.75rem, 0.85vw, 0.8125rem);
-  --font-size-btn: clamp(0.8125rem, 0.95vw, 0.875rem);
+  --font-size-card-title: clamp(1.125rem, 1.4vw, 1.3125rem);
+  --font-size-card-subtitle: clamp(1rem, 1.15vw, 1.125rem);
+  --font-size-subtitle: clamp(0.8125rem, 0.95vw, 0.875rem);
+  --font-size-body: clamp(1rem, 1.15vw, 1.125rem);
+  --font-size-small: clamp(0.875rem, 1vw, 0.9375rem);
+  --font-size-btn: clamp(0.9375rem, 1.05vw, 1rem);
 }
 
 /* ================================================

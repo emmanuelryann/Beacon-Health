@@ -18,7 +18,10 @@
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  min-height: min(18rem, 28vh);
   padding: clamp(2rem, 3.5vw, 2.75rem) 0;
+  display: flex;
+  align-items: center;
 }
 
 .services-page__hero-overlay {
@@ -52,6 +55,7 @@
 .services-page__hero-container {
   position: relative;
   z-index: 3;
+  width: 100%;
 }
 
 .services-page__hero-content {

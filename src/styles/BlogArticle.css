@@ -14,6 +14,70 @@
 }
 
 /* ================================================
+   HERO BANNER
+   ================================================ */
+.blog-hero {
+  position: relative;
+  background-color: #071c35;
+  overflow: hidden;
+  min-height: min(18rem, 28vh);
+  padding: clamp(2rem, 3.5vw, 2.75rem) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 28, 53, 0.95) 0%,
+    rgba(7, 28, 53, 0.8) 50%,
+    rgba(7, 28, 53, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+.blog-hero__watermark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+}
+
+.blog-hero__watermark-svg {
+  width: 100%;
+  height: auto;
+}
+
+.blog-hero__container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-hero__content {
+  max-width: 44rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.blog-hero__title {
+  font-size: var(--font-size-hero-subpage);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02rem;
+  text-align: center;
+}
+
+/* ================================================
    1. ARTICLE CONTENT
    ================================================ */
 .blog-content {
@@ -74,10 +138,7 @@
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  background-color: #f8fafc;
-  border-left: 0.25rem solid #12435c;
-  border-radius: 0.5rem;
-  padding: clamp(1rem, 1.8vw, 1.35rem) clamp(1.25rem, 2vw, 1.5rem);
+  padding: clamp(1rem, 1.8vw, 1.35rem) 0;
   margin-top: clamp(1.5rem, 2.5vw, 2rem);
   margin-bottom: clamp(2rem, 3.5vw, 3rem);
 }

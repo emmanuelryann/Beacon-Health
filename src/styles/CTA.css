@@ -30,7 +30,7 @@
   flex-shrink: 0;
 }
 
-.cta__logo-svg {
+.cta__logo-img {
   width: min(14.5rem, 42vw);
   height: auto;
 }

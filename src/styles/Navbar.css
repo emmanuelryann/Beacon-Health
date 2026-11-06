@@ -70,7 +70,7 @@
   flex-shrink: 0;
 }
 
-.navbar__logo-svg {
+.navbar__logo-img {
   width: min(13.5rem, 38vw);
   height: auto;
 }
@@ -324,7 +324,7 @@
   flex-shrink: 0;
 }
 
-.sidebar__logo-svg {
+.sidebar__logo-img {
   width: min(10rem, 45vw);
   height: auto;
 }
