@@ -56,9 +56,11 @@
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.specialists__see-all-btn:hover {
-  background-color: #0b1a30;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .specialists__see-all-btn:hover {
+    background-color: #0b1a30;
+    color: #ffffff;
+  }
 }
 
 .specialists__see-all-icon {
@@ -89,9 +91,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.specialists__card:hover {
-  transform: translateY(-0.3125rem);
-  box-shadow: 0 0.625rem 2rem rgba(0, 0, 0, 0.06);
+@media (hover: hover) and (pointer: fine) {
+  .specialists__card:hover {
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.625rem 2rem rgba(0, 0, 0, 0.06);
+  }
 }
 
 .specialists__avatar-wrap {
@@ -146,9 +150,11 @@
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.specialists__profile-btn:hover {
-  background-color: #0b1a30;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .specialists__profile-btn:hover {
+    background-color: #0b1a30;
+    color: #ffffff;
+  }
 }
 
 /* Pagination Dots */

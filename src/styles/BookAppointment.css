@@ -54,8 +54,10 @@
   color: #ffffff;
 }
 
-.enquiry-hero__phone-link:hover {
-  opacity: 0.85;
+@media (hover: hover) and (pointer: fine) {
+  .enquiry-hero__phone-link:hover {
+    opacity: 0.85;
+  }
 }
 
 .enquiry-hero__text--required {
@@ -227,9 +229,11 @@
   transition: background-color 0.25s ease, transform 0.2s ease;
 }
 
-.enquiry-form__submit-btn:hover {
-  background-color: #12435c;
-  transform: translateY(-0.0625rem);
+@media (hover: hover) and (pointer: fine) {
+  .enquiry-form__submit-btn:hover {
+    background-color: #12435c;
+    transform: translateY(-0.0625rem);
+  }
 }
 
 .enquiry-form__submit-btn:disabled {
@@ -291,9 +295,11 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.enquiry-form__reset-btn:hover {
-  background-color: #15803d;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .enquiry-form__reset-btn:hover {
+    background-color: #15803d;
+    color: #ffffff;
+  }
 }
 
 /* ================================================

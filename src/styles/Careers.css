@@ -125,21 +125,23 @@
   transition: all 0.2s ease;
 }
 
-.careers-filter-btn:hover {
-  border-color: #071c35;
-  color: #071c35;
-}
-
 .careers-filter-btn--active {
   background-color: #071c35;
   border-color: #071c35;
   color: #ffffff;
 }
 
-.careers-filter-btn--active:hover {
-  background-color: #0c2647;
-  border-color: #0c2647;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .careers-filter-btn:hover {
+    border-color: #071c35;
+    color: #071c35;
+  }
+
+  .careers-filter-btn--active:hover {
+    background-color: #0c2647;
+    border-color: #0c2647;
+    color: #ffffff;
+  }
 }
 
 /* Empty State Card */
@@ -223,9 +225,11 @@
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.careers-empty__action-btn:hover {
-  background-color: #12435c;
-  transform: translateY(-0.0625rem);
+@media (hover: hover) and (pointer: fine) {
+  .careers-empty__action-btn:hover {
+    background-color: #12435c;
+    transform: translateY(-0.0625rem);
+  }
 }
 
 .careers-empty__btn-icon {
@@ -277,9 +281,11 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.careers-pillar-card:hover {
-  transform: translateY(-0.125rem);
-  box-shadow: 0 0.5rem 1.25rem rgba(7, 28, 53, 0.05);
+@media (hover: hover) and (pointer: fine) {
+  .careers-pillar-card:hover {
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.5rem 1.25rem rgba(7, 28, 53, 0.05);
+  }
 }
 
 .careers-pillar__icon {

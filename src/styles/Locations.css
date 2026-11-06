@@ -150,10 +150,6 @@
   cursor: pointer;
 }
 
-.locations-search-clear:hover {
-  color: #1f2937;
-}
-
 .locations-count {
   font-size: var(--font-size-body);
   color: #6b7280;
@@ -183,21 +179,27 @@
   transition: all 0.2s ease;
 }
 
-.locations-pill-btn:hover {
-  border-color: #071c35;
-  color: #071c35;
-}
-
 .locations-pill-btn--active {
   background-color: #071c35;
   border-color: #071c35;
   color: #ffffff;
 }
 
-.locations-pill-btn--active:hover {
-  background-color: #0c2647;
-  border-color: #0c2647;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .locations-search-clear:hover {
+    color: #1f2937;
+  }
+
+  .locations-pill-btn:hover {
+    border-color: #071c35;
+    color: #071c35;
+  }
+
+  .locations-pill-btn--active:hover {
+    background-color: #0c2647;
+    border-color: #0c2647;
+    color: #ffffff;
+  }
 }
 
 /* ================================================
@@ -225,10 +227,16 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.location-card:hover {
-  transform: translateY(-0.25rem);
-  border-color: #b0c9e6;
-  box-shadow: 0 0.75rem 2rem rgba(7, 28, 53, 0.08);
+@media (hover: hover) and (pointer: fine) {
+  .location-card:hover {
+    transform: translateY(-0.25rem);
+    border-color: #b0c9e6;
+    box-shadow: 0 0.75rem 2rem rgba(7, 28, 53, 0.08);
+  }
+
+  .location-card:hover .location-card__image {
+    transform: scale(1.03);
+  }
 }
 
 .location-card__image-wrap {
@@ -244,10 +252,6 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-}
-
-.location-card:hover .location-card__image {
-  transform: scale(1.03);
 }
 
 .location-card__badge-row {
@@ -342,9 +346,11 @@
   transition: color 0.2s ease;
 }
 
-.location-card__phone-link:hover {
-  color: #071c35;
-  text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+  .location-card__phone-link:hover {
+    color: #071c35;
+    text-decoration: underline;
+  }
 }
 
 .location-card__footer {
@@ -367,9 +373,11 @@
   text-align: center;
 }
 
-.location-card__action-btn:hover {
-  background-color: #12435c;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .location-card__action-btn:hover {
+    background-color: #12435c;
+    color: #ffffff;
+  }
 }
 
 /* Empty State */

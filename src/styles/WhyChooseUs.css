@@ -73,8 +73,10 @@
   transition: transform 0.4s ease;
 }
 
-.welcome__video-card:hover .welcome__video-thumbnail {
-  transform: scale(1.03);
+@media (hover: hover) and (pointer: fine) {
+  .welcome__video-card:hover .welcome__video-thumbnail {
+    transform: scale(1.03);
+  }
 }
 
 /* Top bar overlay */
@@ -139,8 +141,10 @@
   transition: transform 0.2s ease;
 }
 
-.welcome__play-btn:hover {
-  transform: translate(-50%, -50%) scale(1.08);
+@media (hover: hover) and (pointer: fine) {
+  .welcome__play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
 }
 
 .welcome__play-icon {

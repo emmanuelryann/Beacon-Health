@@ -150,9 +150,11 @@
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.services-page__sort-btn:hover {
-  background-color: #111827;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .services-page__sort-btn:hover {
+    background-color: #111827;
+    color: #ffffff;
+  }
 }
 
 .services-page__sort-icon {
@@ -242,9 +244,11 @@
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.services-page__card-btn:hover {
-  background-color: #111827;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .services-page__card-btn:hover {
+    background-color: #111827;
+    color: #ffffff;
+  }
 }
 
 .services-page__empty {

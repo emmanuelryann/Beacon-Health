@@ -56,8 +56,10 @@
   transition: color 0.2s ease;
 }
 
-.cta__enquiry-phone:hover {
-  color: #12435c;
+@media (hover: hover) and (pointer: fine) {
+  .cta__enquiry-phone:hover {
+    color: #12435c;
+  }
 }
 
 /* Bottom Row: 4 Pill Action Buttons */
@@ -85,10 +87,12 @@
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-.cta__btn:hover {
-  background-color: #12435c;
-  border-color: #12435c;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .cta__btn:hover {
+    background-color: #12435c;
+    border-color: #12435c;
+    color: #ffffff;
+  }
 }
 
 .cta__btn-icon {

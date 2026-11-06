@@ -38,8 +38,10 @@
   transition: opacity 0.2s ease;
 }
 
-.topbar__link:hover {
-  opacity: 0.85;
+@media (hover: hover) and (pointer: fine) {
+  .topbar__link:hover {
+    opacity: 0.85;
+  }
 }
 
 /* ================================================
@@ -102,8 +104,10 @@
   transition: color 0.2s ease;
 }
 
-.navbar__link:hover {
-  color: #12435c;
+@media (hover: hover) and (pointer: fine) {
+  .navbar__link:hover {
+    color: #12435c;
+  }
 }
 
 .navbar__link--active {
@@ -120,15 +124,24 @@
   transition: transform 0.25s ease, color 0.2s ease;
 }
 
-.navbar__item--has-dropdown:hover .navbar__chevron,
 .navbar__item--has-dropdown:focus-within .navbar__chevron {
   transform: rotate(180deg);
   color: #12435c;
 }
 
-.navbar__item--has-dropdown:hover .navbar__link,
 .navbar__item--has-dropdown:focus-within .navbar__link {
   color: #12435c;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar__item--has-dropdown:hover .navbar__chevron {
+    transform: rotate(180deg);
+    color: #12435c;
+  }
+
+  .navbar__item--has-dropdown:hover .navbar__link {
+    color: #12435c;
+  }
 }
 
 /* Dropdown Card */
@@ -159,12 +172,20 @@
   height: 0.75rem;
 }
 
-.navbar__item--has-dropdown:hover .navbar__dropdown,
 .navbar__item--has-dropdown:focus-within .navbar__dropdown {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar__item--has-dropdown:hover .navbar__dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .navbar__dropdown.navbar__dropdown--closed {
@@ -199,9 +220,11 @@
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.navbar__dropdown-link:hover {
-  color: #12435c;
-  transform: translateX(0.25rem);
+@media (hover: hover) and (pointer: fine) {
+  .navbar__dropdown-link:hover {
+    color: #12435c;
+    transform: translateX(0.25rem);
+  }
 }
 
 /* Call us today Pill Button */
@@ -221,10 +244,12 @@
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-.navbar__call-btn:hover {
-  background-color: #12435c;
-  border-color: #12435c;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .navbar__call-btn:hover {
+    background-color: #12435c;
+    border-color: #12435c;
+    color: #ffffff;
+  }
 }
 
 .navbar__call-icon {
@@ -366,7 +391,7 @@
   transition: background-color 0.25s ease;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .sidebar__link:hover {
     background-color: rgba(255, 255, 255, 0.12);
   }
@@ -397,7 +422,7 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .sidebar__sublink:hover {
     background-color: rgba(255, 255, 255, 0.15);
     color: #ffffff;
@@ -425,7 +450,7 @@
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .sidebar__call-btn:hover {
     background-color: transparent;
     color: #ffffff;

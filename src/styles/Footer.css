@@ -59,8 +59,10 @@
   transition: color 0.2s ease;
 }
 
-.footer__links a:hover {
-  color: #12435c;
+@media (hover: hover) and (pointer: fine) {
+  .footer__links a:hover {
+    color: #12435c;
+  }
 }
 
 .footer__contact-info {
@@ -83,8 +85,10 @@
   transition: color 0.2s ease;
 }
 
-.footer__contact-link:hover {
-  color: #12435c;
+@media (hover: hover) and (pointer: fine) {
+  .footer__contact-link:hover {
+    color: #12435c;
+  }
 }
 
 .footer__phone {
@@ -112,10 +116,12 @@
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.footer__social-btn:hover {
-  background-color: #12435c;
-  border-color: #12435c;
-  color: #ffffff;
+@media (hover: hover) and (pointer: fine) {
+  .footer__social-btn:hover {
+    background-color: #12435c;
+    border-color: #12435c;
+    color: #ffffff;
+  }
 }
 
 .footer__social-btn svg {
@@ -151,8 +157,10 @@
   transition: color 0.2s ease;
 }
 
-.footer__legal a:hover {
-  color: #12435c;
+@media (hover: hover) and (pointer: fine) {
+  .footer__legal a:hover {
+    color: #12435c;
+  }
 }
 
 .footer__legal-dot {

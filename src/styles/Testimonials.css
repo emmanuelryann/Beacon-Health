@@ -73,8 +73,10 @@
   cursor: pointer;
 }
 
-.testimonials__nav-btn--active:hover {
-  background-color: #12435c;
+@media (hover: hover) and (pointer: fine) {
+  .testimonials__nav-btn--active:hover {
+    background-color: #12435c;
+  }
 }
 
 .testimonials__nav-icon {
@@ -111,9 +113,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonials__card:hover {
-  transform: translateY(-0.25rem);
-  box-shadow: 0 0.75rem 2.5rem rgba(0, 0, 0, 0.1);
+@media (hover: hover) and (pointer: fine) {
+  .testimonials__card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.75rem 2.5rem rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Card Image Area */
@@ -132,8 +136,10 @@
   transition: transform 0.5s ease;
 }
 
-.testimonials__card:hover .testimonials__card-img {
-  transform: scale(1.05);
+@media (hover: hover) and (pointer: fine) {
+  .testimonials__card:hover .testimonials__card-img {
+    transform: scale(1.05);
+  }
 }
 
 .testimonials__card-overlay {

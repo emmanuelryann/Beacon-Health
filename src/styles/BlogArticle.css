@@ -157,8 +157,10 @@
   transition: color 0.2s ease;
 }
 
-.blog-content__callout-link:hover {
-  color: #0c2141;
+@media (hover: hover) and (pointer: fine) {
+  .blog-content__callout-link:hover {
+    color: #0c2141;
+  }
 }
 
 /* ================================================
