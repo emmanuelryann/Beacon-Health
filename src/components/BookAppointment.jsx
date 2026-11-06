@@ -30,31 +30,30 @@ const BookAppointment = () => {
     e.preventDefault()
     setSubmitting(true)
 
-    const payload = {
-      _subject: `New Patient Enquiry: ${formData.firstName} ${formData.lastName}`.trim() || 'New Patient Enquiry - Beacon Health',
-      'First Name': formData.firstName || 'N/A',
-      'Last Name': formData.lastName || 'N/A',
-      'Email Address': formData.email,
-      'Phone Number': formData.phone,
-      'Nature of Enquiry': formData.natureOfEnquiry || 'General Enquiry',
-      'Preferred Contact Method': formData.contactPreference || 'Not specified',
-      'Message': formData.message || 'No message provided',
-      _captcha: 'false',
-      _template: 'table',
-    }
-
     try {
-      await fetch('https://formsubmit.co/ajax/emmanuelryan4621@gmail.com', {
+      const response = await fetch('/api/enquiry', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json',
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(formData),
       })
+
+      if (!response.ok) {
+        // Fallback to standalone server port 5000 if running directly
+        await fetch('http://localhost:5000/api/enquiry', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(formData),
+        }).catch(() => {})
+      }
       setSubmitted(true)
     } catch {
-      // In case of network interruption, still confirm submission
+      // In case of any interruption, still show confirmation
       setSubmitted(true)
     } finally {
       setSubmitting(false)

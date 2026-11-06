@@ -296,6 +296,8 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 .sidebar-overlay--visible {
@@ -319,7 +321,9 @@
   padding: clamp(4rem, 10vw, 6rem) clamp(1.5rem, 3vw, 2rem) clamp(2rem, 4vw, 3rem);
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 .sidebar--open {
@@ -362,8 +366,10 @@
   transition: background-color 0.25s ease;
 }
 
-.sidebar__link:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+@media (hover: hover) {
+  .sidebar__link:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
 }
 
 .sidebar__chevron {
@@ -391,9 +397,11 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.sidebar__sublink:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+@media (hover: hover) {
+  .sidebar__sublink:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
 }
 
 .sidebar__footer {
@@ -417,9 +425,11 @@
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.sidebar__call-btn:hover {
-  background-color: transparent;
-  color: #ffffff;
+@media (hover: hover) {
+  .sidebar__call-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+  }
 }
 
 /* ================================================

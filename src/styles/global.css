@@ -58,8 +58,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html.no-scroll,
 body.no-scroll {
-  overflow: hidden;
+  overflow: hidden !important;
+  height: 100% !important;
+  touch-action: none !important;
+  overscroll-behavior: none !important;
+  -webkit-overflow-scrolling: auto !important;
 }
 
 img {
@@ -160,4 +165,125 @@ section {
 .btn-secondary:hover {
   background-color: var(--color-bg-white);
   color: var(--color-primary);
+}
+
+/* ================================================
+   DISABLE HOVER EFFECTS ON TOUCH & MOBILE DEVICES
+   Prevents sticky hover states and transforms on tap
+   ================================================ */
+@media (hover: none), (max-width: 48rem) {
+  *,
+  *::before,
+  *::after {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Reset hover transforms and translations on touch devices */
+  .btn:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .cta__btn:hover,
+  .cta__enquiry-phone:hover,
+  .services__view-all-btn:hover,
+  .services__card:hover,
+  .services__card:hover .services__card-bg,
+  .services__card-btn:hover,
+  .services-page__card:hover,
+  .services-page__card:hover .services-page__card-image,
+  .services-page__card-btn:hover,
+  .services-page__sort-btn:hover,
+  .location-card:hover,
+  .location-card:hover .location-card__image,
+  .location-card__action-btn:hover,
+  .location-card__phone-link:hover,
+  .locations-pill-btn:hover,
+  .locations-search-clear:hover,
+  .wte-card:hover,
+  .wte-support__tab-btn:hover,
+  .wte-support__book-link:hover,
+  .ip-service-card:hover,
+  .ip-planning-card:hover,
+  .testimonials__card:hover,
+  .testimonials__card:hover .testimonials__card-img,
+  .testimonials__nav-btn--active:hover,
+  .careers-pillar-card:hover,
+  .careers-filter-btn:hover,
+  .careers-empty__action-btn:hover,
+  .specialists__card:hover,
+  .specialists__see-all-btn:hover,
+  .specialists__profile-btn:hover,
+  .about-leadership__card:hover .about-leadership__photo,
+  .welcome__video-card:hover .welcome__video-thumbnail,
+  .welcome__play-btn:hover,
+  .enquiry-form__submit-btn:hover,
+  .enquiry-form__reset-btn:hover,
+  .enquiry-hero__phone-link:hover,
+  .footer__links a:hover,
+  .footer__contact-link:hover,
+  .footer__social-btn:hover,
+  .footer__legal a:hover,
+  .blog-content__callout-link:hover,
+  .navbar__call-btn:hover,
+  .navbar__link:hover,
+  .navbar__dropdown-link:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Reset sticky background and text colors on touch devices */
+  .sidebar__link:hover {
+    background-color: transparent !important;
+  }
+
+  .sidebar__sublink:hover {
+    background-color: transparent !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  .sidebar__call-btn:hover {
+    background-color: #ffffff !important;
+    color: #071c35 !important;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-accent) !important;
+    color: var(--color-bg-white) !important;
+  }
+
+  .btn-secondary:hover {
+    background-color: transparent !important;
+    color: var(--color-bg-white) !important;
+  }
+
+  .cta__btn:hover {
+    background-color: transparent !important;
+    color: #0c2141 !important;
+  }
+
+  .services__card-btn:hover {
+    background-color: transparent !important;
+    color: #ffffff !important;
+  }
+
+  .location-card__action-btn:hover {
+    background-color: #12435c !important;
+    color: #ffffff !important;
+  }
+
+  .footer__social-btn:hover {
+    background-color: transparent !important;
+    color: #12435c !important;
+  }
+
+  .welcome__play-btn:hover {
+    background-color: #ffffff !important;
+  }
+
+  .enquiry-form__submit-btn:hover {
+    background-color: #0c2141 !important;
+  }
+
+  .enquiry-form__reset-btn:hover {
+    background-color: #071c35 !important;
+  }
 }

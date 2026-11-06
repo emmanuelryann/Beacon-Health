@@ -35,10 +35,25 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
   useEffect(() => {
     if (sidebarOpen) {
       document.body.classList.add('no-scroll')
+      document.documentElement.classList.add('no-scroll')
+
+      const preventScroll = (e) => {
+        e.preventDefault()
+      }
+
+      window.addEventListener('touchmove', preventScroll, { passive: false })
+      window.addEventListener('wheel', preventScroll, { passive: false })
+
+      return () => {
+        document.body.classList.remove('no-scroll')
+        document.documentElement.classList.remove('no-scroll')
+        window.removeEventListener('touchmove', preventScroll)
+        window.removeEventListener('wheel', preventScroll)
+      }
     } else {
       document.body.classList.remove('no-scroll')
+      document.documentElement.classList.remove('no-scroll')
     }
-    return () => document.body.classList.remove('no-scroll')
   }, [sidebarOpen])
 
   const closeSidebar = useCallback(() => {
@@ -271,6 +286,8 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
       <div
         className={`sidebar-overlay ${sidebarOpen ? 'sidebar-overlay--visible' : ''}`}
         onClick={closeSidebar}
+        onTouchMove={(e) => e.preventDefault()}
+        onWheel={(e) => e.preventDefault()}
         aria-hidden="true"
       />
 
@@ -278,6 +295,8 @@ const Navbar = ({ currentPage = 'home', onNavigate = () => {} }) => {
       <aside
         className={`sidebar ${sidebarOpen ? 'sidebar--open' : ''}`}
         aria-hidden={!sidebarOpen}
+        onTouchMove={(e) => e.preventDefault()}
+        onWheel={(e) => e.preventDefault()}
       >
         <div className="sidebar__header">
           <a
